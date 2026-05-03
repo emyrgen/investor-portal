@@ -8077,3 +8077,61 @@
     width: 100%;
   }
 }
+
+
+/* v20.12 Deal-section START INVESTOR REVIEW button: solid high-contrast CTA */
+.deal-cta-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+}
+.deal-cta-row > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 4.35rem !important;
+  width: 100% !important;
+  text-align: center !important;
+  border-radius: .35rem !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 900 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  font-size: clamp(.95rem, 2.8vw, 1.12rem) !important;
+}
+.deal-start-review-cta,
+a.deal-start-review-cta,
+.deal-cta-row a.deal-start-review-cta,
+.deal-cta-row .btn-primary-blue.deal-start-review-cta {
+  background: linear-gradient(135deg, #06b6d4 0%, #5fd4d6 52%, #9cf6ff 100%) !important;
+  border: 1px solid rgba(156,246,255,.95) !important;
+  color: #02070b !important;
+  -webkit-text-fill-color: #02070b !important;
+  box-shadow:
+    0 0 0 1px rgba(95,212,214,.28),
+    0 0 32px rgba(6,182,212,.30),
+    0 20px 46px rgba(6,182,212,.22) !important;
+  text-shadow: none !important;
+}
+.deal-start-review-cta:hover,
+.deal-start-review-cta:focus-visible {
+  background: linear-gradient(135deg, #2dd4ef 0%, #9cf6ff 100%) !important;
+  border-color: #ffffff !important;
+  color: #02070b !important;
+  -webkit-text-fill-color: #02070b !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.36),
+    0 0 44px rgba(6,182,212,.42),
+    0 24px 58px rgba(6,182,212,.28) !important;
+}
+@media (max-width: 720px) {
+  .deal-cta-row {
+    grid-template-columns: 1fr !important;
+    gap: .85rem !important;
+  }
+  .deal-cta-row > a {
+    min-height: 4.65rem !important;
+  }
+}
