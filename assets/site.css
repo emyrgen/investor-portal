@@ -8678,3 +8678,171 @@ a.deal-start-review-cta,
     min-height: 0;
   }
 }
+
+
+/* v20.17 ROI premium redesign */
+.roi-flow-premium {
+  gap: 1.2rem;
+}
+.roi-flow-card {
+  padding: 1.45rem 1.25rem 1.35rem;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 28px 60px rgba(0,0,0,.30);
+}
+.roi-flow-card::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(95,212,214,.12), transparent 32%),
+    radial-gradient(circle at 100% 100%, rgba(255,255,255,.03), transparent 30%);
+}
+.roi-flow-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,.12);
+  opacity: .8;
+}
+.roi-core {
+  background: linear-gradient(135deg, rgba(24,50,104,.95), rgba(11,18,30,.98) 64%, rgba(13,66,94,.50));
+  border-color: rgba(106,181,255,.18);
+}
+.roi-core::after { background: linear-gradient(90deg, #6eb2ff, #40c4ff); }
+.roi-airframe-premium {
+  background: linear-gradient(135deg, rgba(25,32,46,.98), rgba(10,14,24,.98) 58%, rgba(44,116,128,.22));
+  border-color: rgba(103,191,205,.16);
+}
+.roi-airframe-premium::after { background: linear-gradient(90deg, #6ccfd9, #5088a6); }
+.roi-mission-premium {
+  background: linear-gradient(135deg, rgba(8,24,35,.99), rgba(10,13,23,.98) 56%, rgba(0,96,118,.34));
+  border-color: rgba(74,214,224,.18);
+}
+.roi-mission-premium::after { background: linear-gradient(90deg, #50d0d8, #24c0a6); }
+.roi-revenue-premium {
+  background: linear-gradient(135deg, rgba(46,36,12,.92), rgba(12,13,20,.99) 55%, rgba(0,54,76,.36));
+  border-color: rgba(245,200,76,.30);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 30px 72px rgba(0,0,0,.34), 0 0 0 1px rgba(245,200,76,.08);
+}
+.roi-revenue-premium::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(245,200,76,.18), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(95,212,214,.10), transparent 30%);
+}
+.roi-revenue-premium::after { background: linear-gradient(90deg, #f5c84c, #e0a91f, #6fd6db); }
+.roi-orb {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 14px 28px rgba(0,0,0,.20), 0 0 0 1px rgba(255,255,255,.02);
+}
+.roi-orb span {
+  font-size: 1.26rem;
+  letter-spacing: .02em;
+}
+.roi-orb-revenue {
+  width: auto;
+  min-width: 4.8rem;
+  height: 4rem;
+  padding: 0 1rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(245,200,76,.18), rgba(255,255,255,.05));
+  border-color: rgba(245,200,76,.34);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 16px 30px rgba(0,0,0,.22), 0 0 0 1px rgba(245,200,76,.08), 0 0 22px rgba(245,200,76,.10);
+}
+.roi-orb-revenue span {
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #fff4cf;
+}
+.roi-kicker {
+  color: rgba(199,242,255,.86);
+}
+.roi-revenue-premium .roi-kicker {
+  color: rgba(255,233,168,.95);
+}
+.roi-flow-card h3 {
+  font-size: clamp(1.6rem, 3.1vw, 2.35rem);
+}
+.roi-chip-row span {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.10);
+}
+.roi-revenue-premium .roi-chip-row span {
+  background: rgba(255,255,255,.05);
+  border-color: rgba(245,200,76,.22);
+}
+.roi-flow-link span {
+  width: 3.15rem;
+  height: 3.15rem;
+  background: radial-gradient(circle at 50% 50%, rgba(121,223,255,.18), rgba(121,223,255,.02) 62%, transparent 70%);
+}
+.roi-flow-link span::before {
+  font-size: 2.15rem;
+}
+.roi-phase-grid {
+  gap: 1.1rem;
+}
+.roi-phase-card {
+  background: linear-gradient(180deg, rgba(15,18,28,.98), rgba(11,14,22,.96));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 20px 42px rgba(0,0,0,.22);
+}
+.roi-phase-card.near {
+  border-color: rgba(98,203,255,.18);
+  background: linear-gradient(180deg, rgba(16,25,42,.98), rgba(11,14,22,.96));
+}
+.roi-phase-card.mid {
+  border-color: rgba(106,231,238,.18);
+  background: linear-gradient(180deg, rgba(10,25,32,.98), rgba(11,14,22,.96));
+}
+.roi-phase-card.long {
+  border-color: rgba(245,200,76,.18);
+  background: linear-gradient(180deg, rgba(29,24,14,.98), rgba(11,14,22,.96));
+}
+.roi-phase-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 100% 0%, rgba(255,255,255,.04), transparent 34%);
+}
+.roi-phase-pill {
+  padding: .48rem .8rem;
+  font-size: .78rem;
+}
+.roi-phase-card strong {
+  font-size: 1.22rem;
+}
+.roi-phase-card p {
+  color: rgba(226,240,255,.80);
+}
+@media (max-width: 900px) {
+  .roi-flow-card {
+    padding: 1.3rem 1.05rem 1.2rem;
+  }
+  .roi-orb {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 1.05rem;
+  }
+  .roi-orb span {
+    font-size: 1.14rem;
+  }
+  .roi-orb-revenue {
+    min-width: 4.3rem;
+    height: 3.55rem;
+    padding: 0 .85rem;
+  }
+  .roi-orb-revenue span {
+    font-size: 1.04rem;
+  }
+  .roi-flow-link span {
+    width: 3rem;
+    height: 3rem;
+  }
+}
