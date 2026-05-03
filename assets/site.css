@@ -7715,3 +7715,75 @@
   .simplified-market-cards .v20-card-visual { margin-left: -1rem; margin-right: -1rem; }
   .simplified-market-cards .v20-stack-img { border-radius: 0 !important; box-shadow: none !important; border: 0 !important; }
 }
+
+/* v20.6 mobile spacing correction: tighten the oversized gaps visible on mobile screenshots */
+:root {
+  --tight-section-gap-mobile: 2.35rem;
+  --tight-section-gap-desktop: 4.25rem;
+}
+
+/* Global section-to-section compaction for the new investor-substance flow */
+#hero {
+  padding-bottom: clamp(2.2rem, 4vw, 3.5rem) !important;
+}
+#proof-snapshot.market-numbers-section {
+  padding-top: clamp(3.25rem, 5vw, 4.6rem) !important;
+  padding-bottom: clamp(2.4rem, 4vw, 3.6rem) !important;
+}
+#markets.market-substance {
+  padding-top: clamp(3.25rem, 5vw, 4.6rem) !important;
+}
+#products {
+  padding-bottom: clamp(3.2rem, 5vw, 4.8rem) !important;
+}
+#logistics {
+  padding-top: clamp(3.2rem, 5vw, 4.8rem) !important;
+}
+
+@media (max-width: 760px) {
+  /* Screenshot 3: reduce the blank hero area between Download Agreement and Market Numbers */
+  #hero {
+    padding-bottom: 1.55rem !important;
+  }
+  #hero .hero-content {
+    padding-bottom: 0 !important;
+  }
+
+  /* Screenshot 2: reduce the large empty area after market sources before Market Opportunity */
+  #proof-snapshot.market-numbers-section {
+    padding-top: 2.2rem !important;
+    padding-bottom: 1.55rem !important;
+  }
+  .market-sources-line {
+    margin-top: 0.8rem !important;
+    margin-bottom: 0 !important;
+  }
+  #markets.market-substance {
+    padding-top: 2.15rem !important;
+  }
+  #markets .v20-market-header,
+  #markets .market-substance-header {
+    margin-top: 0 !important;
+  }
+
+  /* Screenshot 1: reduce the large black gap after IP Stack before Investment Process */
+  #products {
+    padding-bottom: 2rem !important;
+  }
+  #logistics {
+    padding-top: 2.15rem !important;
+  }
+  #products .product-grid {
+    margin-bottom: 0 !important;
+  }
+
+  /* Keep later sections compact without making cards feel cramped */
+  #offer,
+  #whynow,
+  #about,
+  #how,
+  #contact {
+    padding-top: 3.25rem !important;
+    padding-bottom: 3.25rem !important;
+  }
+}
