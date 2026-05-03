@@ -7442,3 +7442,276 @@
   }
 }
 
+
+/* v20.5 investor-substance pass: shorter copy, market numbers, simple ROI logic */
+.market-numbers-section {
+  background: radial-gradient(circle at 8% 0%, rgba(47, 125, 246, 0.22), transparent 34%), linear-gradient(180deg, #06101d 0%, #081827 100%);
+  padding: 7.5rem 3rem 6.5rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.market-numbers-wrap {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.market-numbers-copy {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(320px, .65fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2.2rem;
+}
+.market-numbers-copy .section-title { margin-bottom: 0; }
+.market-numbers-lead {
+  color: rgba(236, 247, 255, .78);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.45;
+  max-width: 560px;
+}
+.market-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.market-metric-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.13);
+  background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  min-height: 230px;
+  box-shadow: 0 28px 60px rgba(0,0,0,.24);
+}
+.market-metric-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -30% -50% auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(74, 189, 255, .15);
+  filter: blur(18px);
+}
+.metric-label {
+  display: block;
+  color: #75d5ff;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .72rem;
+  font-weight: 800;
+  margin-bottom: .9rem;
+}
+.market-metric-card strong {
+  display: block;
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+  margin-bottom: .65rem;
+}
+.market-metric-card p {
+  color: rgba(255,255,255,.86);
+  font-size: 1rem;
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
+}
+.metric-bar {
+  height: .55rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+  margin: 0 0 .75rem;
+}
+.metric-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f5c84c, #49d3ff);
+}
+.market-metric-card small {
+  display: block;
+  color: rgba(221, 237, 255, .62);
+  font-size: .78rem;
+  line-height: 1.35;
+}
+.market-sources-line {
+  margin-top: 1rem;
+  color: rgba(221,237,255,.55);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.market-substance { padding-top: 7.5rem; }
+.market-substance-header { max-width: 1020px; }
+.roi-engine-panel {
+  border: 1px solid rgba(79, 211, 255, .22);
+  background: linear-gradient(135deg, rgba(18, 43, 71, .92), rgba(6, 16, 29, .86));
+  border-radius: 1.5rem;
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: minmax(240px, .6fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  margin: 2.2rem 0 2rem;
+}
+.roi-engine-copy h3 {
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.05;
+  margin: .35rem 0 0;
+}
+.roi-engine-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+.roi-engine-flow div,
+.roi-bottom-grid div,
+.investor-logic-band,
+.deal-card {
+  border: 1px solid rgba(255,255,255,.11);
+  background: rgba(255,255,255,.055);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.roi-engine-flow strong,
+.roi-bottom-grid strong,
+.investor-logic-band strong {
+  display: block;
+  color: #fff;
+  font-size: .98rem;
+  margin-bottom: .35rem;
+}
+.roi-engine-flow span,
+.roi-bottom-grid span,
+.investor-logic-band span {
+  display: block;
+  color: rgba(226,240,255,.68);
+  line-height: 1.35;
+  font-size: .9rem;
+}
+.simplified-market-cards .v20-market-card { margin-bottom: 1.3rem; }
+.market-number-card .v20-card-body { padding-top: 2rem; }
+.market-card-number {
+  color: #f7cc4f;
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  line-height: .9;
+  letter-spacing: -.055em;
+  margin-bottom: 1rem;
+}
+.market-number-card h3 {
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  line-height: .95;
+  max-width: 760px;
+}
+.market-money-line {
+  margin-top: 1rem;
+  border-left: 3px solid #f7cc4f;
+  padding-left: .9rem;
+  color: rgba(255,255,255,.86);
+  font-weight: 700;
+  line-height: 1.45;
+}
+.investor-logic-band {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(90deg, rgba(245,200,76,.13), rgba(73,211,255,.09));
+}
+.short-why-now { padding: 7rem 3rem; }
+.compact-bento .whynow-text { font-size: .98rem; }
+.deal-snapshot-section {
+  padding: 7rem 3rem;
+  background: radial-gradient(circle at 90% 10%, rgba(245, 200, 76, .14), transparent 30%), var(--c-dark);
+}
+.deal-snapshot-wrap { max-width: 1180px; margin: 0 auto; }
+.deal-snapshot-head {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(300px, .5fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+.deal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, minmax(0, 1fr));
+  gap: .9rem;
+}
+.deal-card.big { grid-row: span 2; }
+.deal-card span {
+  display: block;
+  color: #75d5ff;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .72rem;
+  font-weight: 800;
+  margin-bottom: .6rem;
+}
+.deal-card strong {
+  display: block;
+  color: #fff;
+  font-size: clamp(1.15rem, 2vw, 1.65rem);
+  line-height: 1.15;
+}
+.deal-card p { color: rgba(226,240,255,.68); margin-top: .75rem; line-height:1.45; }
+.deal-cta-row { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+.roi-logic-section {
+  padding: 7rem 3rem;
+  background: linear-gradient(180deg, #07111f, #050914);
+}
+.roi-logic-wrap { max-width: 1180px; margin: 0 auto; }
+.roi-diagram {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: .75rem;
+  align-items: center;
+  margin: 2.2rem 0 1rem;
+}
+.roi-node {
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  color: #fff;
+  background: rgba(255,255,255,.06);
+  font-weight: 850;
+  letter-spacing: -.01em;
+}
+.roi-node.source { background: linear-gradient(135deg, rgba(47,125,246,.35), rgba(255,255,255,.06)); }
+.roi-node.finish { background: linear-gradient(135deg, rgba(245,200,76,.28), rgba(255,255,255,.06)); }
+.roi-arrow { color: #75d5ff; font-size: 2rem; font-weight: 900; }
+.roi-bottom-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:.9rem; }
+@media (max-width: 900px) {
+  .market-numbers-section,
+  .market-substance,
+  .deal-snapshot-section,
+  .roi-logic-section,
+  .short-why-now { padding-left: 1rem; padding-right: 1rem; }
+  .market-numbers-copy,
+  .roi-engine-panel,
+  .deal-snapshot-head { grid-template-columns: 1fr; }
+  .market-metrics-grid { grid-template-columns: 1fr 1fr; }
+  .roi-engine-flow { grid-template-columns: 1fr 1fr; }
+  .deal-grid { grid-template-columns: 1fr; }
+  .deal-card.big { grid-row: auto; }
+  .roi-diagram { grid-template-columns: 1fr; }
+  .roi-arrow { transform: rotate(90deg); justify-self: center; }
+  .roi-bottom-grid { grid-template-columns: 1fr; }
+  .investor-logic-band { flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 640px) {
+  .market-metrics-grid { grid-template-columns: 1fr; }
+  .market-metric-card { border-radius: 1rem; min-height: 0; }
+  .roi-engine-flow { grid-template-columns: 1fr; }
+  .market-number-card h3 { font-size: clamp(2.2rem, 10vw, 3.2rem); }
+  .market-card-number { font-size: clamp(3.4rem, 17vw, 5.2rem); }
+  .simplified-market-cards .v20-card-visual { margin-left: -1rem; margin-right: -1rem; }
+  .simplified-market-cards .v20-stack-img { border-radius: 0 !important; box-shadow: none !important; border: 0 !important; }
+}
