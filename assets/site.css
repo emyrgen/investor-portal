@@ -8028,3 +8028,52 @@
     min-width: 0;
   }
 }
+
+
+/* v20.11 emphasize deal-section Start Investor Review button */
+.deal-cta-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+.deal-cta-row > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.25rem;
+  text-align: center;
+}
+.deal-invest-review-cta {
+  position: relative;
+  border: 1.5px solid rgba(6,182,212,.72) !important;
+  background: linear-gradient(135deg, rgba(6,182,212,.16), rgba(6,182,212,.06) 58%, rgba(255,255,255,.03)) !important;
+  color: #dffbff !important;
+  -webkit-text-fill-color: #dffbff !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), 0 0 0 1px rgba(6,182,212,.12), 0 18px 40px rgba(6,182,212,.14) !important;
+}
+.deal-invest-review-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(6,182,212,.18), transparent 34%, transparent 66%, rgba(6,182,212,.12));
+  pointer-events: none;
+}
+.deal-invest-review-cta:hover,
+.deal-invest-review-cta:focus-visible {
+  border-color: rgba(95,212,214,.98) !important;
+  background: linear-gradient(135deg, rgba(6,182,212,.26), rgba(6,182,212,.11) 60%, rgba(255,255,255,.04)) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 0 0 1px rgba(6,182,212,.22), 0 22px 52px rgba(6,182,212,.2) !important;
+  transform: translateY(-2px);
+}
+@media (max-width: 720px) {
+  .deal-cta-row {
+    grid-template-columns: 1fr;
+  }
+  .deal-cta-row > a {
+    width: 100%;
+  }
+}
