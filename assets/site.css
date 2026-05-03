@@ -8135,3 +8135,181 @@ a.deal-start-review-cta,
     min-height: 4.65rem !important;
   }
 }
+
+
+/* v20.13 visual polish for Deal + ROI + timeline cards */
+.deal-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 1.25rem 1.35rem 1.25rem;
+  border-radius: 1.35rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.038));
+  border: 1px solid rgba(255,255,255,.09);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 16px 34px rgba(0,0,0,.18);
+}
+.deal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 0% 0%, rgba(255,255,255,.07), transparent 34%);
+}
+.deal-card span {
+  position: relative;
+  padding-left: 2.2rem;
+}
+.deal-card span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(117,213,255,.28);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+  background: linear-gradient(135deg, rgba(6,182,212,.18), rgba(255,255,255,.03));
+}
+.deal-card-use { background: linear-gradient(135deg, rgba(6,182,212,.08), rgba(255,255,255,.04) 60%, rgba(255,184,28,.05)); }
+.deal-card-use span::before { box-shadow: inset 0 0 0 1px rgba(255,255,255,.03), 0 0 0 1px rgba(6,182,212,.18); }
+.deal-card-upside { background: linear-gradient(135deg, rgba(95,212,214,.10), rgba(255,255,255,.03) 54%, rgba(6,182,212,.05)); }
+.deal-card-upside span::before { border-color: rgba(95,212,214,.42); background: linear-gradient(135deg, rgba(95,212,214,.22), rgba(255,255,255,.04)); }
+.deal-card-terms { background: linear-gradient(135deg, rgba(255,184,28,.09), rgba(255,255,255,.035) 64%, rgba(255,184,28,.03)); }
+.deal-card-terms span::before { border-color: rgba(255,184,28,.42); background: linear-gradient(135deg, rgba(255,184,28,.22), rgba(255,255,255,.04)); }
+
+.deal-start-review-cta,
+a.deal-start-review-cta,
+.deal-cta-row a.deal-start-review-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 4.6rem !important;
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: .5rem !important;
+  background: linear-gradient(135deg, rgba(7,20,34,.96), rgba(8,34,50,.98)) !important;
+  border: 1.5px solid rgba(95,212,214,.65) !important;
+  color: #dffcff !important;
+  -webkit-text-fill-color: #dffcff !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: clamp(.95rem, 2.8vw, 1.06rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 0 1px rgba(6,182,212,.10), 0 18px 34px rgba(0,0,0,.22), 0 0 26px rgba(6,182,212,.12) !important;
+}
+.deal-start-review-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6,182,212,.14), transparent 32%, transparent 68%, rgba(6,182,212,.14));
+  pointer-events: none;
+}
+.deal-start-review-cta::after {
+  content: '➜';
+  position: absolute;
+  right: 1.15rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9cf6ff;
+  font-family: inherit;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.deal-start-review-cta:hover,
+.deal-start-review-cta:focus-visible {
+  background: linear-gradient(135deg, rgba(8,34,50,.98), rgba(6,182,212,.22)) !important;
+  border-color: rgba(156,246,255,.95) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.07), 0 0 0 1px rgba(6,182,212,.16), 0 18px 40px rgba(0,0,0,.24), 0 0 34px rgba(6,182,212,.18) !important;
+}
+
+.roi-node {
+  position: relative;
+  min-height: 132px;
+  padding: 1.1rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.035));
+  border: 1px solid rgba(255,255,255,.11);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 18px 42px rgba(0,0,0,.18);
+}
+.roi-node.source { background: linear-gradient(135deg, rgba(47,125,246,.26), rgba(6,182,212,.14) 58%, rgba(255,255,255,.04)); }
+.roi-node.finish { background: linear-gradient(135deg, rgba(255,184,28,.22), rgba(255,255,255,.05) 65%, rgba(6,182,212,.10)); }
+.roi-node.roi-convert { background: linear-gradient(135deg, rgba(95,212,214,.11), rgba(255,255,255,.04) 62%, rgba(255,255,255,.025)); }
+.roi-node.roi-mission { background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(6,182,212,.08) 58%, rgba(255,184,28,.05)); }
+.roi-node-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-bottom: .9rem;
+  border-radius: .8rem;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.07);
+  color: #e9fdff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+.roi-node-label {
+  display: block;
+  font-size: clamp(1.15rem, 2.1vw, 1.55rem);
+  line-height: 1.12;
+}
+.roi-arrow {
+  color: #79dfff;
+  font-size: 2.4rem;
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(6,182,212,.32);
+}
+.roi-bottom-grid { gap: 1rem; margin-top: 1.35rem; }
+.roi-stage-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.15rem 1.05rem 1.15rem 1.15rem !important;
+  border-radius: 1.3rem !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.034)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03), 0 14px 28px rgba(0,0,0,.15);
+}
+.roi-stage-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #79dfff;
+  opacity: .95;
+}
+.roi-stage-card.near::before { background: #5fd4d6; }
+.roi-stage-card.mid::before { background: #9cf6ff; }
+.roi-stage-card.long::before { background: #f5c84c; }
+.roi-stage-card strong {
+  position: relative;
+  padding-left: 2rem;
+}
+.roi-stage-card strong::before {
+  content: '◉';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: inherit;
+  font-size: .9rem;
+}
+.roi-stage-card.near strong { color: #d8fbff; }
+.roi-stage-card.mid strong { color: #e9fdff; }
+.roi-stage-card.long strong { color: #fff2cf; }
+@media (max-width: 900px) {
+  .roi-node { min-height: 116px; }
+  .roi-node-badge { width: 2rem; height: 2rem; margin-bottom: .75rem; }
+  .roi-node-label { font-size: 1.05rem; }
+  .roi-arrow { font-size: 2.2rem; }
+}
