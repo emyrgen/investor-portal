@@ -7936,3 +7936,95 @@
     max-width: none !important;
   }
 }
+
+
+/* v20.10 early-entry investor trigger uplift */
+.investor-logic-band {
+  margin-top: 2.1rem;
+  display: block;
+  padding: 1.6rem 1.6rem 1.75rem;
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at 0% 100%, rgba(245,200,76,.18), transparent 38%),
+    radial-gradient(circle at 100% 0%, rgba(73,211,255,.16), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
+  border: 1px solid rgba(117,213,255,.18);
+  box-shadow: 0 26px 70px rgba(0,0,0,.28);
+}
+.investor-logic-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #f5c84c;
+  margin-bottom: .95rem;
+}
+.investor-logic-kicker::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f5c84c;
+  box-shadow: 0 0 18px rgba(245,200,76,.55);
+}
+.investor-logic-title {
+  margin: 0;
+  max-width: 11ch;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.55rem, 5.8vw, 5.15rem);
+  line-height: .97;
+  letter-spacing: -.035em;
+  color: #ffffff;
+}
+.investor-logic-title em {
+  color: var(--c-accent, #06b6d4);
+  font-style: italic;
+}
+.investor-logic-milestones {
+  margin-top: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1rem, 1.9vw, 1.35rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.93);
+}
+.investor-logic-summary {
+  margin: .95rem 0 1.35rem;
+  max-width: 48rem;
+  color: rgba(226,240,255,.82);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.investor-logic-cta {
+  display: inline-flex;
+  min-width: min(100%, 24rem);
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .investor-logic-band {
+    padding: 1.35rem 1.2rem 1.3rem;
+  }
+  .investor-logic-title {
+    max-width: none;
+    font-size: clamp(2.35rem, 10vw, 3.4rem);
+    line-height: 1;
+  }
+  .investor-logic-milestones {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+  .investor-logic-summary {
+    font-size: .98rem;
+    line-height: 1.52;
+    margin-bottom: 1.15rem;
+  }
+  .investor-logic-cta {
+    width: 100%;
+    min-width: 0;
+  }
+}
