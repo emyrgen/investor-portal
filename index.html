@@ -6959,6 +6959,256 @@
   }
 </style>
 
+
+<style id="v20-1-market-visuals-gallery-order-fix">
+  /* v20.1 — move conversion proof higher and replace market thumbnails with cinematic stacked images */
+  #conversion-gallery-proof,
+  #markets,
+  #offer,
+  #whynow,
+  #about,
+  #how,
+  #products,
+  #logistics,
+  #contact {
+    scroll-margin-top: 96px;
+  }
+
+  .v20-conversion-proof {
+    position: relative;
+    padding: clamp(4.5rem, 7vw, 8rem) 0 clamp(3.5rem, 6vw, 7rem) !important;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(6,182,212,0.13), transparent 34%),
+      radial-gradient(circle at 86% 22%, rgba(245,158,11,0.075), transparent 30%),
+      linear-gradient(180deg, #03070d 0%, #07111b 58%, #03070d 100%) !important;
+    overflow: hidden;
+  }
+
+  .v20-conversion-proof::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.032) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.16;
+    pointer-events: none;
+  }
+
+  .v20-conversion-proof-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .v20-conversion-proof .conversion-gallery-shell {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .v20-conversion-proof .conversion-gallery-head {
+    max-width: 920px !important;
+    margin: 0 auto 2rem !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .v20-conversion-proof .conversion-gallery-kicker {
+    font-family: var(--f-mono) !important;
+    font-size: 0.92rem !important;
+    letter-spacing: 0.18em !important;
+    font-weight: 800 !important;
+    color: var(--c-lime) !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .v20-conversion-proof .conversion-gallery-title {
+    font-family: var(--f-display) !important;
+    font-size: clamp(2.55rem, 5vw, 5rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+    color: var(--c-white) !important;
+  }
+
+  .v20-conversion-proof .conversion-gallery-text {
+    max-width: 760px !important;
+    margin: 0.85rem auto 0 !important;
+    color: rgba(238,243,239,0.84) !important;
+    font-family: var(--f-sans) !important;
+    font-size: clamp(1.02rem, 1.35vw, 1.2rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  .v20-conversion-proof .conversion-gallery-track {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #markets.v20-market-section {
+    padding-top: clamp(5rem, 7vw, 8rem) !important;
+  }
+
+  #markets .section-title {
+    font-family: var(--f-display) !important;
+    font-size: clamp(2.8rem, 5.6vw, 5.4rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  #markets .section-body,
+  #markets .v20-market-lead,
+  #markets .v20-thesis-copy p,
+  #markets .v20-card-thesis,
+  #markets .v20-copy-grid p,
+  #markets .v20-logic-grid span,
+  #markets .v20-thesis-points span,
+  #markets .v20-market-cta p {
+    font-family: var(--f-sans) !important;
+  }
+
+  #markets .v20-card-body h3,
+  #markets .v20-logic-heading h3,
+  #markets .v20-market-cta h3 {
+    font-family: var(--f-display) !important;
+  }
+
+  .v20-market-montage,
+  .v20-thumb-row,
+  .v20-thumb-row-four {
+    display: none !important;
+  }
+
+  .v20-market-cards {
+    gap: clamp(1.75rem, 3vw, 2.6rem) !important;
+    margin-top: clamp(1.75rem, 3vw, 2.75rem) !important;
+  }
+
+  .v20-market-card,
+  .v20-market-card-featured {
+    grid-template-columns: 1fr !important;
+    overflow: hidden !important;
+    border-radius: 32px !important;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(6,182,212,0.07), transparent 30%),
+      linear-gradient(180deg, rgba(5,13,22,0.99), rgba(2,6,11,1)) !important;
+    border: 1px solid rgba(103,232,249,0.20) !important;
+  }
+
+  .v20-market-card-featured {
+    border-color: rgba(245,158,11,0.34) !important;
+    box-shadow: 0 42px 110px -70px rgba(245,158,11,0.36), 0 36px 100px -70px rgba(0,0,0,0.98) !important;
+  }
+
+  .v20-card-visual {
+    position: relative !important;
+    display: block !important;
+    min-height: 0 !important;
+    grid-template-rows: none !important;
+    padding: clamp(0.85rem, 1.5vw, 1.25rem) !important;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(6,182,212,0.08), transparent 38%),
+      linear-gradient(180deg, rgba(3,8,14,0.96), rgba(2,6,10,0.98)) !important;
+  }
+
+  .v20-card-visual::after {
+    display: none !important;
+  }
+
+  .v20-image-stack {
+    display: grid !important;
+    gap: clamp(0.85rem, 1.4vw, 1.15rem) !important;
+  }
+
+  .v20-stack-img {
+    width: 100% !important;
+    height: clamp(260px, 28vw, 420px) !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 22px !important;
+    border: 1px solid rgba(255,255,255,0.11) !important;
+    box-shadow: 0 22px 60px -42px rgba(0,0,0,0.96) !important;
+    background: #07111b !important;
+  }
+
+  .v20-stack-lead {
+    height: clamp(340px, 38vw, 560px) !important;
+    border-color: rgba(103,232,249,0.22) !important;
+  }
+
+  .v20-market-card-featured .v20-stack-img {
+    height: clamp(300px, 31vw, 470px) !important;
+  }
+
+  .v20-market-card-featured .v20-stack-lead {
+    height: clamp(390px, 46vw, 660px) !important;
+    border-color: rgba(245,158,11,0.28) !important;
+  }
+
+  .v20-card-body {
+    padding: clamp(1.55rem, 3vw, 3rem) !important;
+  }
+
+  .v20-market-label,
+  .v20-eyebrow {
+    font-family: var(--f-mono) !important;
+  }
+
+  .v20-card-body h3 {
+    font-size: clamp(2.35rem, 4.8vw, 4.6rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .v20-card-thesis {
+    max-width: 920px !important;
+    color: rgba(238,243,239,0.92) !important;
+  }
+
+  .v20-copy-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(0.85rem, 1.4vw, 1.15rem) !important;
+  }
+
+  .v20-copy-grid div {
+    border-top: 1px solid rgba(103,232,249,0.24) !important;
+    padding-top: 0.9rem !important;
+  }
+
+  .v20-copy-grid p,
+  .v20-logic-grid span,
+  .v20-thesis-points span {
+    color: rgba(238,243,239,0.80) !important;
+  }
+
+  @media (max-width: 900px) {
+    .v20-copy-grid,
+    .v20-logic-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .v20-conversion-proof-wrap {
+      padding: 0 1rem;
+    }
+    .v20-stack-img,
+    .v20-market-card-featured .v20-stack-img {
+      height: clamp(230px, 58vw, 360px) !important;
+      border-radius: 18px !important;
+    }
+    .v20-stack-lead,
+    .v20-market-card-featured .v20-stack-lead {
+      height: clamp(280px, 72vw, 440px) !important;
+    }
+    .v20-card-body {
+      padding: 1.35rem !important;
+    }
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
@@ -6974,7 +7224,7 @@
 <li><a href="#offer">Offer</a></li>
 <li><a href="#whynow">Why Now</a></li>
 <li><a href="#about">Why This Works</a></li>
-<li><a href="#how">Conversion</a></li>
+<li><a href="#conversion-gallery-proof">Conversion</a></li>
 <li><a href="#products">IP Stack</a></li>
 <li><a href="#logistics">Process</a></li>
 </ul>
@@ -6990,7 +7240,7 @@
 <a href="#offer">Offer</a>
 <a href="#whynow">Why Now</a>
 <a href="#about">Why This Works</a>
-<a href="#how">Conversion</a>
+<a href="#conversion-gallery-proof">Conversion</a>
 <a href="#products">IP Stack</a>
 <a href="#logistics">Process</a>
 <a class="mobile-menu-cta" href="#contact">Investor Signup</a>
@@ -7115,7 +7365,70 @@
 <!-- /hero-airframe-top -->
 </section>
 
-<!-- ─── MARKET OPPORTUNITY v20.0 ──────────────────────────── -->
+<!-- ─── CONVERSION GALLERY PROOF v20.1 ──────────────────────────── -->
+<section id="conversion-gallery-proof" class="v20-conversion-proof" aria-label="EMYRGEN conversion gallery proof">
+  <div class="v20-conversion-proof-wrap">
+<!-- v19.28: Conversion Gallery moved below the How We Convert steps -->
+<div class="conversion-gallery-shell">
+<div class="conversion-gallery-head">
+<div class="conversion-gallery-kicker">Conversion Gallery</div>
+<h3 class="conversion-gallery-title">Inside the Conversion Program</h3>
+<p class="conversion-gallery-text">Real teardown, integration, and flight-validation work from EMYRGEN's program.</p>
+</div>
+<div class="conversion-gallery-track" id="conversionGallery" aria-label="EMYRGEN conversion image gallery">
+<article class="gallery-slide is-active" tabindex="0">
+<img alt="Large helicopter airframe teardown in hangar" src="gallery-01-airframe-teardown.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">01 · Airframe</div>
+<h4 class="gallery-slide-title">Airframe Teardown</h4>
+<p class="gallery-slide-text">Opened up for structural access and removal of pilot-specific systems.</p>
+</div>
+</article>
+<article class="gallery-slide" tabindex="0">
+<img alt="Engineer working on exposed rotor and control systems" src="gallery-02-rotor-systems.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">02 · Mechanical</div>
+<h4 class="gallery-slide-title">Rotor &amp; Flight-Control Systems</h4>
+<p class="gallery-slide-text">Mechanical interfaces and rotor systems adapted for autonomous control.</p>
+</div>
+</article>
+<article class="gallery-slide" tabindex="0">
+<img alt="Stripped helicopter interior with exposed wiring and internal systems" src="gallery-03-interior-wiring.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">03 · Integration</div>
+<h4 class="gallery-slide-title">Internal Systems Integration</h4>
+<p class="gallery-slide-text">Avionics, power, and wiring reworked for unmanned mission architecture.</p>
+</div>
+</article>
+<article class="gallery-slide" tabindex="0">
+<img alt="Helicopter cockpit instrument panel" src="gallery-04-cockpit-panel.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">04 · Cockpit</div>
+<h4 class="gallery-slide-title">Cockpit &amp; Instrumentation</h4>
+<p class="gallery-slide-text">Cockpit interfaces transitioned to remote command and telemetry.</p>
+</div>
+</article>
+<article class="gallery-slide" tabindex="0">
+<img alt="Converted helicopter in flight" src="gallery-05-flight-validation.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">05 · Flight Test</div>
+<h4 class="gallery-slide-title">Flight Validation</h4>
+<p class="gallery-slide-text">Flight validation: performance, control, mission readiness — proven in air.</p>
+</div>
+</article>
+<article class="gallery-slide" tabindex="0">
+<img alt="Engineer at electronics workstation with circuit board on monitor" src="gallery-06-autonomy-engineering.webp" loading="lazy" decoding="async"/>
+<div class="gallery-overlay">
+<div class="gallery-pill">06 · Autonomy</div>
+<h4 class="gallery-slide-title">Autonomy Engineering</h4>
+<p class="gallery-slide-text">Embedded compute and mission software for autonomous navigation.</p>
+</div>
+</article>
+</div>
+</div>
+  </div>
+</section>
+<!-- ─── MARKET OPPORTUNITY v20.1 ──────────────────────────── -->
 <section id="markets" class="v20-market-section">
   <div class="v20-market-wrap">
     <div class="v20-market-header">
@@ -7128,20 +7441,9 @@
       </p>
     </div>
 
-    <div class="v20-market-montage" aria-label="EMYRGEN market opportunity visual montage">
-      <figure class="v20-montage-panel large">
-        <img src="market-dual-main.webp" alt="Unmanned heavy-lift helicopter carrying cargo to a remote industrial site" loading="lazy" decoding="async"/>
-        <figcaption>Dual-use logistics</figcaption>
-      </figure>
-      <figure class="v20-montage-panel">
-        <img src="market-wildfire-main.webp" alt="Heavy-lift unmanned helicopter operating above an active wildfire zone" loading="lazy" decoding="async"/>
-        <figcaption>Wildfire response</figcaption>
-      </figure>
-      <figure class="v20-montage-panel">
-        <img src="market-agriculture-main.webp" alt="Autonomous aircraft supporting large-scale agriculture operations" loading="lazy" decoding="async"/>
-        <figcaption>Agriculture automation</figcaption>
-      </figure>
-    </div>
+    
+    <!-- v20.1: Intro collage removed; market visuals now appear as full-width mission image stacks. -->
+
 
     <div class="v20-thesis-panel">
       <div class="v20-thesis-copy">
@@ -7162,10 +7464,10 @@
     <div class="v20-market-cards">
       <article class="v20-market-card">
         <div class="v20-card-visual">
-          <img class="v20-card-main-img" src="market-wildfire-main.webp" alt="Heavy-lift unmanned aircraft supporting wildfire response" loading="lazy" decoding="async"/>
-          <div class="v20-thumb-row">
-            <img src="market-wildfire-logistics.webp" alt="Unmanned helicopter delivering cargo near a wildfire response zone" loading="lazy" decoding="async"/>
-            <img src="market-wildfire-terrain.webp" alt="Unmanned helicopter operating in rugged wildfire terrain" loading="lazy" decoding="async"/>
+          <div class="v20-image-stack" aria-label="Wildfire response mission visuals">
+            <img class="v20-stack-img v20-stack-lead" src="market-wildfire-main.webp" alt="Heavy-lift unmanned aircraft supporting wildfire response" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-wildfire-logistics.webp" alt="Unmanned helicopter delivering cargo near a wildfire response zone" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-wildfire-terrain.webp" alt="Unmanned helicopter operating in rugged wildfire terrain" loading="lazy" decoding="async"/>
           </div>
         </div>
         <div class="v20-card-body">
@@ -7182,10 +7484,10 @@
 
       <article class="v20-market-card">
         <div class="v20-card-visual">
-          <img class="v20-card-main-img" src="market-agriculture-main.webp" alt="Autonomous helicopter-class aircraft supporting agricultural automation" loading="lazy" decoding="async"/>
-          <div class="v20-thumb-row">
-            <img src="market-agriculture-vineyard.webp" alt="Autonomous aircraft supporting vineyard spraying operations" loading="lazy" decoding="async"/>
-            <img src="market-agriculture-logistics.webp" alt="Heavy-lift aircraft moving agricultural cargo over farmland" loading="lazy" decoding="async"/>
+          <div class="v20-image-stack" aria-label="Agriculture automation mission visuals">
+            <img class="v20-stack-img v20-stack-lead" src="market-agriculture-main.webp" alt="Autonomous helicopter-class aircraft supporting agricultural automation" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-agriculture-vineyard.webp" alt="Autonomous aircraft supporting vineyard spraying operations" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-agriculture-logistics.webp" alt="Heavy-lift aircraft moving agricultural cargo over farmland" loading="lazy" decoding="async"/>
           </div>
         </div>
         <div class="v20-card-body">
@@ -7202,11 +7504,11 @@
 
       <article class="v20-market-card v20-market-card-featured">
         <div class="v20-card-visual">
-          <img class="v20-card-main-img" src="market-dual-main.webp" alt="Unmanned heavy-lift helicopter carrying industrial cargo to a remote site" loading="lazy" decoding="async"/>
-          <div class="v20-thumb-row v20-thumb-row-four">
-            <img src="market-dual-grid.webp" alt="Heavy-lift unmanned helicopter carrying power-grid equipment" loading="lazy" decoding="async"/>
-            <img src="market-dual-flood.webp" alt="Unmanned aircraft delivering supplies over a flooded industrial district" loading="lazy" decoding="async"/>
-            <img src="market-dual-port.webp" alt="Heavy-lift unmanned aircraft moving cargo in an industrial port" loading="lazy" decoding="async"/>
+          <div class="v20-image-stack v20-image-stack-featured" aria-label="Dual-use logistics and industrial response mission visuals">
+            <img class="v20-stack-img v20-stack-lead" src="market-dual-main.webp" alt="Unmanned heavy-lift helicopter carrying industrial cargo to a remote site" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-dual-grid.webp" alt="Heavy-lift unmanned helicopter carrying power-grid equipment" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-dual-flood.webp" alt="Unmanned aircraft delivering supplies over a flooded industrial district" loading="lazy" decoding="async"/>
+            <img class="v20-stack-img" src="market-dual-port.webp" alt="Heavy-lift unmanned aircraft moving cargo in an industrial port" loading="lazy" decoding="async"/>
           </div>
         </div>
         <div class="v20-card-body">
@@ -7440,64 +7742,7 @@
 </div>
 </div>
 
-<!-- v19.28: Conversion Gallery moved below the How We Convert steps -->
-<div class="conversion-gallery-shell">
-<div class="conversion-gallery-head">
-<div class="conversion-gallery-kicker">Conversion Gallery</div>
-<h3 class="conversion-gallery-title">Inside the Conversion Program</h3>
-<p class="conversion-gallery-text">Real teardown, integration, and flight-validation work from EMYRGEN's program.</p>
-</div>
-<div class="conversion-gallery-track" id="conversionGallery" aria-label="EMYRGEN conversion image gallery">
-<article class="gallery-slide is-active" tabindex="0">
-<img alt="Large helicopter airframe teardown in hangar" src="gallery-01-airframe-teardown.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">01 · Airframe</div>
-<h4 class="gallery-slide-title">Airframe Teardown</h4>
-<p class="gallery-slide-text">Opened up for structural access and removal of pilot-specific systems.</p>
-</div>
-</article>
-<article class="gallery-slide" tabindex="0">
-<img alt="Engineer working on exposed rotor and control systems" src="gallery-02-rotor-systems.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">02 · Mechanical</div>
-<h4 class="gallery-slide-title">Rotor &amp; Flight-Control Systems</h4>
-<p class="gallery-slide-text">Mechanical interfaces and rotor systems adapted for autonomous control.</p>
-</div>
-</article>
-<article class="gallery-slide" tabindex="0">
-<img alt="Stripped helicopter interior with exposed wiring and internal systems" src="gallery-03-interior-wiring.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">03 · Integration</div>
-<h4 class="gallery-slide-title">Internal Systems Integration</h4>
-<p class="gallery-slide-text">Avionics, power, and wiring reworked for unmanned mission architecture.</p>
-</div>
-</article>
-<article class="gallery-slide" tabindex="0">
-<img alt="Helicopter cockpit instrument panel" src="gallery-04-cockpit-panel.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">04 · Cockpit</div>
-<h4 class="gallery-slide-title">Cockpit &amp; Instrumentation</h4>
-<p class="gallery-slide-text">Cockpit interfaces transitioned to remote command and telemetry.</p>
-</div>
-</article>
-<article class="gallery-slide" tabindex="0">
-<img alt="Converted helicopter in flight" src="gallery-05-flight-validation.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">05 · Flight Test</div>
-<h4 class="gallery-slide-title">Flight Validation</h4>
-<p class="gallery-slide-text">Flight validation: performance, control, mission readiness — proven in air.</p>
-</div>
-</article>
-<article class="gallery-slide" tabindex="0">
-<img alt="Engineer at electronics workstation with circuit board on monitor" src="gallery-06-autonomy-engineering.webp" loading="lazy" decoding="async"/>
-<div class="gallery-overlay">
-<div class="gallery-pill">06 · Autonomy</div>
-<h4 class="gallery-slide-title">Autonomy Engineering</h4>
-<p class="gallery-slide-text">Embedded compute and mission software for autonomous navigation.</p>
-</div>
-</article>
-</div>
-</div>
+
 
 </div>
 
