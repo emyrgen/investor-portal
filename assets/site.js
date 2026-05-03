@@ -22,7 +22,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.pillar, .step, .product-card, .market-card, .lspec, .compliance-item, .achievement-item, .whynow-card, .offer-tile').forEach(el => {
+  document.querySelectorAll('.pillar, .step, .product-card, .market-card, .v20-market-card, .proof-snapshot-item, .v20-platform-nodes span, .lspec, .compliance-item, .achievement-item, .whynow-card, .offer-tile').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

@@ -7194,3 +7194,251 @@
     .signup-entry-steps { grid-template-columns: 1fr; }
     .signup-field-row { grid-template-columns: 1fr; }
   }
+
+
+/* v20.4 investor-conversion strengthening */
+#proof-snapshot,
+#airframes,
+#conversion-gallery-proof,
+#markets,
+#offer,
+#whynow,
+#about,
+#how,
+#products,
+#logistics,
+#contact {
+  scroll-margin-top: 96px;
+}
+
+#hero .hero-content {
+  padding-bottom: clamp(3.2rem, 5vw, 5.2rem) !important;
+}
+
+.hero-actions a.btn-ghost[href="#markets"] {
+  border: 1px solid rgba(6, 182, 212, 0.58) !important;
+  background: rgba(6, 182, 212, 0.07) !important;
+  color: #9ef3ff !important;
+  -webkit-text-fill-color: #9ef3ff !important;
+}
+
+.proof-snapshot {
+  position: relative;
+  padding: clamp(2.7rem, 4.8vw, 4.4rem) 1.5rem;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(6,182,212,0.12), transparent 34%),
+    linear-gradient(180deg, #05090f 0%, #07111b 100%);
+  border-top: 1px solid rgba(103,232,249,0.16);
+  border-bottom: 1px solid rgba(103,232,249,0.14);
+}
+.proof-snapshot-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.proof-snapshot-kicker {
+  font-family: var(--f-mono, monospace);
+  color: var(--c-lime, #a7f3d0);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.proof-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.proof-snapshot-item {
+  min-height: 142px;
+  padding: clamp(1.05rem, 1.8vw, 1.45rem);
+  border-radius: 22px;
+  border: 1px solid rgba(103,232,249,0.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.proof-snapshot-item strong {
+  display: block;
+  color: #ffffff;
+  font-family: var(--f-mono, monospace);
+  font-size: clamp(1.15rem, 2.1vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+.proof-snapshot-item span {
+  display: block;
+  margin-top: 1.1rem;
+  color: rgba(238,243,239,0.76);
+  font-size: 0.98rem;
+  line-height: 1.42;
+}
+
+.airframe-section {
+  position: relative;
+  padding: clamp(5rem, 7vw, 7.5rem) 0 0;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(6,182,212,0.10), transparent 32%),
+    linear-gradient(180deg, #03070d 0%, #06101a 100%);
+  overflow: hidden;
+}
+.airframe-section .airframe-showcase-intro {
+  padding-top: 0 !important;
+}
+.airframe-section .hero-airframe-top {
+  margin-top: 0 !important;
+}
+
+.v20-platform-leverage {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 1.25rem;
+  align-items: stretch;
+  padding: clamp(1.45rem, 2.6vw, 2.35rem);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(6,182,212,0.18), transparent 36%),
+    radial-gradient(circle at 90% 20%, rgba(245,158,11,0.10), transparent 34%),
+    linear-gradient(180deg, rgba(8,23,34,0.98), rgba(4,10,16,0.99));
+  border: 1px solid rgba(103,232,249,0.24);
+  box-shadow: 0 34px 90px -62px rgba(6,182,212,0.62);
+}
+.v20-platform-hub h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--f-display, Georgia, serif);
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.v20-platform-hub p {
+  max-width: 620px;
+  margin: 1rem 0 0;
+  color: rgba(238,243,239,0.78);
+  font-size: 1.02rem;
+  line-height: 1.56;
+}
+.v20-platform-nodes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .78rem;
+  align-content: center;
+}
+.v20-platform-nodes span {
+  display: flex;
+  align-items: center;
+  min-height: 74px;
+  padding: .9rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.11);
+  background: rgba(255,255,255,0.045);
+  color: rgba(255,255,255,0.92);
+  font-family: var(--f-cond, sans-serif);
+  font-size: .98rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.v20-platform-nodes span:first-child,
+.v20-platform-nodes span:nth-child(3) {
+  border-color: rgba(245,158,11,0.28);
+  background: rgba(245,158,11,0.07);
+}
+
+#whynow {
+  background:
+    radial-gradient(circle at 82% 0%, rgba(245,158,11,0.08), transparent 30%),
+    linear-gradient(180deg, #05090f 0%, #07111b 100%) !important;
+}
+
+#offer {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(6,182,212,0.10), transparent 32%),
+    var(--c-dark) !important;
+}
+.offer-bento {
+  grid-template-columns: 1.25fr 1fr 1fr !important;
+}
+.offer-tile-value {
+  word-break: normal;
+}
+
+#about .about-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 1120px !important;
+}
+#about .about-left .section-body {
+  max-width: 880px !important;
+}
+#about .about-pillars {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+#how .steps {
+  gap: 0 !important;
+}
+#how .step {
+  padding: 1.55rem 0 !important;
+}
+#how .step-text {
+  line-height: 1.55 !important;
+}
+#how .step-instruments {
+  margin-top: .75rem !important;
+}
+
+#products .product-desc {
+  color: rgba(238,243,239,0.84) !important;
+  line-height: 1.58 !important;
+}
+
+#contact .section-body strong,
+#contact .signup-return-panel strong {
+  color: #fff !important;
+}
+
+@media (max-width: 1040px) {
+  .proof-snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .v20-platform-leverage {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .offer-bento {
+    grid-template-columns: 1fr !important;
+  }
+  #about .about-pillars {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 760px) {
+  .proof-snapshot {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .proof-snapshot-grid {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+  }
+  .proof-snapshot-item {
+    min-height: 118px;
+    border-radius: 18px;
+  }
+  .v20-platform-nodes {
+    grid-template-columns: 1fr;
+  }
+  .v20-platform-nodes span {
+    min-height: 62px;
+  }
+  .airframe-section {
+    padding-top: 4rem;
+  }
+}
+
