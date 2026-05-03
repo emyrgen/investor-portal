@@ -8567,3 +8567,114 @@ a.deal-start-review-cta,
     min-height: 0;
   }
 }
+
+
+/* v20.16 ROI refinement */
+.roi-revenue-premium {
+  border-color: rgba(245,200,76,.32);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 24px 52px rgba(0,0,0,.28), 0 0 0 1px rgba(245,200,76,.06);
+}
+.roi-orb {
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 1.22rem;
+}
+.roi-orb span {
+  font-size: 1.24rem;
+}
+.roi-orb-infinity {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(245,200,76,.34);
+  background: radial-gradient(circle at 50% 40%, rgba(255,244,193,.16), rgba(255,255,255,.07) 52%, rgba(255,255,255,.04) 68%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 18px 34px rgba(0,0,0,.22), 0 0 0 1px rgba(245,200,76,.08), 0 0 26px rgba(245,200,76,.16);
+}
+.roi-orb-infinity::before,
+.roi-orb-infinity::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(245,200,76,.14);
+  pointer-events: none;
+}
+.roi-orb-infinity::after {
+  inset: 16px;
+  border-color: rgba(255,255,255,.08);
+}
+.roi-orb-infinity span {
+  font-size: 2.65rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -.08em;
+  transform: translateY(-1px);
+  color: #fff5d5;
+  text-shadow: 0 0 16px rgba(245,200,76,.18);
+}
+.roi-flow-link {
+  min-height: 3.2rem;
+}
+.roi-flow-link span {
+  width: 3rem;
+  height: 3rem;
+}
+.roi-phase-grid {
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+.roi-phase-card {
+  min-height: 190px;
+  padding: 1.1rem 1.1rem 1.15rem;
+  border-radius: 1.35rem;
+}
+.roi-phase-card::after {
+  height: 4px;
+}
+.roi-phase-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: .9rem;
+  padding: .45rem .72rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.roi-phase-card.near .roi-phase-pill { color: #d8fbff; border-color: rgba(95,212,214,.22); background: rgba(95,212,214,.08); }
+.roi-phase-card.mid .roi-phase-pill { color: #eefcff; border-color: rgba(156,246,255,.24); background: rgba(121,223,255,.08); }
+.roi-phase-card.long .roi-phase-pill { color: #fff5d5; border-color: rgba(245,200,76,.22); background: rgba(245,200,76,.08); }
+.roi-phase-card strong {
+  font-size: 1.24rem;
+  line-height: 1.15;
+  margin-bottom: .7rem;
+}
+.roi-phase-card p {
+  font-size: 1rem;
+  line-height: 1.56;
+}
+@media (max-width: 900px) {
+  .roi-orb {
+    width: 3.35rem;
+    height: 3.35rem;
+    border-radius: 1.05rem;
+  }
+  .roi-orb span {
+    font-size: 1.16rem;
+  }
+  .roi-orb-infinity {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 1.3rem;
+  }
+  .roi-orb-infinity span {
+    font-size: 2.35rem;
+  }
+  .roi-phase-card {
+    min-height: 0;
+  }
+}
