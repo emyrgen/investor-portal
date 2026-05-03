@@ -6490,8 +6490,390 @@
 </style>
 
 
-<style id="v19-50-signup-cta-match">
-  /* v19.50 — harmonize signup CTAs so both feel equally important */
+<style id="v20-market-opportunity-redesign">
+  /* v20.0 — Market Opportunity becomes the investor-conversion focal section */
+  #markets.v20-market-section {
+    position: relative;
+    padding: clamp(5.5rem, 8vw, 9rem) 1.5rem !important;
+    background:
+      radial-gradient(circle at 12% 5%, rgba(6,182,212,0.13), transparent 32%),
+      radial-gradient(circle at 86% 18%, rgba(245,158,11,0.09), transparent 28%),
+      linear-gradient(180deg, #03070d 0%, #07111b 45%, #03070d 100%) !important;
+    overflow: hidden;
+  }
+
+  #markets.v20-market-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  .v20-market-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .v20-market-header {
+    max-width: 980px;
+    margin: 0 auto 2.4rem;
+    text-align: center;
+  }
+
+  .v20-market-lead {
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: rgba(238,243,239,0.86) !important;
+    font-size: clamp(1.06rem, 1.45vw, 1.32rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  .v20-eyebrow {
+    font-family: var(--f-mono, monospace);
+    color: var(--c-lime, #a7f3d0);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 800;
+    font-size: 0.78rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .v20-market-montage {
+    display: grid;
+    grid-template-columns: 1.35fr 0.82fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin: 2.5rem 0 1.25rem;
+  }
+
+  .v20-montage-panel {
+    position: relative;
+    min-height: 230px;
+    margin: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(103,232,249,0.18);
+    background: #06101a;
+    box-shadow: 0 28px 80px -50px rgba(0,0,0,0.95);
+  }
+
+  .v20-montage-panel.large {
+    grid-row: 1 / span 2;
+    min-height: 480px;
+  }
+
+  .v20-montage-panel img,
+  .v20-card-main-img,
+  .v20-thumb-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .v20-montage-panel::after,
+  .v20-card-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.70));
+    pointer-events: none;
+  }
+
+  .v20-montage-panel figcaption {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+    font-family: var(--f-cond, sans-serif);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    font-size: 0.92rem;
+    color: #fff;
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(3,7,13,0.62);
+    backdrop-filter: blur(12px);
+  }
+
+  .v20-thesis-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 1.2rem;
+    padding: clamp(1.35rem, 2.4vw, 2.1rem);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(6,182,212,0.12), transparent 36%),
+      linear-gradient(180deg, rgba(9,20,31,0.96), rgba(4,10,16,0.98));
+    border: 1px solid rgba(103,232,249,0.20);
+    box-shadow: 0 34px 90px -60px rgba(6,182,212,0.55);
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .v20-thesis-copy p {
+    margin: 0;
+    color: rgba(238,243,239,0.90);
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.62;
+  }
+
+  .v20-thesis-points {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .v20-thesis-points div,
+  .v20-logic-grid div {
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.035);
+    border-radius: 18px;
+    padding: 1rem;
+  }
+
+  .v20-thesis-points strong,
+  .v20-logic-grid strong {
+    display: block;
+    color: #fff;
+    font-family: var(--f-cond, sans-serif);
+    font-size: 1.04rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+
+  .v20-thesis-points span,
+  .v20-logic-grid span {
+    display: block;
+    color: rgba(238,243,239,0.75);
+    font-size: 0.96rem;
+    line-height: 1.48;
+  }
+
+  .v20-market-cards {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .v20-market-card {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.96fr) minmax(0, 1.04fr);
+    gap: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(6,182,212,0.08), transparent 28%),
+      linear-gradient(180deg, rgba(7,15,24,0.98), rgba(3,7,12,0.99));
+    border: 1px solid rgba(103,232,249,0.18);
+    box-shadow: 0 36px 100px -70px rgba(0,0,0,0.95);
+  }
+
+  .v20-market-card-featured {
+    border-color: rgba(245,158,11,0.26);
+    background:
+      radial-gradient(circle at 18% 0%, rgba(245,158,11,0.10), transparent 30%),
+      radial-gradient(circle at 85% 15%, rgba(6,182,212,0.10), transparent 35%),
+      linear-gradient(180deg, rgba(7,15,24,0.99), rgba(3,7,12,1));
+  }
+
+  .v20-card-visual {
+    position: relative;
+    min-height: 430px;
+    background: #050b12;
+    display: grid;
+    grid-template-rows: 1fr 112px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .v20-card-main-img,
+  .v20-thumb-row img {
+    border-radius: 20px;
+  }
+
+  .v20-thumb-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    min-height: 0;
+  }
+
+  .v20-thumb-row-four {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .v20-card-body {
+    padding: clamp(1.45rem, 2.6vw, 2.35rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .v20-market-label {
+    align-self: flex-start;
+    color: #061118;
+    background: linear-gradient(135deg, var(--c-accent, #06b6d4), var(--c-lime, #a7f3d0));
+    border-radius: 999px;
+    padding: 0.42rem 0.75rem;
+    font-family: var(--f-mono, monospace);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .v20-market-card-featured .v20-market-label {
+    background: linear-gradient(135deg, var(--c-gold, #f59e0b), #ffe3a2);
+  }
+
+  .v20-card-body h3 {
+    margin: 0;
+    color: #fff;
+    font-family: var(--f-serif, Georgia, serif);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    font-size: clamp(2.1rem, 4vw, 4.05rem);
+    line-height: 0.96;
+  }
+
+  .v20-card-thesis {
+    color: rgba(238,243,239,0.92);
+    font-size: clamp(1.04rem, 1.35vw, 1.22rem);
+    line-height: 1.46;
+    margin: 1.05rem 0 1.2rem;
+  }
+
+  .v20-copy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .v20-copy-grid div {
+    border-top: 1px solid rgba(103,232,249,0.22);
+    padding-top: 0.8rem;
+  }
+
+  .v20-copy-grid span {
+    display: block;
+    color: var(--c-gold, #f59e0b);
+    font-family: var(--f-cond, sans-serif);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.86rem;
+    margin-bottom: 0.38rem;
+  }
+
+  .v20-copy-grid p {
+    margin: 0;
+    color: rgba(238,243,239,0.76);
+    font-size: 0.94rem;
+    line-height: 1.48;
+  }
+
+  .v20-investor-logic {
+    margin-top: 1.35rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .v20-logic-heading {
+    padding: clamp(1.25rem, 2.3vw, 2rem);
+    border-radius: 24px;
+    border: 1px solid rgba(245,158,11,0.22);
+    background: linear-gradient(180deg, rgba(245,158,11,0.075), rgba(255,255,255,0.02));
+  }
+
+  .v20-logic-heading h3,
+  .v20-market-cta h3 {
+    margin: 0;
+    color: #fff;
+    font-family: var(--f-serif, Georgia, serif);
+    font-size: clamp(2rem, 3.2vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+  }
+
+  .v20-logic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .v20-market-cta {
+    margin-top: 1.35rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    padding: clamp(1.45rem, 2.6vw, 2.35rem);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at 16% 0%, rgba(6,182,212,0.16), transparent 36%),
+      linear-gradient(180deg, rgba(8,23,34,0.98), rgba(4,10,16,0.99));
+    border: 1px solid rgba(103,232,249,0.24);
+  }
+
+  .v20-market-cta p {
+    max-width: 780px;
+    color: rgba(238,243,239,0.78);
+    font-size: 1.02rem;
+    line-height: 1.54;
+    margin: 0.85rem 0 0;
+  }
+
+  .v20-market-cta-actions {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 270px;
+  }
+
+  .v20-cta-primary,
+  .v20-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--f-cond, sans-serif);
+    font-weight: 900;
+    font-size: 0.96rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.12;
+  }
+
+  .v20-cta-primary {
+    background: var(--c-gold, #f59e0b);
+    color: #080808;
+    box-shadow: 0 14px 34px -12px rgba(245,158,11,0.62);
+  }
+
+  .v20-cta-secondary {
+    color: #061118;
+    background: linear-gradient(135deg, var(--c-accent, #06b6d4), var(--c-lime, #a7f3d0));
+    box-shadow: 0 14px 34px -14px rgba(6,182,212,0.92), 0 0 0 1px rgba(103,232,249,0.16) inset;
+  }
+
+  /* Carry forward v19.50 matched signup buttons */
   .signup-entry-cta,
   .signup-return-cta {
     display: inline-flex !important;
@@ -6509,20 +6891,65 @@
     text-align: center !important;
   }
 
-  .signup-entry-cta {
-    box-shadow: 0 14px 34px -12px rgba(245,158,11,0.62) !important;
+  @media (max-width: 1040px) {
+    .v20-thesis-panel,
+    .v20-investor-logic,
+    .v20-market-cta {
+      grid-template-columns: 1fr;
+    }
+    .v20-market-card,
+    .v20-market-card-featured {
+      grid-template-columns: 1fr;
+    }
+    .v20-card-visual {
+      min-height: 390px;
+    }
   }
 
-  .signup-return-cta {
-    min-height: 78px !important;
-    box-shadow: 0 14px 34px -14px rgba(6,182,212,0.92), 0 0 0 1px rgba(103,232,249,0.16) inset !important;
-  }
-
-  .signup-return-cta:hover {
-    box-shadow: 0 18px 38px -14px rgba(6,182,212,0.98), 0 0 0 1px rgba(103,232,249,0.22) inset !important;
-  }
-
-  @media (max-width: 760px) {
+  @media (max-width: 820px) {
+    #markets.v20-market-section {
+      padding: 4.5rem 1rem !important;
+    }
+    .v20-market-montage {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    .v20-montage-panel,
+    .v20-montage-panel.large {
+      grid-row: auto;
+      min-height: 250px;
+      border-radius: 20px;
+    }
+    .v20-thesis-panel,
+    .v20-market-card,
+    .v20-market-cta,
+    .v20-logic-heading {
+      border-radius: 22px;
+    }
+    .v20-card-visual {
+      min-height: 340px;
+      grid-template-rows: 1fr 88px;
+    }
+    .v20-thumb-row,
+    .v20-thumb-row-four {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .v20-thumb-row-four img:nth-child(3) {
+      display: none;
+    }
+    .v20-card-body {
+      padding: 1.35rem;
+    }
+    .v20-copy-grid,
+    .v20-logic-grid {
+      grid-template-columns: 1fr;
+    }
+    .v20-market-cta-actions {
+      min-width: 0;
+      width: 100%;
+    }
     .signup-entry-cta,
     .signup-return-cta {
       min-height: 74px !important;
@@ -6543,12 +6970,12 @@
 </div>
 </a>
 <ul class="nav-links">
+<li><a href="#markets">Market Opportunity</a></li>
 <li><a href="#offer">Offer</a></li>
 <li><a href="#whynow">Why Now</a></li>
 <li><a href="#about">Why This Works</a></li>
 <li><a href="#how">Conversion</a></li>
 <li><a href="#products">IP Stack</a></li>
-<li><a href="#markets">Market Opportunity</a></li>
 <li><a href="#logistics">Process</a></li>
 </ul>
 <a class="nav-cta" href="#contact">Investor Signup</a>
@@ -6559,12 +6986,12 @@
 </button>
 </nav>
 <div aria-hidden="true" class="mobile-menu-panel" id="mobileMenu">
+<a href="#markets">Market Opportunity</a>
 <a href="#offer">Offer</a>
 <a href="#whynow">Why Now</a>
 <a href="#about">Why This Works</a>
 <a href="#how">Conversion</a>
 <a href="#products">IP Stack</a>
-<a href="#markets">Market Opportunity</a>
 <a href="#logistics">Process</a>
 <a class="mobile-menu-cta" href="#contact">Investor Signup</a>
 
@@ -6687,6 +7114,141 @@
 </div>
 <!-- /hero-airframe-top -->
 </section>
+
+<!-- ─── MARKET OPPORTUNITY v20.0 ──────────────────────────── -->
+<section id="markets" class="v20-market-section">
+  <div class="v20-market-wrap">
+    <div class="v20-market-header">
+      <div class="section-tag">Market Opportunity</div>
+      <h2 class="section-title">Three urgent markets.<br/><em>One heavy-lift autonomy platform.</em></h2>
+      <p class="section-body v20-market-lead">
+        EMYRGEN targets missions where helicopters already prove the need: dangerous fire zones,
+        large-scale agriculture, and high-value industrial logistics. The opportunity is to make those missions
+        unmanned, repeatable, and partner-deployable.
+      </p>
+    </div>
+
+    <div class="v20-market-montage" aria-label="EMYRGEN market opportunity visual montage">
+      <figure class="v20-montage-panel large">
+        <img src="market-dual-main.webp" alt="Unmanned heavy-lift helicopter carrying cargo to a remote industrial site" loading="lazy" decoding="async"/>
+        <figcaption>Dual-use logistics</figcaption>
+      </figure>
+      <figure class="v20-montage-panel">
+        <img src="market-wildfire-main.webp" alt="Heavy-lift unmanned helicopter operating above an active wildfire zone" loading="lazy" decoding="async"/>
+        <figcaption>Wildfire response</figcaption>
+      </figure>
+      <figure class="v20-montage-panel">
+        <img src="market-agriculture-main.webp" alt="Autonomous aircraft supporting large-scale agriculture operations" loading="lazy" decoding="async"/>
+        <figcaption>Agriculture automation</figcaption>
+      </figure>
+    </div>
+
+    <div class="v20-thesis-panel">
+      <div class="v20-thesis-copy">
+        <div class="v20-eyebrow">Investor thesis</div>
+        <p>
+          Helicopters are used when the job is too heavy, too remote, or too time-critical for ground crews.
+          EMYRGEN is building the autonomy layer for that world — converting proven aircraft into unmanned mission
+          platforms and monetizing through integration, software, licensing, training, support, and partner deployments.
+        </p>
+      </div>
+      <div class="v20-thesis-points">
+        <div><strong>Existing aviation demand</strong><span>These mission categories already rely on aircraft-class capability.</span></div>
+        <div><strong>Better operating model</strong><span>Unmanned operations can reduce crew exposure and expand availability.</span></div>
+        <div><strong>Platform leverage</strong><span>One autonomy stack can support multiple mission packages.</span></div>
+      </div>
+    </div>
+
+    <div class="v20-market-cards">
+      <article class="v20-market-card">
+        <div class="v20-card-visual">
+          <img class="v20-card-main-img" src="market-wildfire-main.webp" alt="Heavy-lift unmanned aircraft supporting wildfire response" loading="lazy" decoding="async"/>
+          <div class="v20-thumb-row">
+            <img src="market-wildfire-logistics.webp" alt="Unmanned helicopter delivering cargo near a wildfire response zone" loading="lazy" decoding="async"/>
+            <img src="market-wildfire-terrain.webp" alt="Unmanned helicopter operating in rugged wildfire terrain" loading="lazy" decoding="async"/>
+          </div>
+        </div>
+        <div class="v20-card-body">
+          <div class="v20-market-label">Primary Mission</div>
+          <h3>Wildfire Response</h3>
+          <p class="v20-card-thesis">Wildfire response is becoming a persistent operating market, not a seasonal edge case.</p>
+          <div class="v20-copy-grid">
+            <div><span>Why now</span><p>Fire conditions are more urgent, aircraft demand is concentrated, and crewed aviation faces risk, cost, and availability constraints.</p></div>
+            <div><span>What EMYRGEN enables</span><p>Unmanned heavy-lift aircraft for water delivery, sensing, base-camp logistics, and dangerous-area operations.</p></div>
+            <div><span>Revenue path</span><p>Conversion programs, mission software, operator licensing, support contracts, and partner deployment revenue.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="v20-market-card">
+        <div class="v20-card-visual">
+          <img class="v20-card-main-img" src="market-agriculture-main.webp" alt="Autonomous helicopter-class aircraft supporting agricultural automation" loading="lazy" decoding="async"/>
+          <div class="v20-thumb-row">
+            <img src="market-agriculture-vineyard.webp" alt="Autonomous aircraft supporting vineyard spraying operations" loading="lazy" decoding="async"/>
+            <img src="market-agriculture-logistics.webp" alt="Heavy-lift aircraft moving agricultural cargo over farmland" loading="lazy" decoding="async"/>
+          </div>
+        </div>
+        <div class="v20-card-body">
+          <div class="v20-market-label">Commercial Mission</div>
+          <h3>Agriculture Automation</h3>
+          <p class="v20-card-thesis">Large-scale agriculture needs aircraft that can carry meaningful payloads and repeat precision missions across wide acreage.</p>
+          <div class="v20-copy-grid">
+            <div><span>Why now</span><p>Labor constraints, climate pressure, and higher acreage productivity are pushing agricultural aviation toward automation.</p></div>
+            <div><span>What EMYRGEN enables</span><p>Spraying, seeding, inspection support, orchard and vineyard operations, livestock-area logistics, and remote farm resupply.</p></div>
+            <div><span>Revenue path</span><p>Mission modules, seasonal service deployments, partner operator licensing, software access, and fleet support.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="v20-market-card v20-market-card-featured">
+        <div class="v20-card-visual">
+          <img class="v20-card-main-img" src="market-dual-main.webp" alt="Unmanned heavy-lift helicopter carrying industrial cargo to a remote site" loading="lazy" decoding="async"/>
+          <div class="v20-thumb-row v20-thumb-row-four">
+            <img src="market-dual-grid.webp" alt="Heavy-lift unmanned helicopter carrying power-grid equipment" loading="lazy" decoding="async"/>
+            <img src="market-dual-flood.webp" alt="Unmanned aircraft delivering supplies over a flooded industrial district" loading="lazy" decoding="async"/>
+            <img src="market-dual-port.webp" alt="Heavy-lift unmanned aircraft moving cargo in an industrial port" loading="lazy" decoding="async"/>
+          </div>
+        </div>
+        <div class="v20-card-body">
+          <div class="v20-market-label">Dual-Use Mission</div>
+          <h3>Logistics + Industrial Response</h3>
+          <p class="v20-card-thesis">When roads are blocked, infrastructure is remote, or payloads are urgent, heavy-lift unmanned aircraft become strategic infrastructure.</p>
+          <div class="v20-copy-grid">
+            <div><span>Why now</span><p>Industrial operators, utilities, ports, disaster-response teams, and remote infrastructure projects need faster ways to move critical payloads.</p></div>
+            <div><span>What EMYRGEN enables</span><p>Emergency resupply, utility restoration, offshore delivery, port logistics, mining support, disaster response, and remote payload movement.</p></div>
+            <div><span>Revenue path</span><p>Deployment partnerships, conversion integration, logistics mission software, fleet licensing, training, support, and partner revenue-share.</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="v20-investor-logic">
+      <div class="v20-logic-heading">
+        <div class="v20-eyebrow">Why investors should care</div>
+        <h3>Not a single aircraft bet — a platform strategy.</h3>
+      </div>
+      <div class="v20-logic-grid">
+        <div><strong>One stack, many missions</strong><span>The same autonomy platform can support different mission packages.</span></div>
+        <div><strong>Partner-led deployment</strong><span>Qualified operators can handle local missions while EMYRGEN supplies software, conversion architecture, training, and support.</span></div>
+        <div><strong>Recurring software layer</strong><span>Revenue can extend beyond one-time hardware work through licensing, support, upgrades, and mission modules.</span></div>
+        <div><strong>Helicopter-class payloads</strong><span>EMYRGEN is aimed at missions where small drones are not enough.</span></div>
+      </div>
+    </div>
+
+    <div class="v20-market-cta">
+      <div>
+        <div class="v20-eyebrow">Early investor position</div>
+        <h3>Invest before the platform is fully priced by the market.</h3>
+        <p>EMYRGEN is positioning early investors at the platform layer — before partner fleets, mission modules, and recurring deployment economics are fully visible.</p>
+      </div>
+      <div class="v20-market-cta-actions">
+        <a class="v20-cta-primary" href="emyrgen-investment-agreement.pdf" download>Download Investment Agreement</a>
+        <a class="v20-cta-secondary" href="mailto:invest@emyrgengroup.com?subject=Signed%20EMYRGEN%20Investment%20Agreement&body=Hello%20EMYRGEN%2C%0A%0AAttached%20is%20my%20completed%20and%20signed%20EMYRGEN%20Investment%20Agreement.%0A%0AInvestor%20name%3A%0AContact%20email%20or%20phone%3A%0A%0AThank%20you.">Email Signed Agreement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── THE OFFER (NEW v17) ──────────────────────────── -->
 <section id="offer">
 <div class="offer-wrap">
@@ -7142,73 +7704,6 @@
 </div>
 </section>
 <!-- ─── MARKETS ──────────────────────────────────── -->
-<section id="markets">
-<div class="markets-wrap">
-<div class="section-header">
-<div class="section-tag">Market Opportunity</div>
-<h2 class="section-title">
-        Where Conversion<br/><em>Creates Demand.</em>
-</h2>
-<p class="section-body">
-        Missions where small drones can't carry the load and crewed helicopters are too expensive
-        or too dangerous. Aircraft-class capability without crew exposure.
-      </p>
-</div>
-
-<div class="markets-cards">
-<div class="market-card primary">
-<div class="market-region">Primary Mission</div>
-<div class="market-name">Wildfire<br/>Response</div>
-<div class="market-desc">
-          Night operations, low-altitude response, repeat drops — without crews in the line of fire.
-        </div>
-<div class="market-stat">High-Risk</div>
-<div class="market-stat-label">Crewed Aviation Mission</div>
-</div>
-<div class="market-card">
-<div class="market-region">Commercial Mission</div>
-<div class="market-name">Agriculture<br/>Automation</div>
-<div class="market-desc">
-          Large-farm spraying, treatment, and remote-area operations at payloads small drones can't reach.
-        </div>
-<div class="market-stat">Payload</div>
-<div class="market-stat-label">Beyond Small Drones</div>
-</div>
-<div class="market-card">
-<div class="market-region">Dual-Use Mission</div>
-<div class="market-name">Logistics +<br/>Industrial Response</div>
-<div class="market-desc">
-          Cargo, remote logistics, disaster response, border/maritime security, defense-adjacent.
-        </div>
-<div class="market-stat">Mission</div>
-<div class="market-stat-label">Flexible Platform</div>
-</div>
-</div>
-
-<div class="achievement-grid">
-<div class="achievement-item">
-<div class="achievement-kicker">Execution Proof</div>
-<div class="achievement-title">2 Completed</div>
-<div class="achievement-copy">Two helicopter platforms converted for autonomous unmanned operation.</div>
-</div>
-<div class="achievement-item">
-<div class="achievement-kicker">Payload Class</div>
-<div class="achievement-title achievement-title-stack"><span>900 kg–1,150 kg</span><span>1,985 lb–2,535 lb</span></div>
-<div class="achievement-copy">Heavy-lift payload class beyond small-drone capability.</div>
-</div>
-<div class="achievement-item">
-<div class="achievement-kicker">Autonomous Control</div>
-<div class="achievement-title">Flight-Tested</div>
-<div class="achievement-copy">Pilotless control architecture demonstrated under EMYRGEN autopilot.</div>
-</div>
-<div class="achievement-item">
-<div class="achievement-kicker">Commercial Path</div>
-<div class="achievement-title">Package Model</div>
-<div class="achievement-copy">Integration fees plus recurring software, support, training, and partner deployment.</div>
-</div>
-</div>
-</div>
-</section>
 <!-- ─── CONTACT ───────────────────────────────────── -->
 <section id="contact">
 <div class="contact-wrap">
