@@ -8221,8 +8221,8 @@
     </div>
   </div>
   <div class="signup-helper">Use email or phone — at least one contact method is required.</div>
+  <div class="signup-status" id="simpleSignupStatus" role="alert" aria-live="assertive" hidden></div>
   <button class="signup-entry-cta" id="simpleSignupSubmit" type="submit">Download Investment Agreement</button>
-  <div class="signup-status" id="simpleSignupStatus" role="status" aria-live="polite" hidden></div>
 </form>
 <div class="signup-return-panel">
 <div class="signup-return-kicker">Ready to return the signed agreement?</div>
@@ -8449,8 +8449,13 @@ Securities Act of 1933. Consult your own attorney, tax advisor, and financial ad
   function setStatus(message, isError) {
     if (!statusEl) return;
     statusEl.hidden = false;
-    statusEl.textContent = message;
     statusEl.classList.toggle('is-error', !!isError);
+    form.classList.toggle('has-validation-error', !!isError);
+    if (isError) {
+      statusEl.innerHTML = '<strong>Required before download</strong><span>' + message + '</span>';
+    } else {
+      statusEl.textContent = message;
+    }
   }
   function setError(el, show) {
     if (el) el.classList.toggle('is-error', !!show);
@@ -8491,7 +8496,14 @@ Securities Act of 1933. Consult your own attorney, tax advisor, and financial ad
     setError(emailEl, !hasContact);
     setError(phoneEl, !hasContact);
     if (!name || !hasContact) {
-      setStatus('Enter your full name and at least one contact method.', true);
+      setStatus('Enter your full legal name and either email or phone to access the Investment Agreement.', true);
+      const firstMissing = !name ? nameEl : (!hasContact ? emailEl : null);
+      if (statusEl && typeof statusEl.scrollIntoView === 'function') {
+        statusEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      if (firstMissing && typeof firstMissing.focus === 'function') {
+        setTimeout(() => firstMissing.focus({ preventScroll: true }), 180);
+      }
       return;
     }
 
@@ -8501,6 +8513,7 @@ Securities Act of 1933. Consult your own attorney, tax advisor, and financial ad
       statusEl.hidden = true;
       statusEl.textContent = '';
       statusEl.classList.remove('is-error');
+      form.classList.remove('has-validation-error');
     }
   });
 })();
@@ -10514,6 +10527,84 @@ Thank you.`;
     #contact #investorSignupCard .signup-field-row {
       grid-template-columns: 1fr !important;
     }
+  }
+</style>
+
+
+<style id="v20-38-signup-validation-alert">
+  /* v20.38 — make the required-field warning visible and actionable */
+  #contact #investorSignupCard .signup-status[hidden] {
+    display: none !important;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: .78rem;
+    row-gap: .1rem;
+    align-items: start;
+    margin: .1rem 0 .25rem !important;
+    padding: 1rem 1rem 1.05rem !important;
+    border-radius: 16px !important;
+    border: 1.5px solid rgba(245, 184, 28, 0.78) !important;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(245, 184, 28, 0.22), transparent 38%),
+      linear-gradient(180deg, rgba(44, 31, 9, 0.92), rgba(15, 19, 27, 0.96)) !important;
+    color: #fff !important;
+    box-shadow:
+      0 0 0 1px rgba(245, 184, 28, 0.12),
+      0 18px 44px rgba(0,0,0,0.34),
+      0 0 30px rgba(245, 184, 28, 0.16) !important;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error::before {
+    content: '!';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 184, 28, 0.78);
+    background: rgba(245, 184, 28, 0.18);
+    color: #ffd66b;
+    font-family: var(--f-mono);
+    font-size: 1.05rem;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 0 0 18px rgba(245, 184, 28, 0.24);
+  }
+
+  #contact #investorSignupCard .signup-status.is-error strong {
+    display: block;
+    margin: 0 0 .22rem;
+    color: #fff;
+    font-family: var(--f-mono);
+    font-size: clamp(.86rem, 2.2vw, 1rem);
+    font-weight: 900;
+    letter-spacing: .13em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error span {
+    display: block;
+    color: rgba(255, 244, 214, 0.92);
+    font-size: clamp(.96rem, 2.7vw, 1.06rem);
+    font-weight: 600;
+    line-height: 1.42;
+  }
+
+  #contact #investorSignupCard .signup-input.is-error {
+    border-color: rgba(245, 184, 28, 0.92) !important;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(245,184,28,.10), transparent 45%),
+      linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.04)) !important;
+    box-shadow:
+      0 0 0 4px rgba(245, 184, 28, 0.14),
+      0 0 24px rgba(245, 184, 28, 0.14),
+      inset 0 1px 0 rgba(255,255,255,0.06) !important;
   }
 </style>
 
