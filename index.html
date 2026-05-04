@@ -1849,6 +1849,208 @@
   #markets .investor-logic-cta { width: 100%; }
 }
 
+
+  /* v20.26 premium investor-proof cards: execution, payload, recurring economics */
+  #whynow .premium-proof-bento {
+    align-items: stretch;
+  }
+  #whynow .premium-proof-card {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.35rem 2rem 1.85rem;
+    border-radius: 26px;
+    border: 1px solid rgba(93, 225, 255, 0.20);
+    background:
+      radial-gradient(circle at 0% 0%, rgba(6,182,212,.13), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgba(255,255,255,.035), transparent 28%),
+      linear-gradient(180deg, rgba(8,17,28,.98), rgba(5,9,15,.99));
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.055),
+      0 28px 70px rgba(0,0,0,.34);
+  }
+  #whynow .premium-proof-card::before {
+    content: '';
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    top: 0;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(6,182,212,.95), rgba(142,244,255,.95), rgba(6,182,212,0));
+    box-shadow: 0 0 18px rgba(6,182,212,.28);
+    pointer-events: none;
+  }
+  #whynow .premium-proof-card::after {
+    opacity: 1;
+    background: radial-gradient(circle at 0 0, rgba(6,182,212,.08), transparent 58%);
+  }
+  #whynow .proof-payload {
+    border-color: rgba(245,200,76,.28);
+    background:
+      radial-gradient(circle at 0% 0%, rgba(245,200,76,.13), transparent 32%),
+      radial-gradient(circle at 100% 100%, rgba(6,182,212,.12), transparent 31%),
+      linear-gradient(180deg, rgba(11,16,24,.99), rgba(5,9,15,.99));
+  }
+  #whynow .proof-payload::before {
+    background: linear-gradient(90deg, rgba(245,200,76,.95), rgba(6,182,212,.95), rgba(6,182,212,0));
+    box-shadow: 0 0 18px rgba(245,200,76,.20);
+  }
+  #whynow .proof-recurring {
+    border-color: rgba(245,200,76,.26);
+    background:
+      radial-gradient(circle at 0% 0%, rgba(245,200,76,.12), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgba(6,182,212,.10), transparent 30%),
+      linear-gradient(180deg, rgba(15,12,8,.98), rgba(5,9,15,.99));
+  }
+  #whynow .proof-recurring::before {
+    background: linear-gradient(90deg, rgba(245,200,76,.95), rgba(245,200,76,.42), rgba(6,182,212,0));
+  }
+  #whynow .premium-proof-card .whynow-num {
+    font-size: clamp(3rem, 6vw, 4.75rem);
+    line-height: .82;
+    margin: 0 0 1.1rem;
+    color: var(--c-accent);
+    text-shadow: 0 0 22px rgba(6,182,212,.20);
+  }
+  #whynow .proof-payload .whynow-num,
+  #whynow .proof-recurring .whynow-num {
+    color: var(--c-gold);
+    text-shadow: 0 0 22px rgba(245,200,76,.16);
+  }
+  #whynow .proof-label {
+    font-family: var(--f-mono);
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: #79e6ff;
+    font-size: .72rem;
+    font-weight: 800;
+    margin-bottom: .65rem;
+  }
+  #whynow .proof-payload .proof-label,
+  #whynow .proof-recurring .proof-label {
+    color: #f5c84c;
+  }
+  #whynow .premium-proof-card .whynow-title {
+    font-size: clamp(1.48rem, 2.7vw, 2.05rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    margin-bottom: .95rem;
+    color: #fff;
+  }
+  #whynow .premium-proof-card .whynow-text {
+    color: rgba(226,240,255,.74);
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+  #whynow .payload-range {
+    margin: .15rem 0 1rem;
+    padding: 1rem 1rem .9rem;
+    border-radius: 18px;
+    border: 1px solid rgba(245,200,76,.22);
+    background: linear-gradient(180deg, rgba(245,200,76,.075), rgba(255,255,255,.025));
+  }
+  #whynow .payload-main {
+    font-family: var(--f-mono);
+    color: #f5c84c;
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.05em;
+    white-space: nowrap;
+  }
+  #whynow .payload-main span {
+    color: #7ee6ff;
+    letter-spacing: -.08em;
+    margin: 0 .18rem;
+  }
+  #whynow .payload-sub {
+    margin-top: .45rem;
+    color: rgba(255,255,255,.84);
+    font-size: .95rem;
+    line-height: 1.35;
+  }
+  #whynow .payload-scale {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto;
+    align-items: center;
+    gap: .35rem;
+    margin-top: .75rem;
+  }
+  #whynow .payload-scale span {
+    width: .55rem;
+    height: .55rem;
+    border-radius: 999px;
+    background: #f5c84c;
+    box-shadow: 0 0 12px rgba(245,200,76,.35);
+  }
+  #whynow .payload-scale span:last-child {
+    background: #7ee6ff;
+    box-shadow: 0 0 12px rgba(126,230,255,.38);
+  }
+  #whynow .payload-scale i {
+    display: block;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(245,200,76,.78), rgba(126,230,255,.78));
+  }
+  #whynow .proof-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+  }
+  #whynow .proof-tags span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(126,230,255,.16);
+    background: rgba(255,255,255,.04);
+    color: rgba(231,245,255,.82);
+    border-radius: 999px;
+    padding: .45rem .65rem;
+    font-family: var(--f-mono);
+    font-size: .62rem;
+    line-height: 1;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #whynow .proof-payload .proof-tags span,
+  #whynow .proof-recurring .proof-tags span {
+    border-color: rgba(245,200,76,.18);
+    color: rgba(255,245,216,.86);
+  }
+  @media (max-width: 900px) {
+    #whynow .premium-proof-card {
+      min-height: 0;
+      padding: 2rem 1.45rem 1.55rem;
+      border-radius: 24px;
+    }
+    #whynow .premium-proof-card .whynow-num {
+      font-size: 3.35rem;
+    }
+    #whynow .premium-proof-card .whynow-title {
+      font-size: 1.5rem;
+    }
+    #whynow .payload-main {
+      font-size: clamp(1.45rem, 7vw, 2rem);
+    }
+  }
+  @media (max-width: 430px) {
+    #whynow .payload-range {
+      padding: .9rem .85rem .85rem;
+    }
+    #whynow .payload-main {
+      font-size: clamp(1.25rem, 6.2vw, 1.55rem);
+    }
+    #whynow .payload-sub,
+    #whynow .premium-proof-card .whynow-text {
+      font-size: .94rem;
+    }
+  }
+
 </style>
 <style>
   .scroll-top-btn {
@@ -7180,21 +7382,32 @@
 <div class="section-tag">Why Now</div>
 <h2 class="section-title">Three Forces Make This <em>Unrepeatable</em></h2>
 </div>
-<div class="whynow-bento">
-<div class="whynow-card">
+<div class="whynow-bento premium-proof-bento">
+<div class="whynow-card premium-proof-card proof-execution">
 <div class="whynow-num">01</div>
-<div class="whynow-title">Proof Already Exists</div>
-<div class="whynow-text">Two helicopters already converted. Autonomy already flight-tested. You're not betting on the science — only on scale.</div>
+<div class="proof-label">Execution Proof</div>
+<div class="whynow-title">4 Helicopters Already Converted</div>
+<div class="whynow-text">EMYRGEN is not starting from a blank sheet. Prior conversion work proves the core path: take proven helicopter airframes and move them toward unmanned, mission-ready operation.</div>
+<div class="proof-tags"><span>Converted Airframes</span><span>Real Integration Work</span><span>Scale-Up Story</span></div>
 </div>
-<div class="whynow-card">
+<div class="whynow-card premium-proof-card proof-payload">
 <div class="whynow-num">02</div>
-<div class="whynow-title">The Payload Gap</div>
-<div class="whynow-text">Small drones can't carry it. Crewed helicopters cost too much. EMYRGEN sits in the empty middle — 900–1,150 kg (1,985–2,535 lb) autonomous lift.</div>
+<div class="proof-label">Payload Gap</div>
+<div class="whynow-title">Aircraft-Class Lift, Without the Pilot</div>
+<div class="payload-range">
+<div class="payload-main">200 kg <span>→</span> 3,000+ kg</div>
+<div class="payload-sub">440 lb → 6,600+ lb payload range</div>
+<div class="payload-scale" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span></div>
 </div>
-<div class="whynow-card urgent">
+<div class="whynow-text">Small drones cannot carry it. Crewed helicopters are expensive, scarce, and risky. EMYRGEN targets the heavy-lift gap in between.</div>
+<div class="proof-tags"><span>Heavy Payloads</span><span>Remote Missions</span><span>Unmanned Lift</span></div>
+</div>
+<div class="whynow-card premium-proof-card proof-recurring urgent">
 <div class="whynow-num">03</div>
-<div class="whynow-title">Pre-Seed Pricing</div>
-<div class="whynow-text">A SAFE today buys in before priced rounds. After Autopilot v1 ships, the next round will not be at this entry point.</div>
+<div class="proof-label">Recurring Economics</div>
+<div class="whynow-title">Revenue After the Conversion</div>
+<div class="whynow-text">The first conversion is only the entry point. Software access, support, training, upgrades, and partner deployments can create continuing revenue after the aircraft is delivered.</div>
+<div class="proof-tags"><span>Software Access</span><span>Support</span><span>Training</span><span>Partner Deployments</span></div>
 </div>
 </div>
 </div>
