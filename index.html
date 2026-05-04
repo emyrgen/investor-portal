@@ -1811,6 +1811,20 @@
   grid-template-rows: 1.15fr .85fr;
 }
 #markets .v20-market-card:not(.v20-market-card-featured) .v20-image-stack { grid-template-rows: 1fr; }
+#markets .v20-image-stack.market-gallery-2,
+#markets .v20-image-stack.market-gallery-3 {
+  height: auto;
+  grid-template-rows: none !important;
+  grid-auto-rows: auto;
+  align-content: start;
+}
+#markets .v20-image-stack.market-gallery-2 .v20-stack-img,
+#markets .v20-image-stack.market-gallery-3 .v20-stack-img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  min-height: 0;
+  object-fit: cover;
+}
 #markets .v20-card-visual::after {
   content: '';
   position: absolute;
@@ -8089,8 +8103,9 @@
 <p class="v20-card-thesis">U.S. federal wildfire suppression alone averages about $3B per year. EMYRGEN targets fire-zone missions where heavy payloads, range, and pilot-risk reduction matter.</p>
 <div class="market-money-line">Potential revenue: conversion + mission software + training + deployment support.</div>
 </div><div class="v20-card-visual">
-<div aria-label="Wildfire response mission visuals" class="v20-image-stack">
+<div aria-label="Wildfire response mission visuals" class="v20-image-stack market-gallery-2">
 <img alt="Heavy-lift unmanned aircraft supporting wildfire response" class="v20-stack-img v20-stack-lead" decoding="async" loading="lazy" src="market-wildfire-main.webp"/>
+<img alt="Autonomous heavy-lift aircraft performing wildfire suppression over active fire terrain" class="v20-stack-img" decoding="async" loading="lazy" src="market-wildfire-02.webp"/>
 </div>
 </div>
 </article>
@@ -8102,8 +8117,9 @@
 <p class="v20-card-thesis">The agriculture drone market is projected to reach $10.76B by 2030. EMYRGEN targets the gap between small spray drones and costly crewed agricultural aviation.</p>
 <div class="market-money-line">Potential revenue: payload modules + partner operators + seasonal support.</div>
 </div><div class="v20-card-visual">
-<div aria-label="Agriculture automation mission visuals" class="v20-image-stack">
+<div aria-label="Agriculture automation mission visuals" class="v20-image-stack market-gallery-2">
 <img alt="Autonomous helicopter-class aircraft supporting agricultural automation" class="v20-stack-img v20-stack-lead" decoding="async" loading="lazy" src="market-agriculture-main.webp"/>
+<img alt="Unmanned helicopter-class aircraft supporting agricultural logistics in difficult mountain terrain" class="v20-stack-img" decoding="async" loading="lazy" src="market-agriculture-02.webp"/>
 </div>
 </div>
 </article>
@@ -8115,9 +8131,10 @@
 <p class="v20-card-thesis">Cargo drones are projected to reach $33.79B by 2032. EMYRGEN’s heavy-lift conversion strategy targets high-value payload movement when roads, crews, or conventional aircraft are constrained.</p>
 <div class="market-money-line">Potential revenue: integration + licensing + support + partner deployment economics.</div>
 </div><div class="v20-card-visual">
-<div aria-label="Dual-use logistics and industrial response mission visuals" class="v20-image-stack v20-image-stack-featured">
+<div aria-label="Dual-use logistics and industrial response mission visuals" class="v20-image-stack v20-image-stack-featured market-gallery-3">
 <img alt="Unmanned heavy-lift helicopter carrying industrial cargo to a remote site" class="v20-stack-img v20-stack-lead" decoding="async" loading="lazy" src="market-dual-main.webp"/>
 <img alt="Heavy-lift unmanned helicopter carrying power-grid equipment" class="v20-stack-img" decoding="async" loading="lazy" src="market-dual-grid.webp"/>
+<img alt="Heavy-lift unmanned aircraft moving cargo in Arctic industrial logistics conditions" class="v20-stack-img" decoding="async" loading="lazy" src="market-dual-arctic.webp"/>
 </div>
 </div>
 </article>
