@@ -10608,5 +10608,85 @@ Thank you.`;
   }
 </style>
 
+
+<style id="v20-39-signup-validation-alert-layout-fix">
+  /* v20.39 — keep the validation alert title inside the card on mobile */
+  #contact #investorSignupCard .signup-status.is-error {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: 2rem minmax(0, 1fr) !important;
+    column-gap: .78rem !important;
+    row-gap: .15rem !important;
+    align-items: start !important;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error::before {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    align-self: start !important;
+    justify-self: center !important;
+    flex: 0 0 auto !important;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error strong {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: auto !important;
+    display: block !important;
+    position: static !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    text-align: left !important;
+    letter-spacing: .075em !important;
+    font-size: clamp(.76rem, 2.3vw, .92rem) !important;
+    line-height: 1.22 !important;
+    margin: 0 0 .32rem !important;
+  }
+
+  #contact #investorSignupCard .signup-status.is-error span {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+    position: static !important;
+    text-align: left !important;
+    overflow-wrap: break-word !important;
+  }
+
+  @media (max-width: 520px) {
+    #contact #investorSignupCard .signup-status.is-error {
+      grid-template-columns: 1.9rem minmax(0, 1fr) !important;
+      padding: .95rem .92rem 1rem !important;
+      column-gap: .7rem !important;
+    }
+
+    #contact #investorSignupCard .signup-status.is-error::before {
+      width: 1.75rem !important;
+      height: 1.75rem !important;
+      font-size: .95rem !important;
+    }
+
+    #contact #investorSignupCard .signup-status.is-error strong {
+      font-size: .78rem !important;
+      letter-spacing: .055em !important;
+      line-height: 1.22 !important;
+    }
+
+    #contact #investorSignupCard .signup-status.is-error span {
+      font-size: .98rem !important;
+      line-height: 1.42 !important;
+    }
+  }
+</style>
+
 </body>
 </html>
