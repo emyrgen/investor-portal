@@ -1967,9 +1967,18 @@
   }
   #whynow .payload-sub {
     margin-top: .45rem;
-    color: rgba(255,255,255,.84);
-    font-size: .95rem;
-    line-height: 1.35;
+    font-family: var(--f-mono);
+    color: #7ee6ff;
+    font-size: clamp(1.55rem, 3vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.05em;
+    white-space: nowrap;
+  }
+  #whynow .payload-sub span {
+    color: #f5c84c;
+    letter-spacing: -.08em;
+    margin: 0 .18rem;
   }
   #whynow .payload-scale {
     display: grid;
@@ -2045,7 +2054,9 @@
     #whynow .payload-main {
       font-size: clamp(1.25rem, 6.2vw, 1.55rem);
     }
-    #whynow .payload-sub,
+    #whynow .payload-sub {
+      font-size: clamp(1.25rem, 6.2vw, 1.55rem);
+    }
     #whynow .premium-proof-card .whynow-text {
       font-size: .94rem;
     }
@@ -7396,7 +7407,7 @@
 <div class="whynow-title">Aircraft-Class Lift, Without the Pilot</div>
 <div class="payload-range">
 <div class="payload-main">200 kg <span>→</span> 3,000+ kg</div>
-<div class="payload-sub">440 lb → 6,600+ lb payload range</div>
+<div class="payload-sub">440 lb <span>→</span> 6,600+ lb</div>
 <div class="payload-scale" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span></div>
 </div>
 <div class="whynow-text">Small drones cannot carry it. Crewed helicopters are expensive, scarce, and risky. EMYRGEN targets the heavy-lift gap in between.</div>
