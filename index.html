@@ -1625,27 +1625,105 @@
 #markets .roi-engine-flow {
   display: grid;
   grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: .75rem;
+  gap: .9rem;
 }
 #markets .roi-engine-flow div {
-  min-height: 130px;
-  padding: 1rem;
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 160px;
+  padding: 1rem 1rem 1.05rem;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 1.08rem;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(79,211,255,.08), transparent 44%),
+    linear-gradient(165deg, rgba(25,52,84,.78) 0%, rgba(14,28,47,.88) 58%, rgba(9,16,30,.96) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 18px 36px rgba(0,0,0,.18);
+}
+#markets .roi-engine-flow div::before {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: .8rem;
+  padding: .34rem .58rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.055);
+  font-family: var(--f-mono);
+  font-size: .62rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#markets .roi-engine-flow div::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0;
+  height: 4px;
+  border-radius: 999px 999px 0 0;
+  opacity: .96;
+}
+#markets .roi-engine-flow div:nth-child(1) {
+  border-color: rgba(92,221,255,.24);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(79,211,255,.14), transparent 42%),
+    linear-gradient(165deg, rgba(26,60,98,.82) 0%, rgba(16,32,57,.9) 58%, rgba(10,17,31,.98) 100%);
+}
+#markets .roi-engine-flow div:nth-child(1)::before { content: 'Upfront revenue'; color: #bfefff; }
+#markets .roi-engine-flow div:nth-child(1)::after {
+  background: linear-gradient(90deg, rgba(102,225,255,.95), rgba(63,170,255,.88));
+}
+#markets .roi-engine-flow div:nth-child(2) {
+  border-color: rgba(104,196,255,.22);
+  background:
+    radial-gradient(circle at 0% 100%, rgba(72,129,255,.12), transparent 40%),
+    linear-gradient(165deg, rgba(28,52,88,.8) 0%, rgba(17,31,53,.9) 58%, rgba(9,16,29,.98) 100%);
+}
+#markets .roi-engine-flow div:nth-child(2)::before { content: 'Recurring software'; color: #cce8ff; }
+#markets .roi-engine-flow div:nth-child(2)::after {
+  background: linear-gradient(90deg, rgba(110,180,255,.95), rgba(79,211,255,.88));
+}
+#markets .roi-engine-flow div:nth-child(3) {
+  border-color: rgba(79,211,255,.22);
+  background:
+    radial-gradient(circle at 100% 100%, rgba(0,210,255,.11), transparent 36%),
+    linear-gradient(165deg, rgba(24,48,77,.78) 0%, rgba(15,28,47,.9) 58%, rgba(9,16,29,.98) 100%);
+}
+#markets .roi-engine-flow div:nth-child(3)::before { content: 'Enablement'; color: #cbf7ff; }
+#markets .roi-engine-flow div:nth-child(3)::after {
+  background: linear-gradient(90deg, rgba(57,215,255,.95), rgba(56,255,217,.85));
+}
+#markets .roi-engine-flow div:nth-child(4) {
+  border-color: rgba(245,167,56,.22);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(245,167,56,.11), transparent 38%),
+    linear-gradient(165deg, rgba(47,35,21,.72) 0%, rgba(23,22,28,.9) 54%, rgba(10,16,29,.98) 100%);
+}
+#markets .roi-engine-flow div:nth-child(4)::before { content: 'Partner expansion'; color: #ffdca8; }
+#markets .roi-engine-flow div:nth-child(4)::after {
+  background: linear-gradient(90deg, rgba(255,193,79,.98), rgba(245,167,56,.9));
 }
 #markets .roi-engine-flow strong {
   display: block;
-  margin-bottom: .35rem;
+  margin-bottom: .46rem;
   color: #fff;
-  font-size: .98rem;
-  line-height: 1.2;
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -.018em;
 }
 #markets .roi-engine-flow span {
   display: block;
-  color: rgba(226,240,255,.68);
-  font-size: .9rem;
-  line-height: 1.35;
+  color: rgba(232,241,250,.82);
+  font-size: .97rem;
+  line-height: 1.42;
 }
 
 #markets .v20-market-cards {
@@ -1831,7 +1909,17 @@
     max-width: none !important;
   }
   #markets .v20-market-header { text-align: center; }
-  #markets .roi-engine-flow { grid-template-columns: 1fr; }
+  #markets .roi-engine-flow { grid-template-columns: 1fr; gap: .85rem; }
+  #markets .roi-engine-flow div {
+    min-height: 0;
+    padding: 1rem 1rem 1.05rem;
+  }
+  #markets .roi-engine-flow strong {
+    font-size: 1.22rem;
+  }
+  #markets .roi-engine-flow span {
+    font-size: .96rem;
+  }
   #markets .roi-engine-title {
     font-size: clamp(2.05rem, 9vw, 3rem);
     line-height: 1.02;
