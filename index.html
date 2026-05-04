@@ -2150,6 +2150,103 @@
     }
   }
 
+
+  /* v20.30 — make 01 Execution Proof card strike immediately */
+  #whynow .proof-execution {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(92, 228, 255, .34) !important;
+    background:
+      radial-gradient(circle at 5% 0%, rgba(92,228,255,.18), transparent 34%),
+      radial-gradient(circle at 100% 100%, rgba(245,200,76,.08), transparent 30%),
+      linear-gradient(180deg, rgba(8,21,34,.99), rgba(4,8,14,.99)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.06),
+      0 30px 76px rgba(0,0,0,.38),
+      0 0 0 1px rgba(92,228,255,.07) !important;
+  }
+  #whynow .proof-execution::before {
+    height: 4px;
+    background: linear-gradient(90deg, rgba(92,228,255,1), rgba(255,210,92,.85), rgba(92,228,255,0)) !important;
+    box-shadow: 0 0 20px rgba(92,228,255,.34) !important;
+  }
+  #whynow .proof-execution .whynow-num {
+    position: absolute;
+    top: 1.45rem;
+    right: 1.5rem;
+    margin: 0;
+    font-family: var(--f-mono);
+    font-size: clamp(3.6rem, 8vw, 6rem);
+    line-height: .8;
+    color: rgba(126,230,255,.22) !important;
+    text-shadow: none !important;
+    z-index: 0;
+  }
+  #whynow .proof-execution .proof-label,
+  #whynow .proof-execution .execution-proof-metric,
+  #whynow .proof-execution .execution-proof-line,
+  #whynow .proof-execution .whynow-text,
+  #whynow .proof-execution .proof-tags {
+    position: relative;
+    z-index: 1;
+  }
+  #whynow .execution-proof-metric {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: .9rem;
+    margin: .4rem 0 1rem;
+  }
+  #whynow .execution-proof-metric strong {
+    font-family: var(--f-mono);
+    font-size: clamp(5.2rem, 12vw, 8.2rem);
+    line-height: .76;
+    letter-spacing: -.08em;
+    color: #7ee6ff;
+    text-shadow: 0 0 26px rgba(126,230,255,.22);
+  }
+  #whynow .execution-proof-metric span {
+    font-size: clamp(1.38rem, 3vw, 2.2rem);
+    line-height: 1.02;
+    font-weight: 900;
+    letter-spacing: -.04em;
+    color: #fff;
+  }
+  #whynow .execution-proof-line {
+    display: inline-flex;
+    align-self: flex-start;
+    margin: 0 0 1rem;
+    padding: .58rem .75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(245,200,76,.22);
+    background: rgba(245,200,76,.07);
+    color: #ffe6a3;
+    font-family: var(--f-mono);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+  }
+  #whynow .proof-execution .whynow-text {
+    color: rgba(236,247,255,.82) !important;
+    font-size: 1.04rem !important;
+  }
+  @media (max-width: 520px) {
+    #whynow .execution-proof-metric {
+      gap: .72rem;
+    }
+    #whynow .execution-proof-metric strong {
+      font-size: clamp(4.6rem, 24vw, 6.4rem);
+    }
+    #whynow .execution-proof-metric span {
+      font-size: clamp(1.25rem, 7.1vw, 1.75rem);
+    }
+    #whynow .execution-proof-line {
+      font-size: .65rem;
+      line-height: 1.2;
+    }
+  }
+
 </style>
 <style>
   .scroll-top-btn {
@@ -7485,8 +7582,9 @@
 <div class="whynow-card premium-proof-card proof-execution">
 <div class="whynow-num">01</div>
 <div class="proof-label">Execution Proof</div>
-<div class="whynow-title">4 Helicopters Already Converted</div>
-<div class="whynow-text">EMYRGEN is not starting from a blank sheet. Prior conversion work proves the core path: take proven helicopter airframes and move them toward unmanned, mission-ready operation.</div>
+<div class="execution-proof-metric"><strong>4</strong><span>Helicopters<br/>Already Converted</span></div>
+<div class="execution-proof-line">Scale-up story, not a blank-sheet concept.</div>
+<div class="whynow-text">EMYRGEN is not starting from zero. Prior conversion work proves the core path: take proven helicopter airframes and move them toward unmanned, mission-ready operation.</div>
 <div class="proof-tags"><span>Converted Airframes</span><span>Real Integration Work</span><span>Scale-Up Story</span></div>
 </div>
 <div class="whynow-card premium-proof-card proof-payload">
