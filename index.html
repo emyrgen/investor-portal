@@ -7374,6 +7374,32 @@
   }
 </style>
 
+
+<style id="v20-31-signup-title-only-fix">
+  /* v20.31 — signup title only: remove duplicate kicker and lock title typography */
+  #contact #investorSignupCard .signup-entry-title,
+  #contact #investorSignupCard .signup-entry-title span,
+  #contact #investorSignupCard .signup-entry-title em {
+    font-family: var(--f-display) !important;
+  }
+
+  #contact #investorSignupCard .signup-entry-title {
+    margin-top: 0 !important;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+  }
+
+  #contact #investorSignupCard .signup-entry-title span {
+    color: #ffffff !important;
+    font-style: normal !important;
+  }
+
+  #contact #investorSignupCard .signup-entry-title em {
+    color: var(--c-accent) !important;
+    font-style: italic !important;
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
@@ -8154,7 +8180,6 @@
 </div>
 <div>
 <div class="signup-entry-card" id="investorSignupCard">
-<div class="signup-entry-kicker">Investor Agreement</div>
 <h3 class="signup-entry-title"><span>Investment Agreement</span><br/><em>Access</em></h3>
 <form class="simple-signup-form" id="simpleInvestorForm" novalidate>
   <div class="signup-field">
