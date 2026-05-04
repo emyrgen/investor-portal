@@ -8527,3 +8527,152 @@ a.deal-start-review-cta,
     min-height: 0;
   }
 }
+
+
+/* v20.24 — final title typography lock
+   Fixes direct span/h3 overrides caused by older global span/h3 font rules. */
+#markets .section-title,
+#markets .section-title span,
+#markets .section-title .title-yellow,
+#markets .section-title em,
+#proof-snapshot .section-title,
+#proof-snapshot .section-title span,
+#proof-snapshot .section-title em,
+#offer .section-title,
+#offer .section-title span,
+#offer .section-title em,
+#about .section-title,
+#about .section-title span,
+#about .section-title em,
+#whynow .section-title,
+#whynow .section-title span,
+#whynow .section-title em,
+#how .section-title,
+#how .section-title span,
+#how .section-title em,
+#products .section-title,
+#products .section-title span,
+#products .section-title em,
+#logistics .section-title,
+#logistics .section-title span,
+#logistics .section-title em,
+#contact .section-title,
+#contact .section-title span,
+#contact .section-title em,
+.airframe-showcase-title,
+.airframe-showcase-title span,
+.airframe-showcase-title em,
+.v20-conversion-proof .conversion-gallery-title,
+.v20-conversion-proof .conversion-gallery-title span,
+.v20-conversion-proof .conversion-gallery-title em {
+  font-family: var(--f-display, 'Cormorant Garamond', Georgia, serif) !important;
+}
+
+/* Main section-title structure: white upright first phrase, cyan italic highlighted phrase. */
+#markets .section-title,
+#proof-snapshot .section-title,
+#offer .section-title,
+#about .section-title,
+#whynow .section-title,
+#how .section-title,
+#products .section-title,
+#logistics .section-title,
+#contact .section-title,
+.airframe-showcase-title,
+.v20-conversion-proof .conversion-gallery-title {
+  font-size: var(--title-scale-desktop, clamp(2.95rem, 6.15vw, 5.65rem)) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.028em !important;
+  font-weight: 500 !important;
+  color: var(--c-white, #fff) !important;
+}
+
+#markets .section-title span,
+#proof-snapshot .section-title span,
+#offer .section-title span,
+#about .section-title span,
+#whynow .section-title span,
+#how .section-title span,
+#products .section-title span,
+#logistics .section-title span,
+#contact .section-title span {
+  color: var(--c-white, #fff) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+}
+
+#markets .section-title em,
+#proof-snapshot .section-title em,
+#offer .section-title em,
+#about .section-title em,
+#whynow .section-title em,
+#how .section-title em,
+#products .section-title em,
+#logistics .section-title em,
+#contact .section-title em,
+.airframe-showcase-title em,
+.v20-conversion-proof .conversion-gallery-title em {
+  color: var(--title-highlight-blue, var(--c-accent, #06b6d4)) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+
+/* Market Opportunity remains the one approved three-color title. */
+#markets .section-title .title-yellow {
+  color: var(--title-highlight-yellow, #f59e0b) !important;
+  font-style: normal !important;
+}
+
+/* Revenue Logic panel title inside Market Opportunity must match the same title system. */
+#markets .roi-engine-copy h3,
+#markets .roi-engine-title,
+#markets .roi-engine-title span,
+#markets .roi-engine-title em {
+  font-family: var(--f-display, 'Cormorant Garamond', Georgia, serif) !important;
+}
+
+#markets .roi-engine-copy h3,
+#markets .roi-engine-title {
+  margin: .35rem 0 0 !important;
+  font-size: clamp(2.05rem, 5vw, 4rem) !important;
+  line-height: 1.0 !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 500 !important;
+  color: var(--c-white, #fff) !important;
+}
+
+#markets .roi-engine-title span {
+  color: var(--c-white, #fff) !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+}
+
+#markets .roi-engine-title em {
+  color: var(--title-highlight-blue, var(--c-accent, #06b6d4)) !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 820px) {
+  #markets .section-title,
+  #proof-snapshot .section-title,
+  #offer .section-title,
+  #about .section-title,
+  #whynow .section-title,
+  #how .section-title,
+  #products .section-title,
+  #logistics .section-title,
+  #contact .section-title,
+  .airframe-showcase-title,
+  .v20-conversion-proof .conversion-gallery-title {
+    font-size: var(--title-scale-mobile, clamp(2.18rem, 10vw, 3rem)) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  #markets .roi-engine-copy h3,
+  #markets .roi-engine-title {
+    font-size: clamp(2.05rem, 10vw, 3rem) !important;
+    line-height: 1.02 !important;
+  }
+}
