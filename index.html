@@ -14099,5 +14099,237 @@ Thank you.`;
   }
 </style>
 
+
+
+<style id="v20-59-wider-rail-readable-copy-no-black-panels">
+  /* v20.59 — wider desktop one-column rail, stronger copy readability, and removal of harsh black inner section panels.
+     Base: v20.58. Mobile remains untouched. Proven Airframes and Conversion Gallery remain cinematic/full-width. */
+  @media (min-width: 821px) {
+    :root {
+      --v20-58-rail: 1060px;
+      --v20-58-gutter: clamp(30px, 4.4vw, 72px);
+      --v20-58-section-y: clamp(6rem, 7vw, 8.6rem);
+      --v20-58-card-gap: clamp(1.25rem, 1.7vw, 1.8rem);
+      --v20-58-card-pad: clamp(1.85rem, 2.35vw, 2.65rem);
+      --v20-58-section-copy: clamp(1.09rem, 1.02vw, 1.2rem);
+      --v20-58-card-title: clamp(1.55rem, 1.55vw, 1.9rem);
+      --v20-58-card-copy: clamp(1.06rem, 1vw, 1.16rem);
+      --v20-58-small: clamp(0.9rem, 0.82vw, 1rem);
+      --v20-58-micro: clamp(0.78rem, 0.72vw, 0.88rem);
+      --v20-59-page-blue: #07111d;
+      --v20-59-panel-blue: rgba(7, 17, 29, 0.72);
+      --v20-59-card-blue: rgba(8, 23, 35, 0.82);
+    }
+
+    html,
+    body {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(6, 182, 212, 0.08) 0%, rgba(7, 17, 29, 0) 34%),
+        linear-gradient(180deg, #07111d 0%, #06101a 48%, #07111d 100%) !important;
+      background-color: var(--v20-59-page-blue) !important;
+    }
+
+    /* Remove the pasted-on black inner slabs. Keep cards dark/glass, but let sections sit on the blue page. */
+    #products,
+    #logistics,
+    #contact {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    footer {
+      background: transparent !important;
+      background-color: transparent !important;
+      border-top: 1px solid rgba(103, 232, 249, 0.12) !important;
+      box-shadow: none !important;
+      padding-top: clamp(4rem, 5vw, 5.75rem) !important;
+      padding-bottom: clamp(4rem, 5vw, 5.75rem) !important;
+    }
+
+    #products .products-wrap,
+    #logistics .logistics-wrap,
+    #contact .contact-wrap,
+    .legal-strip,
+    footer {
+      width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      max-width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Re-assert the wider rail for all regular one-column content after older fallback rules. */
+    #hero .hero-content,
+    #hero .airframe-showcase-intro,
+    #offer .offer-wrap,
+    #whynow .whynow-wrap,
+    #about .about-grid,
+    #how .how-wrap,
+    #products .products-wrap,
+    #logistics .logistics-wrap,
+    #proof-snapshot .market-numbers-wrap,
+    #markets .v20-market-wrap,
+    #contact .contact-wrap,
+    .legal-strip,
+    footer {
+      width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      max-width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Keep the two cinematic sections outside the normal rail. */
+    #hero .hero-airframe-top,
+    #hero .hero-airframe-top .media-frame.hero-airframe-frame,
+    #hero .hero-airframe-frame,
+    #hero .hero-airframe-carousel,
+    #how .conversion-gallery-shell,
+    #how #conversionGallery.conversion-gallery-track,
+    #how .conversion-gallery-track#conversionGallery {
+      width: 100vw !important;
+      max-width: none !important;
+    }
+
+    /* Desktop readability floor: eliminate tiny explanatory text across the investor page. */
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle,
+    .section-body,
+    #offer .offer-tile-text,
+    #whynow .whynow-text,
+    #about .pillar-text,
+    #how .step-text,
+    #products .product-desc,
+    #logistics .route-node-detail,
+    #logistics .lspec-value,
+    #logistics .offer-val,
+    #proof-snapshot .market-numbers-lead,
+    #proof-snapshot .market-metric-card p,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-market-lead,
+    #markets .v20-card-thesis,
+    #markets .market-money-line,
+    #markets .roi-engine-flow span,
+    #markets .investor-logic-summary,
+    #contact .section-body,
+    #contact .cinfo-value,
+    #contact .signup-helper,
+    #contact .signup-return-panel p,
+    .legal-strip,
+    .footer-copy {
+      font-size: var(--v20-58-card-copy) !important;
+      line-height: 1.68 !important;
+      letter-spacing: 0.002em !important;
+      color: rgba(229, 231, 235, 0.86) !important;
+    }
+
+    /* Small labels are still labels, but no longer fine-print. */
+    #offer .offer-tile-label,
+    #whynow .proof-label,
+    #whynow .proof-tags span,
+    #how .instrument,
+    #products .product-grade,
+    #products .spec-key,
+    #products .spec-val,
+    #logistics .route-node-name,
+    #logistics .lspec-label,
+    #logistics .offer-key,
+    #proof-snapshot .metric-label,
+    #markets .v20-market-label,
+    #markets .v20-eyebrow,
+    #markets .investor-logic-kicker,
+    #contact .cinfo-label,
+    #contact .signup-label,
+    #contact .signup-return-kicker {
+      font-size: var(--v20-58-small) !important;
+      line-height: 1.28 !important;
+      letter-spacing: 0.105em !important;
+    }
+
+    /* Make all card systems feel equally readable. */
+    #offer .offer-tile-value,
+    #whynow .whynow-title,
+    #about .pillar-title,
+    #how .step-title,
+    #products .product-name,
+    #logistics .route-title,
+    #proof-snapshot .market-metric-card strong,
+    #markets .v20-card-body h3,
+    #markets .roi-engine-flow strong,
+    #contact .signup-entry-title {
+      font-size: var(--v20-58-card-title) !important;
+      line-height: 1.18 !important;
+    }
+
+    #products .product-specs,
+    #logistics .offer-table {
+      font-size: var(--v20-58-small) !important;
+      line-height: 1.58 !important;
+    }
+
+    #products .spec-row,
+    #logistics .offer-row {
+      padding-top: 0.9rem !important;
+      padding-bottom: 0.9rem !important;
+    }
+
+    /* Wider rail needs slightly more generous cards; keep the card surfaces, remove only section slabs. */
+    #offer .offer-tile,
+    #offer .offer-tile.feature,
+    #whynow .premium-proof-card,
+    #about .pillar,
+    #how .step,
+    #products .product-card,
+    #logistics .route-card,
+    #logistics .lspec,
+    #logistics .offer-table,
+    #proof-snapshot .market-metric-card,
+    #markets .v20-market-card,
+    #markets .roi-engine-panel,
+    #markets .investor-logic-band,
+    #contact .contact-info-item,
+    #contact .signup-entry-card,
+    #contact .signup-return-panel,
+    .legal-strip {
+      padding: var(--v20-58-card-pad) !important;
+    }
+
+    #products .product-card,
+    #how .step,
+    #logistics .lspec,
+    #logistics .offer-table,
+    #contact .signup-entry-card,
+    .legal-strip {
+      background: linear-gradient(180deg, rgba(8, 23, 35, 0.84), rgba(5, 13, 22, 0.82)) !important;
+      border-color: rgba(103, 232, 249, 0.13) !important;
+    }
+
+    #products .product-grid {
+      background: rgba(103, 232, 249, 0.10) !important;
+      border-color: rgba(103, 232, 249, 0.13) !important;
+    }
+
+    /* Payload metrics remain strong but safe inside the wider one-column card. */
+    #whynow .payload-main {
+      font-size: clamp(1.85rem, 2.15vw, 2.45rem) !important;
+    }
+
+    #whynow .payload-sub {
+      font-size: clamp(1.5rem, 1.75vw, 1.95rem) !important;
+    }
+
+    @media (min-width: 821px) and (max-width: 1050px) {
+      :root {
+        --v20-58-rail: 900px;
+        --v20-58-gutter: clamp(24px, 4vw, 44px);
+        --v20-58-card-copy: clamp(1.02rem, 1.2vw, 1.12rem);
+        --v20-58-small: clamp(0.86rem, 0.95vw, 0.96rem);
+      }
+    }
+  }
+</style>
+
 </body>
 </html>
