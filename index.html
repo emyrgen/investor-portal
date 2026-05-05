@@ -14331,5 +14331,169 @@ Thank you.`;
   }
 </style>
 
+
+
+<style id="v20-60-readable-small-text-floor">
+  /* v20.60 — definitive desktop readability pass for small explanatory text.
+     Purpose: every small body/explanation/helper text class gets a readable desktop floor.
+     Mobile is untouched. Full-width Proven Airframes and Conversion Gallery layout behavior is untouched. */
+  @media (min-width: 821px) {
+    :root {
+      --v20-60-body: clamp(1.18rem, 1.02vw, 1.32rem);
+      --v20-60-body-tight: clamp(1.12rem, 0.98vw, 1.24rem);
+      --v20-60-small: clamp(1.02rem, 0.9vw, 1.12rem);
+      --v20-60-label: clamp(0.94rem, 0.82vw, 1.03rem);
+      --v20-60-line: 1.72;
+      --v20-60-muted: rgba(235, 241, 247, 0.9);
+      --v20-60-muted-strong: rgba(246, 250, 255, 0.94);
+    }
+
+    /* Main explanatory copy and all simple descriptive text. */
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle,
+    #hero .hero-airframe-copy,
+    #offer .offer-tile-text,
+    #offer .offer-tile.feature .offer-tile-text,
+    #whynow .whynow-text,
+    #about .pillar-text,
+    #how .step-text,
+    #how .conversion-gallery-text,
+    #how .gallery-slide-text,
+    #products .product-desc,
+    #logistics .route-node-detail,
+    #logistics .lspec-value,
+    #logistics .offer-val,
+    #proof-snapshot .market-numbers-lead,
+    #proof-snapshot .market-metric-card p,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-market-lead,
+    #markets .v20-card-thesis,
+    #markets .market-money-line,
+    #markets .roi-engine-flow span,
+    #markets .investor-logic-milestones,
+    #markets .investor-logic-summary,
+    #contact .section-body,
+    #contact .cinfo-value,
+    #contact .signup-helper,
+    #contact .signup-return-panel p,
+    .legal-strip,
+    .footer-copy,
+    .wiz-step-sub,
+    .wiz-disclosure,
+    .wiz-agreement-list,
+    .wiz-entity-skip-copy,
+    .wiz-confirm,
+    .wiz-confirm-compact,
+    .wiz-error {
+      font-size: var(--v20-60-body) !important;
+      line-height: var(--v20-60-line) !important;
+      letter-spacing: 0.002em !important;
+      color: var(--v20-60-muted) !important;
+    }
+
+    /* Short card notes and dense technical details: readable, but slightly below paragraph scale. */
+    #products .product-specs,
+    #products .spec-row,
+    #products .spec-key,
+    #products .spec-val,
+    #logistics .offer-table,
+    #logistics .offer-row,
+    #logistics .route-body,
+    #logistics .logistics-specs,
+    #contact .signup-return-kicker,
+    #contact .signup-entry-card p,
+    #contact .simple-signup-form,
+    #contact .signup-input,
+    .wiz-field input,
+    .wiz-field select,
+    .wiz-select,
+    .wiz-label,
+    .wiz-entity-fields-label,
+    .wiz-amount-chip,
+    .wiz-choice-label,
+    .wiz-progress-meta,
+    .wiz-agreement-kicker {
+      font-size: var(--v20-60-small) !important;
+      line-height: 1.56 !important;
+    }
+
+    /* Labels/eyebrows/tags: still compact, no longer tiny/fine-print. */
+    #hero .airframe-showcase-kicker,
+    #hero .hero-airframe-pill,
+    #offer .offer-tile-label,
+    #whynow .proof-label,
+    #whynow .proof-tags span,
+    #how .instrument,
+    #how .gallery-pill,
+    #how .conversion-gallery-kicker,
+    #products .product-grade,
+    #logistics .route-node-name,
+    #logistics .lspec-label,
+    #logistics .offer-key,
+    #proof-snapshot .metric-label,
+    #markets .v20-market-label,
+    #markets .v20-eyebrow,
+    #markets .investor-logic-kicker,
+    #contact .cinfo-label,
+    #contact .signup-label,
+    .section-tag,
+    .wiz-kicker,
+    .wiz-step-h,
+    .wiz-agreement-panel-compact .wiz-agreement-kicker {
+      font-size: var(--v20-60-label) !important;
+      line-height: 1.36 !important;
+      letter-spacing: 0.095em !important;
+    }
+
+    /* The specific text the user called out: force it above the general copy floor. */
+    #offer .offer-tile.feature .offer-tile-text {
+      font-size: clamp(1.24rem, 1.08vw, 1.38rem) !important;
+      line-height: 1.74 !important;
+      color: var(--v20-60-muted-strong) !important;
+    }
+
+    /* Keep smaller one-line offer tiles readable too. */
+    #offer .offer-tile:not(.feature) .offer-tile-text {
+      font-size: clamp(1.14rem, 1vw, 1.26rem) !important;
+      line-height: 1.6 !important;
+      color: var(--v20-60-muted) !important;
+    }
+
+    /* Stronger readability for named values and small contact/security values. */
+    #offer .offer-tile-value,
+    #contact .cinfo-value,
+    #logistics .lspec-value,
+    #logistics .offer-val {
+      color: var(--v20-60-muted-strong) !important;
+    }
+
+    /* Form controls should not remain small on desktop. */
+    #contact .signup-input,
+    #contact .signup-entry-cta,
+    #contact .signup-return-cta,
+    #contact .simple-signup-form button,
+    .wiz-next,
+    .wiz-back,
+    .wiz-agreement-download,
+    .wiz-entity-skip {
+      font-size: clamp(1rem, 0.9vw, 1.12rem) !important;
+      line-height: 1.35 !important;
+    }
+
+    /* Prevent oversized letter spacing from making labels harder to read once scaled up. */
+    #offer .offer-tile-label,
+    #whynow .proof-label,
+    #products .product-grade,
+    #logistics .lspec-label,
+    #proof-snapshot .metric-label,
+    #markets .v20-market-label,
+    #contact .cinfo-label,
+    #contact .signup-label {
+      letter-spacing: 0.075em !important;
+    }
+  }
+</style>
+
 </body>
 </html>
