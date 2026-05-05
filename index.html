@@ -7421,6 +7421,41 @@
   }
 </style>
 
+
+<style id="v20-43-desktop-hero-video-height-fit">
+  /* v20.43 — desktop hero video height fit.
+     Keep the existing hero video, but prevent the video block from becoming too tall
+     for the first desktop viewport. Mobile behavior remains untouched. */
+  @media (min-width: 821px) {
+    .hero-video-band.hero-video-composite {
+      padding-top: clamp(14px, 1.35vw, 22px) !important;
+      padding-bottom: clamp(16px, 1.45vw, 24px) !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video-shell {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: min(1160px, calc(100vw - 96px), calc((100vh - 320px) * 16 / 9)) !important;
+      max-width: min(1160px, calc(100vw - 96px)) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 0 !important;
+      line-height: 0 !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      margin: 0 auto !important;
+    }
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
