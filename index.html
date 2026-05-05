@@ -8036,8 +8036,8 @@
 <div class="proof-label">Payload Gap</div>
 <div class="whynow-title">Aircraft-Class Lift, Without the Pilot</div>
 <div class="payload-range">
-<div class="payload-main">200 kg <span>→</span> 3,000+ kg</div>
-<div class="payload-sub">440 lb <span>→</span> 6,600+ lb</div>
+<div class="payload-main"><span class="payload-from">200 kg</span><span class="payload-arrow">→</span><span class="payload-to">3,000+ kg</span></div>
+<div class="payload-sub"><span class="payload-from">440 lb</span><span class="payload-arrow">→</span><span class="payload-to">6,600+ lb</span></div>
 <div class="payload-scale" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span></div>
 </div>
 <div class="whynow-text">Small drones cannot carry it. Crewed helicopters are expensive, scarce, and risky. EMYRGEN targets the heavy-lift gap in between.</div>
@@ -13570,6 +13570,531 @@ Thank you.`;
   @media (min-width: 1300px) {
     #how .conversion-gallery-head {
       padding-left: calc((100vw - 1300px) / 2 + 137px) !important;
+    }
+  }
+</style>
+
+
+
+<style id="v20-58-one-column-rail-and-typography-normalization">
+  /* v20.58 — One-column rail normalization + desktop typography consistency pass.
+     Base: v20.57. Preserve the one-column desktop flow and the restored v20.54-style Conversion Gallery.
+     Full-width cinematic sections remain full-width: Proven Airframes slider and Conversion Gallery. Mobile unchanged. */
+  @media (min-width: 821px) {
+    :root {
+      --v20-58-rail: 860px;
+      --v20-58-gutter: clamp(32px, 6vw, 96px);
+      --v20-58-section-y: clamp(5.2rem, 6.4vw, 7.25rem);
+      --v20-58-card-gap: clamp(1.05rem, 1.6vw, 1.55rem);
+      --v20-58-card-pad: clamp(1.45rem, 2vw, 2rem);
+      --v20-58-title: clamp(2.28rem, 2.85vw, 3.25rem);
+      --v20-58-title-small: clamp(2.05rem, 2.45vw, 2.8rem);
+      --v20-58-hero-title: clamp(2.35rem, 3vw, 3.45rem);
+      --v20-58-section-copy: clamp(1rem, 0.92vw, 1.075rem);
+      --v20-58-card-title: clamp(1.34rem, 1.45vw, 1.65rem);
+      --v20-58-card-copy: clamp(0.96rem, 0.9vw, 1.04rem);
+      --v20-58-small: clamp(0.78rem, 0.74vw, 0.88rem);
+      --v20-58-micro: clamp(0.68rem, 0.66vw, 0.76rem);
+    }
+
+    /* One master desktop rail for every normal one-column section. */
+    #hero .hero-content,
+    #hero .airframe-showcase-intro,
+    #offer .offer-wrap,
+    #whynow .whynow-wrap,
+    #about .about-grid,
+    #how .how-wrap,
+    #products .products-wrap,
+    #logistics .logistics-wrap,
+    #proof-snapshot .market-numbers-wrap,
+    #markets .v20-market-wrap,
+    #contact .contact-wrap,
+    .legal-strip,
+    footer {
+      box-sizing: border-box !important;
+      width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      max-width: min(var(--v20-58-rail), calc(100vw - (var(--v20-58-gutter) * 2))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    #hero,
+    #offer,
+    #whynow,
+    #about,
+    #how,
+    #products,
+    #logistics,
+    #proof-snapshot,
+    #markets,
+    #contact {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    #offer,
+    #whynow,
+    #about,
+    #how,
+    #products,
+    #logistics,
+    #proof-snapshot,
+    #markets,
+    #contact {
+      padding-top: var(--v20-58-section-y) !important;
+      padding-bottom: var(--v20-58-section-y) !important;
+    }
+
+    /* Explicit exclusions: these two media experiences remain full-width/cinematic. */
+    #hero .hero-airframe-top,
+    #hero .hero-airframe-top .media-frame.hero-airframe-frame,
+    #hero .hero-airframe-frame,
+    #hero .hero-airframe-carousel,
+    #how .conversion-gallery-shell,
+    #how #conversionGallery.conversion-gallery-track,
+    #how .conversion-gallery-track#conversionGallery {
+      max-width: none !important;
+    }
+
+    /* Section headers share the same rail and left edge. */
+    #offer .offer-header,
+    #whynow .whynow-header,
+    #about .about-left,
+    #how .how-sticky,
+    #products .products-header,
+    #logistics .section-header,
+    #proof-snapshot .market-numbers-copy,
+    #markets .v20-market-header,
+    #contact .contact-wrap > div:first-child {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: left !important;
+    }
+
+    #offer .section-tag,
+    #whynow .section-tag,
+    #about .section-tag,
+    #how .section-tag,
+    #products .section-tag,
+    #logistics .section-tag,
+    #proof-snapshot .section-tag,
+    #markets .section-tag,
+    #contact .section-tag,
+    .v20-eyebrow,
+    .investor-logic-kicker {
+      justify-content: flex-start !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      font-size: var(--v20-58-micro) !important;
+      line-height: 1 !important;
+      letter-spacing: 0.15em !important;
+    }
+
+    #hero .hero-h1 {
+      max-width: 100% !important;
+      font-size: var(--v20-58-hero-title) !important;
+      line-height: 1.06 !important;
+      letter-spacing: -0.022em !important;
+    }
+
+    #hero .airframe-showcase-title,
+    #offer .section-title,
+    #about .section-title,
+    #how .section-title,
+    #products .section-title,
+    #logistics .section-title,
+    #contact .section-title {
+      max-width: 100% !important;
+      font-size: var(--v20-58-title) !important;
+      line-height: 1.07 !important;
+      letter-spacing: -0.021em !important;
+      font-weight: 500 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: left !important;
+    }
+
+    #whynow .section-title,
+    #proof-snapshot .section-title,
+    #markets .section-title,
+    #markets .roi-engine-title,
+    #markets .investor-logic-title {
+      max-width: 100% !important;
+      font-size: var(--v20-58-title-small) !important;
+      line-height: 1.08 !important;
+      letter-spacing: -0.018em !important;
+      font-weight: 500 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: left !important;
+    }
+
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle,
+    .section-body,
+    #proof-snapshot .market-numbers-lead,
+    #markets .v20-market-lead,
+    #contact .section-body,
+    .conversion-gallery-text {
+      max-width: 100% !important;
+      font-size: var(--v20-58-section-copy) !important;
+      line-height: 1.66 !important;
+      letter-spacing: 0.002em !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    /* Every normal card/list group becomes one column and fills the same rail. */
+    #offer .offer-bento,
+    #whynow .premium-proof-bento,
+    #about .about-pillars,
+    #how .steps,
+    #products .product-grid,
+    #logistics .logistics-layout,
+    #logistics .logistics-specs,
+    #proof-snapshot .market-metrics-grid,
+    #markets .v20-market-cards,
+    #markets .roi-engine-flow,
+    #contact .contact-info,
+    #contact .signup-field-row,
+    .signup-field-row {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      gap: var(--v20-58-card-gap) !important;
+      align-items: stretch !important;
+      justify-items: stretch !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #markets .v20-market-card,
+    #markets .roi-engine-panel {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      gap: 0 !important;
+    }
+
+    /* All visible boxes/cards/rows share the same outer width. */
+    #offer .offer-tile,
+    #offer .offer-tile.feature,
+    #whynow .premium-proof-card,
+    #about .pillar,
+    #how .step,
+    #products .product-card,
+    #logistics .route-card,
+    #logistics .lspec,
+    #logistics .offer-table,
+    #proof-snapshot .market-metric-card,
+    #markets .v20-market-card,
+    #markets .roi-engine-panel,
+    #markets .investor-logic-band,
+    #contact .contact-info-item,
+    #contact .signup-entry-card,
+    #contact .signup-return-panel,
+    .legal-strip {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      grid-column: auto !important;
+      grid-row: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #offer .offer-tile,
+    #offer .offer-tile.feature,
+    #whynow .premium-proof-card,
+    #about .pillar,
+    #how .step,
+    #products .product-card,
+    #logistics .route-card,
+    #logistics .lspec,
+    #logistics .offer-table,
+    #proof-snapshot .market-metric-card,
+    #markets .v20-market-card .v20-card-body,
+    #markets .roi-engine-panel,
+    #markets .investor-logic-band,
+    #contact .contact-info-item,
+    #contact .signup-entry-card,
+    .legal-strip {
+      padding: var(--v20-58-card-pad) !important;
+    }
+
+    /* Make process rows look like same-width highlight cards rather than thin timeline slivers. */
+    #how .step {
+      border: 1px solid rgba(255,255,255,0.08) !important;
+      border-radius: 18px !important;
+      background: linear-gradient(180deg, rgba(10, 18, 28, 0.82), rgba(6, 12, 20, 0.84)) !important;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.035) !important;
+      display: grid !important;
+      grid-template-columns: auto minmax(0, 1fr) !important;
+      column-gap: clamp(1rem, 1.8vw, 1.45rem) !important;
+      row-gap: 0.9rem !important;
+      align-items: start !important;
+    }
+
+    /* Consistent card/title/body typography across all card systems. */
+    #offer .offer-tile-value,
+    #whynow .whynow-title,
+    #about .pillar-title,
+    #how .step-title,
+    #products .product-name,
+    #logistics .route-title,
+    #proof-snapshot .market-metric-card strong,
+    #markets .v20-card-body h3,
+    #markets .roi-engine-flow strong,
+    #contact .signup-entry-title {
+      font-size: var(--v20-58-card-title) !important;
+      line-height: 1.16 !important;
+      letter-spacing: -0.006em !important;
+    }
+
+    #offer .offer-tile-text,
+    #whynow .whynow-text,
+    #whynow .execution-proof-line,
+    #about .pillar-text,
+    #how .step-text,
+    #products .product-desc,
+    #logistics .route-node-detail,
+    #logistics .lspec-value,
+    #logistics .offer-val,
+    #proof-snapshot .market-metric-card p,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-card-thesis,
+    #markets .market-money-line,
+    #markets .roi-engine-flow span,
+    #markets .investor-logic-summary,
+    #contact .cinfo-value,
+    #contact .signup-helper,
+    #contact .signup-return-text,
+    .legal-strip {
+      font-size: var(--v20-58-card-copy) !important;
+      line-height: 1.62 !important;
+      letter-spacing: 0.002em !important;
+    }
+
+    #offer .offer-tile-label,
+    #whynow .proof-label,
+    #products .product-grade,
+    #logistics .route-node-name,
+    #logistics .lspec-label,
+    #logistics .offer-key,
+    #proof-snapshot .metric-label,
+    #markets .v20-market-label,
+    #contact .cinfo-label,
+    #contact .signup-label,
+    #contact .signup-return-kicker {
+      font-size: var(--v20-58-small) !important;
+      line-height: 1.22 !important;
+      letter-spacing: 0.11em !important;
+    }
+
+    #about .pillar-num,
+    #how .step-num,
+    #whynow .whynow-num {
+      font-size: clamp(1.55rem, 1.95vw, 2.15rem) !important;
+      line-height: 1 !important;
+      letter-spacing: -0.015em !important;
+    }
+
+    /* Offer cards: same width, cleaner density. */
+    #offer .offer-bento,
+    #whynow .premium-proof-bento,
+    #about .about-pillars,
+    #how .steps,
+    #products .product-grid,
+    #proof-snapshot .market-metrics-grid,
+    #markets .v20-market-cards {
+      margin-top: clamp(1.8rem, 2.8vw, 2.65rem) !important;
+    }
+
+    #offer .offer-tile,
+    #offer .offer-tile.feature {
+      min-height: 0 !important;
+    }
+
+    #offer .offer-tile-text,
+    #offer .offer-tile.feature .offer-tile-text,
+    #products .product-desc,
+    #markets .v20-card-thesis {
+      max-width: 100% !important;
+    }
+
+    /* Payload Gap: explicit three-part rows to prevent kg/lb overlap. */
+    #whynow .payload-range {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: clamp(1rem, 1.5vw, 1.35rem) !important;
+      overflow: hidden !important;
+    }
+
+    #whynow .payload-main,
+    #whynow .payload-sub {
+      display: grid !important;
+      grid-template-columns: minmax(0, max-content) auto minmax(0, max-content) !important;
+      align-items: baseline !important;
+      justify-content: start !important;
+      column-gap: clamp(0.8rem, 1.5vw, 1.35rem) !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+    }
+
+    #whynow .payload-main {
+      font-size: clamp(1.65rem, 2.1vw, 2.2rem) !important;
+      line-height: 1.08 !important;
+      letter-spacing: 0.008em !important;
+    }
+
+    #whynow .payload-sub {
+      font-size: clamp(1.35rem, 1.7vw, 1.75rem) !important;
+      line-height: 1.1 !important;
+      margin-top: 0.35rem !important;
+      letter-spacing: 0.008em !important;
+    }
+
+    #whynow .payload-from,
+    #whynow .payload-to,
+    #whynow .payload-arrow {
+      display: inline-block !important;
+      white-space: nowrap !important;
+    }
+
+    #whynow .payload-arrow {
+      opacity: 0.92 !important;
+      transform: translateY(-0.04em) !important;
+    }
+
+    #whynow .proof-tags,
+    #how .step-instruments {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 0.55rem !important;
+    }
+
+    #whynow .proof-tags span,
+    #how .instrument {
+      font-size: var(--v20-58-small) !important;
+      line-height: 1.05 !important;
+      letter-spacing: 0.07em !important;
+    }
+
+    /* Product/IP stack cards and spec tables become readable, not tiny. */
+    #products .product-card {
+      min-height: 0 !important;
+    }
+
+    #products .product-specs,
+    #logistics .offer-table {
+      font-size: var(--v20-58-small) !important;
+      line-height: 1.5 !important;
+    }
+
+    #products .spec-row,
+    #logistics .offer-row {
+      gap: 1.25rem !important;
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+    }
+
+    /* Market number cards and opportunity cards should be readable but not oversized. */
+    #proof-snapshot .market-metric-card strong,
+    #markets .market-card-number {
+      font-size: clamp(2rem, 2.65vw, 2.9rem) !important;
+      line-height: 1.02 !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    #markets .v20-card-body h3 {
+      max-width: 100% !important;
+      font-size: clamp(1.7rem, 2vw, 2.2rem) !important;
+      line-height: 1.1 !important;
+      margin-bottom: 0.95rem !important;
+    }
+
+    #markets .v20-card-visual,
+    #markets .v20-image-stack,
+    #markets .v20-image-stack.market-gallery-2,
+    #markets .v20-image-stack.market-gallery-3,
+    #markets .v20-image-stack-featured {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #markets .v20-stack-img,
+    #markets .v20-stack-img.v20-stack-lead {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      object-fit: cover !important;
+    }
+
+    #markets .roi-engine-panel,
+    #markets .investor-logic-band {
+      gap: var(--v20-58-card-gap) !important;
+    }
+
+    #markets .roi-engine-flow div {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      padding: clamp(1rem, 1.55vw, 1.35rem) !important;
+    }
+
+    /* Contact/signup: align intro, contact rows, and form to same rail. */
+    #contact .contact-wrap {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: clamp(2rem, 3vw, 3rem) !important;
+    }
+
+    #contact .signup-entry-card {
+      padding: clamp(1.55rem, 2.4vw, 2.3rem) !important;
+    }
+
+    #contact .signup-input {
+      min-height: 52px !important;
+      font-size: var(--v20-58-card-copy) !important;
+    }
+
+    #hero .hero-actions,
+    #offer .offer-cta-row {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: flex-start !important;
+      gap: 0.85rem !important;
+    }
+
+    /* Keep v20.57 desktop Conversion Gallery intact; only align the text header to the same visual rail as intended in that gallery. */
+    #how .conversion-gallery-shell {
+      padding-top: 0 !important;
+      padding-bottom: 1.4rem !important;
+    }
+
+    #how .conversion-gallery-title {
+      font-size: clamp(1.65rem, 1.55vw, 2rem) !important;
+      line-height: 1.16 !important;
+    }
+
+    /* Responsive desktop fallback keeps the one-column rail from feeling cramped on small laptops. */
+    @media (min-width: 821px) and (max-width: 1050px) {
+      :root {
+        --v20-58-rail: 820px;
+        --v20-58-gutter: clamp(26px, 5vw, 48px);
+        --v20-58-title: clamp(2.08rem, 3.4vw, 2.85rem);
+        --v20-58-title-small: clamp(1.95rem, 3vw, 2.55rem);
+        --v20-58-hero-title: clamp(2.15rem, 3.65vw, 3rem);
+      }
     }
   }
 </style>
