@@ -7456,6 +7456,58 @@
   }
 </style>
 
+
+
+<style id="v20-44-desktop-hero-video-balance-fix">
+  /* v20.44 — desktop hero video balance fix.
+     Keep the same video, restore stronger presence, and remove the dead gap
+     between the video band and the hero copy. Desktop only. */
+  @media (min-width: 821px) {
+    .hero-video-band.hero-video-composite {
+      padding-top: clamp(16px, 1.6vw, 26px) !important;
+      padding-bottom: clamp(14px, 1.25vw, 22px) !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video-shell {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: min(1040px, 68vw, calc((100vh - 260px) * 16 / 9)) !important;
+      max-width: min(1040px, calc(100vw - 120px)) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 0 !important;
+      line-height: 0 !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      margin: 0 auto !important;
+    }
+
+    #hero {
+      min-height: auto !important;
+      display: block !important;
+      justify-content: initial !important;
+      margin-top: 0 !important;
+      padding-top: clamp(28px, 2.8vw, 48px) !important;
+      padding-bottom: clamp(78px, 7vw, 128px) !important;
+    }
+
+    #hero .hero-content {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
