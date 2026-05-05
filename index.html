@@ -13270,5 +13270,309 @@ Thank you.`;
   }
 </style>
 
+
+
+<style id="v20-57-restore-v20-54-conversion-gallery-only">
+  /* v20.57 — restore the Conversion Gallery desktop presentation from v20.54.
+     Keeps the v20.55/v20.56 one-column desktop flow everywhere else. */
+  @media (min-width: 901px) {
+    #how .conversion-gallery-shell {
+      box-sizing: border-box !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      min-width: 100vw !important;
+      margin-left: calc(50% - 50vw) !important;
+      margin-right: calc(50% - 50vw) !important;
+      margin-top: clamp(3.5rem, 5vw, 5rem) !important;
+      margin-bottom: 0 !important;
+      padding: 0 0 1.4rem 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-radius: 0 !important;
+      overflow: hidden !important;
+      background: linear-gradient(180deg, rgba(11,22,38,0.88), rgba(7,17,29,0.96)) !important;
+    }
+
+    #how .conversion-gallery-head {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding-top: 1.6rem !important;
+      padding-bottom: 1.15rem !important;
+      padding-left: max(var(--shell-gutter), calc((100vw - 1300px) / 2)) !important;
+      padding-right: max(var(--shell-gutter), calc((100vw - 1300px) / 2)) !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-radius: 0 !important;
+      text-align: left !important;
+    }
+
+    #how .conversion-gallery-kicker,
+    #how .conversion-gallery-title,
+    #how .conversion-gallery-text {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      max-width: 980px !important;
+      text-align: left !important;
+    }
+
+    #how .conversion-gallery-title {
+      font-size: clamp(1.6rem, 1.55vw, 2rem) !important;
+      line-height: 1.16 !important;
+      margin-bottom: 0.35rem !important;
+    }
+
+    #how .conversion-gallery-text {
+      font-size: clamp(0.93rem, 0.92vw, 1.02rem) !important;
+      line-height: 1.55 !important;
+      color: var(--c-muted) !important;
+    }
+
+    #how #conversionGallery.conversion-gallery-track,
+    #how .conversion-gallery-track#conversionGallery {
+      display: flex !important;
+      flex-direction: row !important;
+      grid-template-columns: none !important;
+      gap: 0 !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      min-width: 100vw !important;
+      height: 540px !important;
+      min-height: 540px !important;
+      max-height: 540px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 24px !important;
+      overflow: hidden !important;
+      border: 1px solid var(--c-border) !important;
+      background: #07111d !important;
+    }
+
+    #how #conversionGallery .gallery-slide,
+    #how #conversionGallery .gallery-slide.is-active,
+    #how #conversionGallery .gallery-slide:hover,
+    #how #conversionGallery .gallery-slide:focus-within {
+      display: block !important;
+      flex: 1 1 0 !important;
+      min-width: 80px !important;
+      max-width: none !important;
+      width: auto !important;
+      height: 540px !important;
+      min-height: 540px !important;
+      max-height: 540px !important;
+      position: relative !important;
+      cursor: pointer !important;
+      overflow: hidden !important;
+      border-radius: 0 !important;
+      border-left: 0 !important;
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+      border-right: 1px solid rgba(255,255,255,0.05) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      opacity: 1 !important;
+      transform: none !important;
+      transition: flex-grow 700ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    #how #conversionGallery .gallery-slide:last-child {
+      border-right: 0 !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active {
+      flex-grow: 6 !important;
+    }
+
+    #how #conversionGallery .gallery-slide:not(.is-active) {
+      flex-grow: 1 !important;
+    }
+
+    #how #conversionGallery .gallery-slide img,
+    #how #conversionGallery .gallery-slide.is-active img,
+    #how #conversionGallery .gallery-slide:hover img,
+    #how #conversionGallery .gallery-slide:focus-within img {
+      position: absolute !important;
+      inset: 0 !important;
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 100% !important;
+      max-height: none !important;
+      aspect-ratio: auto !important;
+      object-fit: cover !important;
+      filter: brightness(0.55) saturate(0.85) !important;
+      transform: none !important;
+      transition: filter 600ms var(--ease), transform 800ms var(--ease) !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active img {
+      filter: brightness(0.85) saturate(1.05) !important;
+      transform: scale(1.02) !important;
+    }
+
+    #how #conversionGallery .gallery-slide::before,
+    #how #conversionGallery .gallery-slide::after {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 1 !important;
+      pointer-events: none !important;
+      opacity: 1 !important;
+    }
+
+    #how #conversionGallery .gallery-slide::before {
+      background: transparent !important;
+    }
+
+    #how #conversionGallery .gallery-slide::after {
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(5,6,8,0.85) 100%) !important;
+    }
+
+    #how #conversionGallery .gallery-overlay,
+    #how #conversionGallery .gallery-slide.is-active .gallery-overlay,
+    #how #conversionGallery .gallery-slide:hover .gallery-overlay,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-overlay {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 2 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-end !important;
+      padding: 1.75rem !important;
+      background: none !important;
+      border: 0 !important;
+      transform: none !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+    }
+
+    #how #conversionGallery .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill {
+      position: absolute !important;
+      top: 1.5rem !important;
+      left: 1.5rem !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      width: auto !important;
+      max-width: none !important;
+      margin: 0 !important;
+      writing-mode: vertical-rl !important;
+      transform: rotate(180deg) !important;
+      padding: 0.55rem 0.7rem !important;
+      background: rgba(5,6,8,0.6) !important;
+      border: 1px solid rgba(255,255,255,0.12) !important;
+      border-radius: 999px !important;
+      color: var(--c-amber) !important;
+      font-family: var(--f-mono) !important;
+      font-size: 0.66rem !important;
+      line-height: 1 !important;
+      letter-spacing: 0.16em !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      transition: all 500ms var(--ease) !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill {
+      writing-mode: horizontal-tb !important;
+      transform: rotate(0deg) !important;
+    }
+
+    #how #conversionGallery .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-title,
+    #how #conversionGallery .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-text {
+      opacity: 0 !important;
+      transform: translateY(14px) !important;
+      pointer-events: none !important;
+    }
+
+    #how #conversionGallery .gallery-slide-title {
+      display: block !important;
+      color: var(--c-white) !important;
+      font-family: var(--f-display) !important;
+      font-size: 1.6rem !important;
+      line-height: 1.18 !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+      margin: 0 0 0.6rem 0 !important;
+      padding: 0 !important;
+      max-width: 100% !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      transition: opacity 500ms var(--ease) 200ms, transform 500ms var(--ease) 200ms !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.74) !important;
+    }
+
+    #how #conversionGallery .gallery-slide-text,
+    #how .conversion-gallery-shell #conversionGallery .gallery-slide .gallery-slide-text {
+      display: inline-block !important;
+      color: rgba(245,248,255,0.88) !important;
+      font-family: var(--f-body) !important;
+      font-size: 0.92rem !important;
+      line-height: 1.45 !important;
+      font-weight: 400 !important;
+      letter-spacing: 0 !important;
+      max-width: min(520px, 72%) !important;
+      max-height: none !important;
+      margin: 0 !important;
+      padding: 0.85rem 1rem 0.95rem !important;
+      border-radius: 14px !important;
+      background: rgba(3, 8, 18, 0.68) !important;
+      border: 1px solid rgba(180, 210, 255, 0.16) !important;
+      box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.34),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.035) !important;
+      backdrop-filter: blur(10px) saturate(1.05) !important;
+      -webkit-backdrop-filter: blur(10px) saturate(1.05) !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.62) !important;
+      overflow: visible !important;
+      transition: opacity 500ms var(--ease) 280ms, transform 500ms var(--ease) 280ms !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active:hover .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active:focus-within .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-text,
+    #how #conversionGallery .gallery-slide.is-active:hover .gallery-slide-text,
+    #how #conversionGallery .gallery-slide.is-active:focus-within .gallery-slide-text {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      pointer-events: auto !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-title {
+      white-space: normal !important;
+    }
+
+    #how .gallery-mobile-hint {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #how .conversion-gallery-head {
+      padding-left: calc(max(var(--shell-gutter), (100vw - 1300px) / 2) + clamp(107px, 12.2vw, 197px)) !important;
+      padding-right: max(var(--shell-gutter), calc((100vw - 1300px) / 2)) !important;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    #how .conversion-gallery-head {
+      padding-left: calc((100vw - 1300px) / 2 + 137px) !important;
+    }
+  }
+</style>
+
 </body>
 </html>
