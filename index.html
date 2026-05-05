@@ -7544,6 +7544,41 @@
   }
 </style>
 
+
+<style id="v20-46-desktop-hero-video-larger">
+  /* v20.46 — desktop only: increase hero video presence after v20.44 balance fix.
+     Same video, no crop, no mobile changes. */
+  @media (min-width: 821px) {
+    .hero-video-band.hero-video-composite {
+      padding-top: clamp(18px, 1.5vw, 24px) !important;
+      padding-bottom: clamp(10px, 0.9vw, 16px) !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video-shell {
+      width: min(1240px, 78vw, calc((100vh - 150px) * 16 / 9)) !important;
+      max-width: min(1240px, calc(100vw - 96px)) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 0 !important;
+      line-height: 0 !important;
+    }
+
+    .hero-video-band.hero-video-composite .hero-video {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      margin: 0 auto !important;
+    }
+
+    #hero {
+      padding-top: clamp(24px, 2.2vw, 40px) !important;
+    }
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
