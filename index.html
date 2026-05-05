@@ -11914,5 +11914,208 @@ Thank you.`;
   }
 </style>
 
+
+
+<style id="v20-52-desktop-layout-rail-polish">
+  /* v20.52 — Desktop-only content rail and title placement refinement.
+     Full-width sections remain full-width: the Proven Airframes slider and the Conversion Gallery are intentionally not constrained.
+     Mobile rules are untouched. */
+  @media (min-width: 821px) {
+    :root {
+      --v20-52-rail: 1120px;
+      --v20-52-wide-rail: 1220px;
+      --v20-52-gutter: clamp(48px, 7vw, 96px);
+      --v20-52-text: 800px;
+    }
+
+    /* Normal desktop sections use one consistent page rail. */
+    #hero .hero-content,
+    #hero .airframe-showcase-intro,
+    #offer .offer-wrap,
+    #whynow .whynow-wrap,
+    #about .about-wrap,
+    #how .how-wrap,
+    #products .products-wrap,
+    #logistics .logistics-wrap,
+    #contact .contact-wrap {
+      box-sizing: border-box !important;
+      width: min(var(--v20-52-rail), calc(100vw - (var(--v20-52-gutter) * 2))) !important;
+      max-width: min(var(--v20-52-rail), calc(100vw - (var(--v20-52-gutter) * 2))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Wider data-heavy sections get a controlled wider rail, not random drifting. */
+    #proof-snapshot .market-numbers-wrap,
+    #markets .v20-market-wrap {
+      box-sizing: border-box !important;
+      width: min(var(--v20-52-wide-rail), calc(100vw - (var(--v20-52-gutter) * 2))) !important;
+      max-width: min(var(--v20-52-wide-rail), calc(100vw - (var(--v20-52-gutter) * 2))) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Remove inherited side padding from the normal desktop sections only.
+       The two cinematic gallery bands below are excluded and remain full-width. */
+    #hero,
+    #offer,
+    #whynow,
+    #about,
+    #how,
+    #products,
+    #logistics,
+    #proof-snapshot,
+    #markets,
+    #contact {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Keep the two intended full-width experiences unchanged. */
+    #hero .hero-airframe-top,
+    #hero .hero-airframe-top .media-frame.hero-airframe-frame,
+    #how .conversion-gallery-shell,
+    #how .conversion-gallery-shell .conversion-gallery,
+    #how .conversion-gallery-shell .conversion-gallery-wrap,
+    #how .conversion-gallery-shell .conversion-gallery-frame,
+    #how .conversion-gallery-shell .conversion-gallery-track {
+      max-width: none !important;
+    }
+
+    /* Hero copy and the Proven Airframes intro now sit on the same left rail. */
+    #hero .hero-content {
+      padding-top: clamp(2.4rem, 3.2vw, 4rem) !important;
+      padding-bottom: clamp(3.6rem, 5vw, 5.8rem) !important;
+    }
+
+    #hero .hero-content > .hero-tag,
+    #hero .hero-content > .hero-h1,
+    #hero .hero-content > .hero-sub,
+    #hero .hero-content > .hero-actions,
+    #hero .airframe-showcase-kicker,
+    #hero .airframe-showcase-title,
+    #hero .airframe-showcase-subtitle {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #hero .hero-h1,
+    #hero .airframe-showcase-title {
+      max-width: var(--v20-52-text) !important;
+    }
+
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle {
+      max-width: 720px !important;
+    }
+
+    #hero .airframe-showcase-intro {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: clamp(1.8rem, 2.6vw, 2.8rem) !important;
+    }
+
+    /* Let editorial titles breathe instead of inheriting the older 13ch desktop cap. */
+    #offer .section-title,
+    #about .section-title,
+    #how .section-title,
+    #products .section-title,
+    #logistics .section-title,
+    #contact .section-title {
+      max-width: var(--v20-52-text) !important;
+    }
+
+    #offer .offer-header,
+    #about .section-header,
+    #how .section-header,
+    #products .section-header,
+    #logistics .section-header,
+    #contact .section-header {
+      max-width: var(--v20-52-text) !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+
+    /* Keep the dramatic centered proof title centered and at the strong existing width. */
+    #whynow .whynow-header {
+      max-width: 920px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center !important;
+    }
+
+    #whynow .section-title {
+      max-width: 14ch !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Market Numbers: make the right-side headline look intentional by locking it to a split grid. */
+    #proof-snapshot .market-numbers-copy {
+      display: grid !important;
+      grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr) !important;
+      column-gap: clamp(2.4rem, 5vw, 5.4rem) !important;
+      row-gap: 1.1rem !important;
+      align-items: end !important;
+      margin-bottom: clamp(2rem, 3vw, 3rem) !important;
+    }
+
+    #proof-snapshot .market-numbers-copy .section-tag {
+      grid-column: 1 !important;
+      grid-row: 1 !important;
+      justify-self: start !important;
+      align-self: end !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #proof-snapshot .market-numbers-copy .market-numbers-lead {
+      grid-column: 1 !important;
+      grid-row: 2 !important;
+      max-width: 620px !important;
+      margin: 0 !important;
+    }
+
+    #proof-snapshot .market-numbers-copy .section-title {
+      grid-column: 2 !important;
+      grid-row: 1 / 3 !important;
+      justify-self: start !important;
+      align-self: center !important;
+      max-width: 11.5ch !important;
+      margin: 0 !important;
+    }
+
+    /* Keep Market Opportunity intentionally centered. */
+    #markets .v20-market-header {
+      max-width: 1040px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center !important;
+    }
+
+    #markets .section-title {
+      max-width: 11ch !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* Prevent mid-size desktop/tablet widths from becoming cramped. */
+    @media (min-width: 821px) and (max-width: 1100px) {
+      :root {
+        --v20-52-gutter: clamp(36px, 5vw, 56px);
+      }
+
+      #proof-snapshot .market-numbers-copy {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr) !important;
+        column-gap: 2.2rem !important;
+      }
+    }
+  }
+</style>
+
 </body>
 </html>
