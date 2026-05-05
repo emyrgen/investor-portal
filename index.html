@@ -11610,5 +11610,140 @@ Thank you.`;
   }
 </style>
 
+
+<style id="v20-49-conversion-gallery-mobile-typography-lock">
+  /* v20.49 — lock mobile typography for all six Conversion Gallery cards.
+     Fixes the inconsistent active/non-active card type caused by older mobile
+     text-floor and gallery-state overrides. Images, card order, desktop layout,
+     and gallery behavior are intentionally unchanged. */
+  @media (max-width: 900px) {
+    #how #conversionGallery .gallery-slide,
+    #how #conversionGallery .gallery-slide.is-active,
+    #how #conversionGallery .gallery-slide:hover,
+    #how #conversionGallery .gallery-slide:focus-within {
+      font-size: inherit !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-overlay,
+    #how #conversionGallery .gallery-slide.is-active .gallery-overlay,
+    #how #conversionGallery .gallery-slide:hover .gallery-overlay,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-overlay {
+      padding: 1.02rem 1rem 1.12rem !important;
+      overflow: visible !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-pill,
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      width: auto !important;
+      max-width: 100% !important;
+      margin: 0 0 0.62rem 0 !important;
+      padding: 0.36rem 0.66rem !important;
+      border-radius: 999px !important;
+      font-family: var(--f-mono) !important;
+      font-size: 13px !important;
+      line-height: 1.14 !important;
+      letter-spacing: 0.12em !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      overflow-wrap: normal !important;
+      word-break: normal !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-title {
+      display: block !important;
+      margin: 0 0 0.44rem 0 !important;
+      padding: 0 !important;
+      font-family: var(--f-display) !important;
+      font-size: 19px !important;
+      line-height: 1.22 !important;
+      letter-spacing: 0 !important;
+      font-weight: 650 !important;
+      color: var(--c-white) !important;
+      opacity: 1 !important;
+      transform: none !important;
+      max-width: 100% !important;
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-slide-text,
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-text,
+    #how .conversion-gallery-shell #conversionGallery .gallery-slide .gallery-slide-text,
+    #how .conversion-gallery-shell #conversionGallery .gallery-slide.is-active .gallery-slide-text {
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      font-family: var(--f-body) !important;
+      font-size: 16.25px !important;
+      line-height: 1.48 !important;
+      letter-spacing: 0.004em !important;
+      font-weight: 400 !important;
+      color: rgba(226, 235, 247, 0.88) !important;
+      max-width: 100% !important;
+      max-height: none !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      overflow-wrap: normal !important;
+      word-break: normal !important;
+      transform: none !important;
+      text-shadow: none !important;
+      pointer-events: auto !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #how #conversionGallery .gallery-slide .gallery-overlay,
+    #how #conversionGallery .gallery-slide.is-active .gallery-overlay,
+    #how #conversionGallery .gallery-slide:hover .gallery-overlay,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-overlay {
+      padding: 0.94rem 0.9rem 1.04rem !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-pill,
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill {
+      font-size: 12.5px !important;
+      line-height: 1.12 !important;
+      padding: 0.34rem 0.62rem !important;
+      letter-spacing: 0.11em !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-title {
+      font-size: 18px !important;
+      line-height: 1.22 !important;
+      margin-bottom: 0.4rem !important;
+    }
+
+    #how #conversionGallery .gallery-slide .gallery-slide-text,
+    #how #conversionGallery .gallery-slide.is-active .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:hover .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-slide-text,
+    #how .conversion-gallery-shell #conversionGallery .gallery-slide .gallery-slide-text,
+    #how .conversion-gallery-shell #conversionGallery .gallery-slide.is-active .gallery-slide-text {
+      font-size: 15.75px !important;
+      line-height: 1.46 !important;
+    }
+  }
+</style>
+
+
 </body>
 </html>
