@@ -8590,6 +8590,20 @@
 </div>
 </div>
 </article>
+<section aria-label="Wildfire response demonstration video" class="wildfire-video-feature">
+<div class="wildfire-video-copy">
+<div class="v20-market-label wildfire-video-label">Wildfire Mission Video</div>
+<h3>Wildfire Response Demonstration</h3>
+<p>Mission video showing the operational environment EMYRGEN is targeting for heavy-lift autonomous aircraft: wildfire response, difficult terrain, and aircraft-class payload needs.</p>
+</div>
+<div class="wildfire-video-shell">
+<video class="wildfire-video" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
+<source src="wildfire-response-demo.webm" type="video/webm"/>
+<source src="wildfire-response-demo.mp4" type="video/mp4"/>
+Your browser does not support embedded video.
+</video>
+</div>
+</section>
 <article class="v20-market-card market-number-card">
 <div class="v20-card-body">
 <div class="market-card-number">$10.76B</div>
@@ -15569,6 +15583,93 @@ Thank you.`;
       letter-spacing: -0.035em !important;
       font-variant-numeric: lining-nums tabular-nums !important;
       text-rendering: geometricPrecision !important;
+    }
+  }
+</style>
+
+
+
+<style id="v20-69-wildfire-video-embed">
+  /* v20.69 — Add a click-to-play wildfire mission video inside Market Opportunity, directly after the Wildfire Response card.
+     Uses preload=none in HTML so the full video does not download until the visitor interacts with it. */
+  #markets .wildfire-video-feature {
+    overflow: hidden;
+    border: 1px solid rgba(95,212,214,.20);
+    border-radius: 1.8rem;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(245,200,76,.10), transparent 32%),
+      radial-gradient(circle at 100% 60%, rgba(6,182,212,.11), transparent 36%),
+      linear-gradient(135deg, rgba(9,24,33,.97), rgba(4,10,16,.99));
+    box-shadow: 0 28px 70px rgba(0,0,0,.28);
+  }
+
+  #markets .wildfire-video-copy {
+    padding: clamp(1.7rem, 4vw, 3rem);
+  }
+
+  #markets .wildfire-video-label {
+    display: inline-flex;
+    width: fit-content;
+    margin-bottom: .85rem;
+    color: #f7cc4f !important;
+  }
+
+  #markets .wildfire-video-copy h3 {
+    max-width: 780px;
+    margin: 0 0 1rem;
+    color: #fff;
+    font-family: var(--f-display);
+    font-size: clamp(2.2rem, 4vw, 4.4rem);
+    font-weight: 500;
+    line-height: .95;
+    letter-spacing: -.035em;
+  }
+
+  #markets .wildfire-video-copy p {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(234, 244, 255, .86);
+    font-family: var(--f-sans, 'Barlow', system-ui, sans-serif);
+    line-height: 1.55;
+  }
+
+  #markets .wildfire-video-shell {
+    position: relative;
+    overflow: hidden;
+    background: #050c14;
+  }
+
+  #markets .wildfire-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    aspect-ratio: 1364 / 720;
+    object-fit: cover;
+    background: #050c14;
+  }
+
+  @media (min-width: 1024px) {
+    #markets .wildfire-video-feature {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+      align-items: stretch;
+    }
+
+    #markets .wildfire-video-copy {
+      align-self: center;
+    }
+
+    #markets .wildfire-video-copy p {
+      font-size: 21px !important;
+    }
+
+    #markets .wildfire-video-label {
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      letter-spacing: .018em !important;
+      text-transform: none !important;
+      font-family: var(--f-sans, 'Barlow', system-ui, sans-serif) !important;
     }
   }
 </style>
