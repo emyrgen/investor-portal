@@ -15360,5 +15360,123 @@ Thank you.`;
   }
 </style>
 
+
+<style id="v20-66-desktop-unified-tag-treatment">
+  /* v20.66 — desktop-only: unify all visual tag / pill / badge styling.
+     Purpose: reduce oversized tag text introduced by the 20px readability pass and remove bold/mono-heavy tag appearance.
+     Mobile layout and mobile typography are not changed. */
+  @media (min-width: 1024px) {
+    :root {
+      --v20-66-tag-size: 16px;
+      --v20-66-tag-line: 1.24;
+      --v20-66-tag-weight: 400;
+      --v20-66-tag-letter: 0.018em;
+    }
+
+    /* Unified desktop visual tags/pills/badges/kickers across the site. */
+    .hero-tag,
+    #hero .hero-tag,
+    #hero .hero-tag span,
+    .section-tag,
+    #offer .section-tag,
+    #whynow .section-tag,
+    #about .section-tag,
+    #how .section-tag,
+    #products .section-tag,
+    #logistics .section-tag,
+    #proof-snapshot .section-tag,
+    #markets .section-tag,
+    #contact .section-tag,
+    .airframe-showcase-kicker,
+    .conversion-gallery-kicker,
+    .hero-airframe-pill,
+    #hero .hero-airframe-pill,
+    .gallery-pill,
+    #how .gallery-pill,
+    #how #conversionGallery .gallery-pill,
+    #how #conversionGallery .gallery-slide .gallery-pill,
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill,
+    .conversion-gallery-track .gallery-slide .gallery-pill,
+    .conversion-gallery-track .gallery-slide.is-active .gallery-pill,
+    .conversion-gallery-shell .gallery-slide:focus-within .gallery-pill,
+    #whynow .proof-tags span,
+    #whynow .proof-payload .proof-tags span,
+    #whynow .proof-recurring .proof-tags span,
+    .proof-tags span,
+    .route-badge,
+    #logistics .route-badge,
+    .offer-tile-label,
+    #offer .offer-tile-label,
+    .achievement-kicker,
+    .product-grade,
+    #products .product-grade,
+    .metric-label,
+    #proof-snapshot .metric-label,
+    .v20-eyebrow,
+    #markets .v20-eyebrow,
+    .v20-market-label,
+    #markets .v20-market-label,
+    .investor-logic-kicker,
+    #markets .investor-logic-kicker,
+    .proof-label,
+    #whynow .proof-label,
+    .signup-entry-kicker,
+    .signup-return-kicker,
+    .wiz-kicker,
+    .wiz-agreement-kicker {
+      font-size: var(--v20-66-tag-size) !important;
+      line-height: var(--v20-66-tag-line) !important;
+      font-weight: var(--v20-66-tag-weight) !important;
+      letter-spacing: var(--v20-66-tag-letter) !important;
+      text-transform: none !important;
+      font-family: var(--f-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif) !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* Compact pill padding so tags do not look inflated after the readability pass. */
+    .hero-tag,
+    #hero .hero-tag,
+    .hero-airframe-pill,
+    #hero .hero-airframe-pill,
+    .gallery-pill,
+    #how .gallery-pill,
+    #how #conversionGallery .gallery-pill,
+    #whynow .proof-tags span,
+    #whynow .proof-payload .proof-tags span,
+    #whynow .proof-recurring .proof-tags span,
+    .proof-tags span,
+    .route-badge,
+    #logistics .route-badge,
+    .product-grade,
+    #products .product-grade,
+    .v20-market-label,
+    #markets .v20-market-label {
+      padding: 0.36rem 0.62rem !important;
+      border-radius: 999px !important;
+    }
+
+    /* Kicker/tag labels that are not inside pill capsules should stay clean and light, not bold or loud. */
+    .section-tag,
+    .airframe-showcase-kicker,
+    .conversion-gallery-kicker,
+    .offer-tile-label,
+    .achievement-kicker,
+    .metric-label,
+    .v20-eyebrow,
+    .investor-logic-kicker,
+    .proof-label,
+    .signup-entry-kicker,
+    .signup-return-kicker,
+    .wiz-kicker,
+    .wiz-agreement-kicker {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      font-weight: 400 !important;
+    }
+  }
+</style>
+
 </body>
 </html>
