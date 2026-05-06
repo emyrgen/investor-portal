@@ -14707,5 +14707,520 @@ Thank you.`;
   }
 </style>
 
+
+
+<style id="v20-62-desktop-small-font-complete-audit-floor">
+  /* v20.62 — desktop-only complete small-font readability floor.
+     Scope: desktop/laptop widths only. No mobile max-width rules are changed.
+     Purpose: cover every small readable selector from the desktop audit prompt, including labels, pills, captions, form/wizard text, market labels, gallery text, footer/legal text, and the SAFE/investment-vehicle explanation. */
+  @media (min-width: 1024px) {
+    :root {
+      --v20-62-readable-body: clamp(1.28rem, 1.16vw, 1.46rem);
+      --v20-62-readable-card: clamp(1.22rem, 1.08vw, 1.38rem);
+      --v20-62-readable-detail: clamp(1.16rem, 1.02vw, 1.30rem);
+      --v20-62-readable-label: clamp(1.08rem, 0.96vw, 1.20rem);
+      --v20-62-readable-control: clamp(1.02rem, 0.90vw, 1.14rem);
+      --v20-62-readable-nav: clamp(1rem, 0.86vw, 1.10rem);
+      --v20-62-readable-line: 1.70;
+      --v20-62-readable-tight: 1.44;
+      --v20-62-readable-copy-color: rgba(241, 247, 252, 0.94);
+      --v20-62-readable-muted-color: rgba(226, 238, 247, 0.92);
+      --v20-62-readable-label-color: rgba(242, 249, 255, 0.90);
+    }
+
+    /* Desktop body/explanatory copy: investor-facing paragraphs, card copy, legal/footer copy, and all text that must not read as fine print. */
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle,
+    #hero .hero-airframe-copy,
+    .hero-airframe-copy,
+    .hero-airframe-caption,
+    .hero-achievement-grid .achievement-copy,
+    #offer .offer-tile-text,
+    #offer .offer-tile.feature .offer-tile-text,
+    .offer-tile-text,
+    .achievement-copy,
+    .risk-copy,
+    #about .section-copy,
+    #about .pillar-text,
+    .pillar-text,
+    #how .section-copy,
+    #how .step-text,
+    #how .conversion-gallery-text,
+    #how .gallery-slide-text,
+    .step-text,
+    .conversion-gallery-text,
+    .gallery-slide-text,
+    .conversion-gallery-shell .gallery-slide-text,
+    .conversion-gallery-track .gallery-slide .gallery-slide-text,
+    .conversion-gallery-track .gallery-slide.is-active .gallery-slide-text,
+    #products .products-subtitle,
+    #products .product-desc,
+    .product-desc,
+    #logistics .section-body,
+    #logistics .route-node-detail,
+    #logistics .lspec-value,
+    #logistics .offer-val,
+    .route-node-detail,
+    .lspec-value,
+    .offer-val,
+    #proof-snapshot .market-numbers-lead,
+    #proof-snapshot .market-metric-card p,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-market-lead,
+    #markets .v20-card-thesis,
+    #markets .market-money-line,
+    #markets .roi-engine-flow span,
+    #markets .roi-engine-flow strong,
+    #markets .investor-logic-milestones,
+    #markets .investor-logic-summary,
+    #whynow .premium-proof-card .whynow-text,
+    #whynow .whynow-text,
+    .whynow-text,
+    #contact .section-body,
+    #contact .cinfo-value,
+    #contact .signup-helper,
+    #contact .signup-entry-intro,
+    #contact .signup-return-panel p,
+    .signup-entry-intro,
+    .signup-helper,
+    .signup-status,
+    .signup-entry-steps li,
+    .wiz-step-sub,
+    .wiz-disclosure,
+    .wiz-agreement-list,
+    .wiz-entity-skip-copy,
+    .wiz-confirm,
+    .wiz-confirm p,
+    .wiz-confirm-compact,
+    .wiz-confirm-security,
+    .wiz-error,
+    .wiz-helper,
+    .wiz-review-row,
+    .wiz-agreement-copy,
+    .wiz-agreement-email,
+    .legal-strip,
+    .footer-copy,
+    footer .footer-copy,
+    .footer-legal {
+      font-size: var(--v20-62-readable-body) !important;
+      line-height: var(--v20-62-readable-line) !important;
+      letter-spacing: 0.002em !important;
+      color: var(--v20-62-readable-copy-color) !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* Dense technical details and tabular/spec text: readable, slightly tighter than paragraph copy. */
+    #products .product-specs,
+    #products .spec-row,
+    #products .spec-key,
+    #products .spec-val,
+    .product-specs,
+    .spec-row,
+    #logistics .offer-table,
+    #logistics .offer-row,
+    #logistics .route-body,
+    #logistics .logistics-specs,
+    #contact .signup-entry-card p,
+    #contact .simple-signup-form,
+    .wiz-review-section {
+      font-size: var(--v20-62-readable-detail) !important;
+      line-height: 1.58 !important;
+      letter-spacing: 0.002em !important;
+      color: var(--v20-62-readable-muted-color) !important;
+    }
+
+    /* All desktop labels, pills, tags, card kickers, captions, source lines, and formerly tiny all-caps microcopy. */
+    .hero-tag,
+    #hero .hero-tag,
+    #hero .hero-tag span,
+    .section-tag,
+    .section-tag::before,
+    .media-caption,
+    .hero-scroll span,
+    .stat-label,
+    .market-stat-label,
+    .airframe-showcase-kicker,
+    .airframe-showcase-subtitle,
+    .hero-airframe-pill,
+    #hero .hero-airframe-pill,
+    .hero-airframe-play-toggle,
+    #hero .hero-airframe-play-toggle,
+    .offer-tile-label,
+    #offer .offer-tile-label,
+    .offer-key,
+    .offer-val,
+    .achievement-kicker,
+    .instrument,
+    .pillar-num,
+    .pillar-title,
+    .about-img-badge span,
+    .step-num,
+    .step-title,
+    .route-title,
+    .route-badge,
+    .route-node-name,
+    .lspec-label,
+    .product-grade,
+    .product-name,
+    .spec-key,
+    .spec-val,
+    #proof-snapshot .metric-label,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-eyebrow,
+    #markets .v20-market-label,
+    #markets .investor-logic-kicker,
+    #markets .roi-engine-flow div::before,
+    #whynow .proof-label,
+    #whynow .proof-tags span,
+    #whynow .execution-proof-line,
+    .conversion-gallery-kicker,
+    .gallery-pill,
+    .gallery-mobile-hint,
+    #how .instrument,
+    #how .gallery-pill,
+    #how #conversionGallery .gallery-pill,
+    #how #conversionGallery .gallery-slide .gallery-pill,
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill,
+    .conversion-gallery-track .gallery-slide .gallery-pill,
+    .conversion-gallery-track .gallery-slide.is-active .gallery-pill,
+    .conversion-gallery-shell .gallery-slide:focus-within .gallery-pill,
+    .cinfo-label,
+    .cinfo-value,
+    .signup-entry-kicker,
+    .signup-return-kicker,
+    .signup-label,
+    .signup-step-num,
+    #contact #investorSignupCard .signup-entry-kicker,
+    #contact #investorSignupCard .signup-label,
+    #contact #investorSignupCard .signup-helper,
+    #contact #investorSignupCard .signup-status.is-error strong,
+    #contact #investorSignupCard .signup-status.is-error span,
+    .wiz-kicker,
+    .wiz-progress-meta,
+    .wiz-step-h,
+    .wiz-label,
+    .wiz-entity-fields-label,
+    .wiz-choice-label,
+    .wiz-choice-label small,
+    .wiz-amount-chip,
+    .wiz-review-key,
+    .wiz-confirm-id,
+    .wiz-agreement-kicker {
+      font-size: var(--v20-62-readable-label) !important;
+      line-height: var(--v20-62-readable-tight) !important;
+      letter-spacing: 0.045em !important;
+      color: var(--v20-62-readable-label-color) !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* Desktop form controls, buttons, and navigation must not render as small UI microtext. */
+    .nav-links a,
+    .nav-cta,
+    .btn-primary,
+    .btn-ghost,
+    .form-label,
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .form-submit,
+    .signup-input,
+    #contact .signup-input,
+    .signup-entry-cta,
+    #contact .signup-entry-cta,
+    .signup-return-cta,
+    #contact .signup-return-cta,
+    #contact .simple-signup-form button,
+    .wiz-input,
+    .wiz-field input,
+    .wiz-field select,
+    .wiz-select,
+    .wiz-textarea,
+    .wiz-back,
+    .wiz-next,
+    .wiz-agreement-download,
+    .wiz-agreement-email,
+    .wiz-entity-skip {
+      font-size: var(--v20-62-readable-control) !important;
+      line-height: 1.42 !important;
+      letter-spacing: 0.025em !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* Navigation remains compact but above the desktop readability floor. */
+    .nav-links a,
+    .nav-cta {
+      font-size: var(--v20-62-readable-nav) !important;
+      line-height: 1.35 !important;
+    }
+
+    /* Investment Vehicle / SAFE copy: the previously called-out text must read as investor copy, never as fine print. */
+    #offer .offer-tile.feature .offer-tile-text {
+      font-size: clamp(1.36rem, 1.22vw, 1.54rem) !important;
+      line-height: 1.72 !important;
+      letter-spacing: 0.002em !important;
+      color: rgba(250, 253, 255, 0.97) !important;
+    }
+
+    /* Compact offer tiles and supporting values get a clear desktop floor without inflating headings or large numbers. */
+    #offer .offer-tile:not(.feature) .offer-tile-text,
+    #offer .offer-tile:not(.feature) .offer-val,
+    #logistics .offer-val,
+    #logistics .lspec-value {
+      font-size: var(--v20-62-readable-card) !important;
+      line-height: 1.58 !important;
+      color: var(--v20-62-readable-copy-color) !important;
+    }
+
+    /* Keep uppercase text readable by reducing excessive spacing after scaling. */
+    .hero-tag,
+    .section-tag,
+    .airframe-showcase-kicker,
+    .offer-tile-label,
+    .achievement-kicker,
+    .product-grade,
+    .metric-label,
+    .v20-eyebrow,
+    .v20-market-label,
+    .investor-logic-kicker,
+    .proof-label,
+    .proof-tags span,
+    .gallery-pill,
+    .hero-airframe-pill,
+    .cinfo-label,
+    .signup-label,
+    .signup-entry-kicker,
+    .signup-return-kicker,
+    .wiz-kicker,
+    .wiz-label,
+    .wiz-progress-meta,
+    .wiz-agreement-kicker {
+      letter-spacing: 0.045em !important;
+    }
+  }
+</style>
+
+
+<style id="v20-63-desktop-readable-type-unification">
+  /* v20.63 — desktop-only readable text unification.
+     Purpose: simplify the previous layered font system.
+     Desktop supporting copy is unified at 21px.
+     Desktop labels, pills, captions, tags, and form labels are unified at 20px.
+     Mobile typography is not changed. */
+  @media (min-width: 1024px) {
+    :root {
+      --v20-63-readable-copy: 21px;
+      --v20-63-readable-label: 20px;
+      --v20-63-readable-copy-line: 1.56;
+      --v20-63-readable-label-line: 1.36;
+      --v20-63-readable-copy-color: rgba(241, 247, 252, 0.95);
+      --v20-63-readable-muted-color: rgba(226, 238, 247, 0.93);
+      --v20-63-readable-label-color: rgba(242, 249, 255, 0.91);
+    }
+
+    /* 21px desktop readable supporting copy: section intros, card descriptions, investor copy, gallery descriptions, market explanations, signup/wizard copy, footer/legal copy. */
+    .section-body,
+    .section-copy,
+    #hero .hero-sub,
+    #hero .airframe-showcase-subtitle,
+    #hero .hero-airframe-copy,
+    .hero-airframe-copy,
+    .hero-airframe-caption,
+    .hero-achievement-grid .achievement-copy,
+    #offer .offer-tile-text,
+    #offer .offer-tile.feature .offer-tile-text,
+    .offer-tile-text,
+    .achievement-copy,
+    .risk-copy,
+    #about .section-body,
+    #about .section-copy,
+    #about .pillar-text,
+    .pillar-text,
+    #how .section-body,
+    #how .section-copy,
+    #how .step-text,
+    #how .conversion-gallery-text,
+    #how .gallery-slide-text,
+    .step-text,
+    .conversion-gallery-text,
+    .gallery-slide-text,
+    .conversion-gallery-shell .gallery-slide-text,
+    .conversion-gallery-track .gallery-slide .gallery-slide-text,
+    .conversion-gallery-track .gallery-slide.is-active .gallery-slide-text,
+    #products .products-header p,
+    #products .products-header > p,
+    #products .products-header div + p,
+    #products .products-subtitle,
+    #products .product-desc,
+    .product-desc,
+    #logistics .section-body,
+    #logistics .route-node-detail,
+    #logistics .lspec-value,
+    #logistics .offer-val,
+    .route-node-detail,
+    .lspec-value,
+    .offer-val,
+    #proof-snapshot .market-numbers-lead,
+    #proof-snapshot .market-metric-card p,
+    #markets .v20-market-lead,
+    #markets .v20-card-thesis,
+    #markets .market-money-line,
+    #markets .roi-engine-flow span,
+    #markets .roi-engine-flow strong,
+    #markets .investor-logic-milestones,
+    #markets .investor-logic-summary,
+    #whynow .premium-proof-card .whynow-text,
+    #whynow .whynow-text,
+    .whynow-text,
+    #contact .section-body,
+    #contact .cinfo-value,
+    #contact .signup-helper,
+    #contact .signup-entry-intro,
+    #contact .signup-return-panel p,
+    .signup-entry-intro,
+    .signup-helper,
+    .signup-status,
+    .signup-entry-steps li,
+    .wiz-step-sub,
+    .wiz-disclosure,
+    .wiz-agreement-list,
+    .wiz-entity-skip-copy,
+    .wiz-confirm,
+    .wiz-confirm p,
+    .wiz-confirm-compact,
+    .wiz-confirm-security,
+    .wiz-error,
+    .wiz-helper,
+    .wiz-review-row,
+    .wiz-agreement-copy,
+    .wiz-agreement-email,
+    .legal-strip,
+    .footer-copy,
+    footer .footer-copy,
+    .footer-legal {
+      font-size: var(--v20-63-readable-copy) !important;
+      line-height: var(--v20-63-readable-copy-line) !important;
+      letter-spacing: 0.002em !important;
+      color: var(--v20-63-readable-copy-color) !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* 20px desktop labels/tags/captions: still secondary, but no longer tiny fine print. */
+    .hero-tag,
+    #hero .hero-tag,
+    #hero .hero-tag span,
+    .section-tag,
+    .media-caption,
+    .hero-scroll span,
+    .stat-label,
+    .market-stat-label,
+    .airframe-showcase-kicker,
+    .hero-airframe-pill,
+    #hero .hero-airframe-pill,
+    .hero-airframe-play-toggle,
+    #hero .hero-airframe-play-toggle,
+    .offer-tile-label,
+    #offer .offer-tile-label,
+    .offer-key,
+    .offer-val,
+    .achievement-kicker,
+    .instrument,
+    .pillar-num,
+    .about-img-badge span,
+    .step-num,
+    .route-badge,
+    .route-node-name,
+    .lspec-label,
+    .product-grade,
+    .spec-key,
+    .spec-val,
+    #proof-snapshot .metric-label,
+    #proof-snapshot .market-metric-card small,
+    #proof-snapshot .market-sources-line,
+    #markets .v20-eyebrow,
+    #markets .v20-market-label,
+    #markets .investor-logic-kicker,
+    #markets .roi-engine-flow div::before,
+    #whynow .proof-label,
+    #whynow .proof-tags span,
+    #whynow .execution-proof-line,
+    .conversion-gallery-kicker,
+    .gallery-pill,
+    .gallery-mobile-hint,
+    #how .instrument,
+    #how .gallery-pill,
+    #how #conversionGallery .gallery-pill,
+    #how #conversionGallery .gallery-slide .gallery-pill,
+    #how #conversionGallery .gallery-slide.is-active .gallery-pill,
+    #how #conversionGallery .gallery-slide:hover .gallery-pill,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-pill,
+    .conversion-gallery-track .gallery-slide .gallery-pill,
+    .conversion-gallery-track .gallery-slide.is-active .gallery-pill,
+    .conversion-gallery-shell .gallery-slide:focus-within .gallery-pill,
+    .cinfo-label,
+    .signup-entry-kicker,
+    .signup-return-kicker,
+    .signup-label,
+    .signup-step-num,
+    #contact #investorSignupCard .signup-entry-kicker,
+    #contact #investorSignupCard .signup-label,
+    #contact #investorSignupCard .signup-status.is-error strong,
+    #contact #investorSignupCard .signup-status.is-error span,
+    .wiz-kicker,
+    .wiz-progress-meta,
+    .wiz-label,
+    .wiz-entity-fields-label,
+    .wiz-choice-label,
+    .wiz-choice-label small,
+    .wiz-amount-chip,
+    .wiz-review-key,
+    .wiz-review-section,
+    .wiz-confirm-id,
+    .wiz-agreement-kicker {
+      font-size: var(--v20-63-readable-label) !important;
+      line-height: var(--v20-63-readable-label-line) !important;
+      letter-spacing: 0.035em !important;
+      color: var(--v20-63-readable-label-color) !important;
+      text-rendering: optimizeLegibility !important;
+    }
+
+    /* 20px desktop controls/form UI so labels, inputs, buttons, and wizard controls are readable without enlarging headings. */
+    .nav-links a,
+    .nav-cta,
+    .btn-primary,
+    .btn-ghost,
+    .form-label,
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .form-submit,
+    .signup-input,
+    #contact .signup-input,
+    .signup-entry-cta,
+    #contact .signup-entry-cta,
+    .signup-return-cta,
+    #contact .signup-return-cta,
+    #contact .simple-signup-form button,
+    .wiz-input,
+    .wiz-field input,
+    .wiz-field select,
+    .wiz-select,
+    .wiz-textarea,
+    .wiz-back,
+    .wiz-next,
+    .wiz-agreement-download,
+    .wiz-agreement-email,
+    .wiz-entity-skip {
+      font-size: var(--v20-63-readable-label) !important;
+      line-height: 1.42 !important;
+      letter-spacing: 0.02em !important;
+      text-rendering: optimizeLegibility !important;
+    }
+  }
+</style>
+
 </body>
 </html>
