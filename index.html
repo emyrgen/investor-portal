@@ -8188,48 +8188,60 @@
 <img alt="Large helicopter airframe teardown in hangar" src="gallery-01-airframe-teardown.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">01 · Airframe</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Airframe Teardown</h4>
 <p class="gallery-slide-text">Opened up for structural access and removal of pilot-specific systems.</p>
+</div>
 </div>
 </article>
 <article class="gallery-slide" tabindex="0">
 <img alt="Engineer working on exposed rotor and control systems" src="gallery-02-rotor-systems.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">02 · Mechanical</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Rotor &amp; Flight-Control Systems</h4>
 <p class="gallery-slide-text">Mechanical interfaces and rotor systems adapted for autonomous control.</p>
+</div>
 </div>
 </article>
 <article class="gallery-slide" tabindex="0">
 <img alt="Stripped helicopter interior with exposed wiring and internal systems" src="gallery-03-interior-wiring.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">03 · Integration</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Internal Systems Integration</h4>
 <p class="gallery-slide-text">Avionics, power, and wiring reworked for unmanned mission architecture.</p>
+</div>
 </div>
 </article>
 <article class="gallery-slide" tabindex="0">
 <img alt="Helicopter cockpit instrument panel" src="gallery-04-cockpit-panel.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">04 · Cockpit</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Cockpit &amp; Instrumentation</h4>
 <p class="gallery-slide-text">Cockpit interfaces transitioned to remote command and telemetry.</p>
+</div>
 </div>
 </article>
 <article class="gallery-slide" tabindex="0">
 <img alt="Converted helicopter in flight" src="gallery-05-flight-validation.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">05 · Flight Test</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Flight Validation</h4>
 <p class="gallery-slide-text">Flight validation: performance, control, mission readiness — proven in air.</p>
+</div>
 </div>
 </article>
 <article class="gallery-slide" tabindex="0">
 <img alt="Engineer at electronics workstation with circuit board on monitor" src="gallery-06-autonomy-engineering.webp" loading="lazy" decoding="async"/>
 <div class="gallery-overlay">
 <div class="gallery-pill">06 · Autonomy</div>
+<div class="gallery-caption-panel">
 <h4 class="gallery-slide-title">Autonomy Engineering</h4>
 <p class="gallery-slide-text">Embedded compute and mission software for autonomous navigation.</p>
+</div>
 </div>
 </article>
 </div>
@@ -15274,6 +15286,76 @@ Thank you.`;
       box-shadow: none !important;
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
+    }
+  }
+</style>
+
+
+
+<style id="v20-65-conversion-gallery-caption-panel">
+  /* v20.65 — desktop-only: place Conversion Gallery title + description inside one readable translucent caption panel.
+     The full-image overlay remains removed from v20.64. Mobile layout/typography is not changed. */
+  @media (min-width: 1024px) {
+    #how #conversionGallery .gallery-slide .gallery-caption-panel,
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel,
+    #how #conversionGallery .gallery-slide:hover .gallery-caption-panel,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide:hover .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide:focus-within .gallery-caption-panel {
+      display: block !important;
+      width: fit-content !important;
+      max-width: min(560px, 78%) !important;
+      margin: 0 !important;
+      padding: 0.95rem 1.05rem 1rem !important;
+      border-radius: 16px !important;
+      background: rgba(3, 8, 18, 0.68) !important;
+      border: 1px solid rgba(180, 210, 255, 0.18) !important;
+      box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.36),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+      backdrop-filter: blur(10px) saturate(1.05) !important;
+      -webkit-backdrop-filter: blur(10px) saturate(1.05) !important;
+      color: #fff !important;
+    }
+
+    #how #conversionGallery .gallery-caption-panel .gallery-slide-title,
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:hover .gallery-caption-panel .gallery-slide-title,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-caption-panel .gallery-slide-title,
+    #how .conversion-gallery-track .gallery-caption-panel .gallery-slide-title,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel .gallery-slide-title,
+    #how .conversion-gallery-track .gallery-slide:hover .gallery-caption-panel .gallery-slide-title,
+    #how .conversion-gallery-track .gallery-slide:focus-within .gallery-caption-panel .gallery-slide-title {
+      display: block !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #ffffff !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.74) !important;
+    }
+
+    #how #conversionGallery .gallery-caption-panel .gallery-slide-text,
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:hover .gallery-caption-panel .gallery-slide-text,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-caption-panel .gallery-slide-text,
+    #how .conversion-gallery-track .gallery-caption-panel .gallery-slide-text,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel .gallery-slide-text,
+    #how .conversion-gallery-track .gallery-slide:hover .gallery-caption-panel .gallery-slide-text,
+    #how .conversion-gallery-track .gallery-slide:focus-within .gallery-caption-panel .gallery-slide-text {
+      display: block !important;
+      max-width: none !important;
+      margin: 0.42rem 0 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      color: rgba(245, 248, 255, 0.92) !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.68) !important;
     }
   }
 </style>
