@@ -15222,5 +15222,61 @@ Thank you.`;
   }
 </style>
 
+
+<style id="v20-64-conversion-gallery-overlay-removal">
+  /* v20.64 — desktop-only: remove the dark full-image overlay/tint from the Conversion Gallery.
+     Text placement is intentionally unchanged for now. Mobile layout/typography is not changed. */
+  @media (min-width: 1024px) {
+    #how #conversionGallery .gallery-slide img,
+    #how #conversionGallery .gallery-slide.is-active img,
+    #how #conversionGallery .gallery-slide:hover img,
+    #how #conversionGallery .gallery-slide:focus-within img,
+    #how .conversion-gallery-track .gallery-slide img,
+    #how .conversion-gallery-track .gallery-slide.is-active img,
+    #how .conversion-gallery-track .gallery-slide:hover img,
+    #how .conversion-gallery-track .gallery-slide:focus-within img {
+      filter: none !important;
+      opacity: 1 !important;
+    }
+
+    #how #conversionGallery .gallery-slide::before,
+    #how #conversionGallery .gallery-slide::after,
+    #how #conversionGallery .gallery-slide.is-active::before,
+    #how #conversionGallery .gallery-slide.is-active::after,
+    #how #conversionGallery .gallery-slide:hover::before,
+    #how #conversionGallery .gallery-slide:hover::after,
+    #how #conversionGallery .gallery-slide:focus-within::before,
+    #how #conversionGallery .gallery-slide:focus-within::after,
+    #how .conversion-gallery-track .gallery-slide::before,
+    #how .conversion-gallery-track .gallery-slide::after,
+    #how .conversion-gallery-track .gallery-slide.is-active::before,
+    #how .conversion-gallery-track .gallery-slide.is-active::after,
+    #how .conversion-gallery-track .gallery-slide:hover::before,
+    #how .conversion-gallery-track .gallery-slide:hover::after,
+    #how .conversion-gallery-track .gallery-slide:focus-within::before,
+    #how .conversion-gallery-track .gallery-slide:focus-within::after {
+      content: "" !important;
+      background: transparent !important;
+      opacity: 0 !important;
+      box-shadow: none !important;
+      pointer-events: none !important;
+    }
+
+    #how #conversionGallery .gallery-overlay,
+    #how #conversionGallery .gallery-slide.is-active .gallery-overlay,
+    #how #conversionGallery .gallery-slide:hover .gallery-overlay,
+    #how #conversionGallery .gallery-slide:focus-within .gallery-overlay,
+    #how .conversion-gallery-track .gallery-slide .gallery-overlay,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-overlay,
+    #how .conversion-gallery-track .gallery-slide:hover .gallery-overlay,
+    #how .conversion-gallery-track .gallery-slide:focus-within .gallery-overlay {
+      background: transparent !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+  }
+</style>
+
 </body>
 </html>
