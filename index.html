@@ -15555,5 +15555,23 @@ Thank you.`;
   }
 </style>
 
+
+<style id="v20-68-market-number-font-modernization">
+  /* v20.68 — desktop-only: modernize large Market Opportunity dollar values.
+     Scope: change only the large market-number value typography from the serif display font
+     to Barlow / site sans. Sizes, layout, content, cards, and mobile rules are unchanged. */
+  @media (min-width: 1024px) {
+    #proof-snapshot .market-metric-card strong,
+    #markets .market-card-number,
+    #markets .market-number-card .market-card-number {
+      font-family: var(--f-sans, 'Barlow', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.035em !important;
+      font-variant-numeric: lining-nums tabular-nums !important;
+      text-rendering: geometricPrecision !important;
+    }
+  }
+</style>
+
 </body>
 </html>
