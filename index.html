@@ -7818,6 +7818,83 @@
   }
 </style>
 
+
+
+<style id="v20-67-conversion-gallery-collapsed-caption-cleanup">
+  /* v20.67 — desktop-only: hide Conversion Gallery caption panels on collapsed accordion slides.
+     Collapsed slides keep only the vertical pill/label; the dark title/description panel appears only on the active slide.
+     This removes empty-looking vertical background boxes from inactive narrow gallery images. Mobile is untouched. */
+  @media (min-width: 1024px) {
+    /* Default: inactive/collapsed Conversion Gallery slides must not show the caption background panel. */
+    #how #conversionGallery .gallery-slide:not(.is-active) .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide:not(.is-active) .gallery-caption-panel,
+    #how #conversionGallery .gallery-slide:not(.is-active):hover .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide:not(.is-active):hover .gallery-caption-panel {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      width: 0 !important;
+      max-width: 0 !important;
+      max-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      overflow: hidden !important;
+      pointer-events: none !important;
+    }
+
+    /* Active expanded slide keeps the readable translucent caption panel from v20.65. */
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: fit-content !important;
+      max-width: min(560px, 78%) !important;
+      max-height: none !important;
+      margin: 0 !important;
+      padding: 0.95rem 1.05rem 1rem !important;
+      border-radius: 16px !important;
+      background: rgba(3, 8, 18, 0.68) !important;
+      border: 1px solid rgba(180, 210, 255, 0.18) !important;
+      box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.36),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+      backdrop-filter: blur(10px) saturate(1.05) !important;
+      -webkit-backdrop-filter: blur(10px) saturate(1.05) !important;
+      overflow: visible !important;
+      pointer-events: auto !important;
+    }
+
+    /* Keep active title and description readable inside that one panel. */
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel .gallery-slide-title,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel .gallery-slide-title {
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      color: #fff !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.74) !important;
+    }
+
+    #how #conversionGallery .gallery-slide.is-active .gallery-caption-panel .gallery-slide-text,
+    #how .conversion-gallery-track .gallery-slide.is-active .gallery-caption-panel .gallery-slide-text {
+      display: block !important;
+      margin: 0.42rem 0 0 !important;
+      padding: 0 !important;
+      color: rgba(245, 248, 255, 0.92) !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.68) !important;
+    }
+  }
+</style>
+
 </head>
 <body style="background:#050608; color:#e5e7eb;">
 <!-- ─── NAVIGATION ───────────────────────────────── -->
