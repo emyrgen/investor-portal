@@ -8431,6 +8431,7 @@
     </div>
 
     <div class="video-feature-item">
+      <div class="video-feature-kicker">01 · Mission Video</div>
       <h3 class="video-feature-title"><span class="video-title-line video-title-primary">EMYRGEN EGX-10</span><span class="video-title-line video-title-secondary">Wildfire Mission</span></h3>
       <div class="video-feature-shell">
         <video class="video-feature-player" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
@@ -16001,6 +16002,115 @@ Thank you.`;
     #videos .video-feature-title {
       font-weight: 400 !important;
       letter-spacing: -0.014em !important;
+    }
+  }
+</style>
+
+
+<style id="v20-74-video-card-system">
+  /* v20.74 — convert the first video into a repeatable video-card system.
+     Goals: add a recurring label, reduce raw/full-bleed feel on mobile,
+     preserve aspect ratio, and prepare the layout for additional videos below. */
+
+  #videos .video-feature-item {
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border: 1px solid rgba(69, 193, 224, 0.16);
+    border-radius: 1.45rem;
+    background:
+      linear-gradient(180deg, rgba(6, 15, 24, 0.96), rgba(6, 13, 22, 0.92)),
+      radial-gradient(circle at 0% 0%, rgba(32, 197, 255, 0.05), transparent 40%);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
+  }
+
+  #videos .video-feature-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin: 0 0 .85rem;
+    padding: .42rem .82rem;
+    border-radius: 999px;
+    border: 1px solid rgba(95, 212, 214, 0.18);
+    background: rgba(6, 21, 31, 0.72);
+    color: rgba(138, 229, 255, 0.95);
+    font-family: var(--f-mono, 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace);
+    font-size: .92rem;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  #videos .video-feature-title {
+    margin: 0 0 .95rem;
+    max-width: 14ch;
+  }
+
+  #videos .video-feature-shell {
+    width: 100%;
+    margin: 0;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    background: #000 !important;
+    border: 1px solid rgba(255,255,255,0.05) !important;
+    box-shadow: 0 12px 28px rgba(0,0,0,.20) !important;
+  }
+
+  #videos .video-feature-player {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1364 / 720;
+    object-fit: contain;
+    background: #000;
+  }
+
+  @media (min-width: 1024px) {
+    #videos .video-feature-item {
+      padding: 1.35rem;
+    }
+    #videos .video-feature-shell {
+      max-width: 980px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    #videos .video-feature-item {
+      width: calc(100vw - 28px);
+      margin: 0 auto;
+      padding: .95rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,.20);
+    }
+
+    #videos .video-feature-kicker {
+      margin-bottom: .7rem;
+      font-size: .78rem;
+      letter-spacing: .075em;
+      padding: .38rem .7rem;
+    }
+
+    #videos .video-feature-title {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-bottom: .8rem;
+      font-size: clamp(1.58rem, 6vw, 2.15rem);
+      max-width: 12.5ch;
+    }
+
+    #videos .video-feature-shell {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      border-radius: .95rem !important;
+    }
+
+    #videos .video-feature-player {
+      width: 100% !important;
+      max-width: 100% !important;
+      aspect-ratio: 1364 / 720;
+      height: auto;
+      border-radius: 0;
     }
   }
 </style>
