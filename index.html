@@ -8590,11 +8590,9 @@
 </div>
 </div>
 </article>
-<section aria-label="Wildfire response demonstration video" class="wildfire-video-feature">
+<section aria-label="EMYRGEN EGX-10 wildfire mission video" class="wildfire-video-feature">
 <div class="wildfire-video-copy">
-<div class="v20-market-label wildfire-video-label">Wildfire Mission Video</div>
-<h3>Wildfire Response Demonstration</h3>
-<p>Mission video showing the operational environment EMYRGEN is targeting for heavy-lift autonomous aircraft: wildfire response, difficult terrain, and aircraft-class payload needs.</p>
+<h3>EMYRGEN EGX-10 Wildfire Mission</h3>
 </div>
 <div class="wildfire-video-shell">
 <video class="wildfire-video" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
@@ -15789,6 +15787,54 @@ Thank you.`;
 
     #markets .wildfire-video {
       max-height: none;
+    }
+  }
+</style>
+
+
+<style id="v20-71-egx10-wildfire-title-spacing-fix">
+  /* v20.71 — simplify wildfire video feature:
+     only a short EMYRGEN EGX-10 title, no descriptive paragraph,
+     and tighter space under the video before the next market card. */
+
+  #markets .wildfire-video-feature {
+    padding-top: clamp(1rem, 2.4vw, 1.7rem) !important;
+    padding-bottom: clamp(.35rem, 1vw, .8rem) !important;
+  }
+
+  #markets .wildfire-video-copy {
+    margin-bottom: clamp(.75rem, 1.6vw, 1.15rem) !important;
+  }
+
+  #markets .wildfire-video-copy h3 {
+    max-width: min(960px, calc(100vw - 2rem)) !important;
+    margin-bottom: 0 !important;
+  }
+
+  #markets .wildfire-video-copy p,
+  #markets .wildfire-video-label {
+    display: none !important;
+  }
+
+  #markets .wildfire-video-shell {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 1023px) {
+    #markets .wildfire-video-feature {
+      padding-top: .85rem !important;
+      padding-bottom: .25rem !important;
+    }
+
+    #markets .wildfire-video-copy {
+      max-width: calc(100vw - 1.5rem) !important;
+      margin-bottom: .65rem !important;
+    }
+
+    #markets .wildfire-video-copy h3 {
+      max-width: 12.5ch !important;
+      font-size: clamp(2.05rem, 8.6vw, 3.35rem) !important;
+      line-height: .98 !important;
     }
   }
 </style>
