@@ -7912,6 +7912,7 @@
 <li><a href="#how">Conversion</a></li>
 <li><a href="#products">IP Stack</a></li>
 <li><a href="#markets">Market Opportunity</a></li>
+<li><a href="#videos">Videos</a></li>
 <li><a href="#logistics">Process</a></li>
 </ul>
 <a class="nav-cta" href="#contact">Investor Signup</a>
@@ -7928,6 +7929,7 @@
 <a href="#how">Conversion</a>
 <a href="#products">IP Stack</a>
 <a href="#markets">Market Opportunity</a>
+<a href="#videos">Videos</a>
 <a href="#logistics">Process</a>
 <a class="mobile-menu-cta" href="#contact">Investor Signup</a>
 
@@ -8420,6 +8422,27 @@
 </div>
 </section>
 
+
+<section id="videos" class="videos-section" aria-label="EMYRGEN videos">
+  <div class="videos-wrap">
+    <div class="videos-header section-header">
+      <div class="section-tag">Videos</div>
+      <h2 class="section-title"><span>Mission footage.</span><br/><em>Real visuals.</em></h2>
+    </div>
+
+    <div class="video-feature-item">
+      <h3 class="video-feature-title"><span class="video-title-line video-title-primary">EMYRGEN EGX-10</span><span class="video-title-line video-title-secondary">Wildfire Mission</span></h3>
+      <div class="video-feature-shell">
+        <video class="video-feature-player" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
+          <source src="wildfire-response-demo.webm" type="video/webm"/>
+          <source src="wildfire-response-demo.mp4" type="video/mp4"/>
+          Your browser does not support embedded video.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="logistics" style="background: var(--c-deep); padding: 8rem 3rem;">
 <div class="logistics-wrap">
 <div class="section-header">
@@ -8590,18 +8613,7 @@
 </div>
 </div>
 </article>
-<section aria-label="EMYRGEN EGX-10 wildfire mission video" class="wildfire-video-feature">
-<div class="wildfire-video-copy">
-<h3>EMYRGEN EGX-10 Wildfire Mission</h3>
-</div>
-<div class="wildfire-video-shell">
-<video class="wildfire-video" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
-<source src="wildfire-response-demo.webm" type="video/webm"/>
-<source src="wildfire-response-demo.mp4" type="video/mp4"/>
-Your browser does not support embedded video.
-</video>
-</div>
-</section>
+
 <article class="v20-market-card market-number-card">
 <div class="v20-card-body">
 <div class="market-card-number">$10.76B</div>
@@ -15835,6 +15847,137 @@ Thank you.`;
       max-width: 12.5ch !important;
       font-size: clamp(2.05rem, 8.6vw, 3.35rem) !important;
       line-height: .98 !important;
+    }
+  }
+</style>
+
+
+<style id="v20-72-videos-section-and-egx10-video-rebuild">
+  /* v20.72 — Add dedicated Videos section and rebuild the EGX-10 video item.
+     Goals: move video out of Market Opportunity, add Videos nav anchor, simplify the presentation,
+     remove the dark boxed container feel, preserve the source aspect ratio, and make mobile truly full width. */
+
+  #videos {
+    position: relative;
+    background: var(--c-deep);
+    padding: clamp(4.5rem, 7vw, 7rem) 0 clamp(5.25rem, 7vw, 7.5rem);
+    overflow: clip;
+  }
+
+  #videos .videos-wrap {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 0 clamp(1.1rem, 2.6vw, 2.4rem);
+  }
+
+  #videos .videos-header {
+    margin-bottom: clamp(1.3rem, 2.4vw, 2rem);
+  }
+
+  #videos .video-feature-item {
+    margin-top: 0;
+  }
+
+  #videos .video-feature-title {
+    margin: 0 0 1rem;
+    color: #f8fafc;
+    font-family: var(--f-sans, 'Barlow', system-ui, sans-serif);
+    font-size: clamp(2rem, 3.15vw, 3.25rem);
+    font-weight: 600;
+    line-height: .98;
+    letter-spacing: -0.03em;
+  }
+
+  #videos .video-title-line {
+    display: block;
+  }
+
+  #videos .video-title-primary {
+    white-space: nowrap;
+  }
+
+  #videos .video-feature-shell {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden;
+  }
+
+  #videos .video-feature-player {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1364 / 720;
+    object-fit: contain;
+    background: #000;
+  }
+
+  /* Hide old wildfire-market styling if anything remains */
+  #markets .wildfire-video-feature { display: none !important; }
+
+  @media (min-width: 1024px) {
+    #videos .videos-wrap {
+      padding: 0 clamp(1.6rem, 2.8vw, 2.8rem);
+    }
+
+    #videos .video-feature-title {
+      max-width: 18ch;
+      margin-bottom: 1.15rem;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    #videos {
+      padding-top: 3.25rem;
+      padding-bottom: 4rem;
+    }
+
+    #videos .videos-wrap {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    #videos .videos-header {
+      padding-left: .95rem;
+      padding-right: .95rem;
+      margin-bottom: .95rem;
+    }
+
+    #videos .video-feature-item {
+      margin: 0;
+    }
+
+    #videos .video-feature-title {
+      padding-left: .95rem;
+      padding-right: .95rem;
+      margin-bottom: .7rem;
+      font-size: clamp(1.7rem, 6.4vw, 2.4rem);
+      line-height: 1.0;
+    }
+
+    #videos .video-title-primary {
+      white-space: nowrap;
+    }
+
+    #videos .video-feature-shell {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      border-radius: 0 !important;
+    }
+
+    #videos .video-feature-player {
+      width: 100vw;
+      max-width: 100vw;
+      aspect-ratio: 1364 / 720;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0;
     }
   }
 </style>
