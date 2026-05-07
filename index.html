@@ -8436,9 +8436,72 @@
       <div class="video-feature-shell">
         <video class="video-feature-player" controls playsinline preload="none" poster="wildfire-response-poster.jpg">
           <source src="wildfire-response-demo.webm" type="video/webm"/>
-          <source src="wildfire-response-demo.mp4" type="video/mp4"/>
           Your browser does not support embedded video.
         </video>
+      </div>
+    </div>
+
+    <div class="video-series-block" aria-label="Converted platform video series">
+      <div class="video-series-heading">
+        <div class="video-series-kicker">Converted Platform Series</div>
+        <h3>Flight Series</h3>
+      </div>
+
+      <div class="video-series-grid">
+        <article class="video-card">
+          <div class="video-feature-kicker">02 · Flight Video</div>
+          <h4 class="video-card-title">Converted Platform<br/>Flight 01</h4>
+          <div class="video-card-shell">
+            <video class="video-card-player" controls playsinline preload="none" poster="converted-platform-flight-01-poster.jpg">
+              <source src="converted-platform-flight-01.webm" type="video/webm"/>
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-feature-kicker">03 · Flight Video</div>
+          <h4 class="video-card-title">Converted Platform<br/>Flight 02</h4>
+          <div class="video-card-shell">
+            <video class="video-card-player" controls playsinline preload="none" poster="converted-platform-flight-02-poster.jpg">
+              <source src="converted-platform-flight-02.webm" type="video/webm"/>
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-feature-kicker">04 · Flight Video</div>
+          <h4 class="video-card-title">Converted Platform<br/>Flight 03</h4>
+          <div class="video-card-shell">
+            <video class="video-card-player" controls playsinline preload="none" poster="converted-platform-flight-03-poster.jpg">
+              <source src="converted-platform-flight-03.webm" type="video/webm"/>
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-feature-kicker">05 · Flight Video</div>
+          <h4 class="video-card-title">Converted Platform<br/>Flight 04</h4>
+          <div class="video-card-shell">
+            <video class="video-card-player" controls playsinline preload="none" poster="converted-platform-flight-04-poster.jpg">
+              <source src="converted-platform-flight-04.webm" type="video/webm"/>
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
+
+        <article class="video-card video-card-wide">
+          <div class="video-feature-kicker">06 · Flight Video</div>
+          <h4 class="video-card-title">Converted Platform<br/>Flight 05</h4>
+          <div class="video-card-shell">
+            <video class="video-card-player" controls playsinline preload="none" poster="converted-platform-flight-05-poster.jpg">
+              <source src="converted-platform-flight-05.webm" type="video/webm"/>
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </article>
       </div>
     </div>
   </div>
@@ -16114,6 +16177,130 @@ Thank you.`;
     }
   }
 </style>
+
+
+<style id="v20-75-converted-platform-video-series">
+  /* v20.75 — Add the five uploaded converted-platform videos as a neutral flight series.
+     Names intentionally avoid aircraft model identification. Each video uses preload=none. */
+
+  #videos .video-series-block {
+    width: min(1080px, 100%);
+    margin: clamp(1.35rem, 3vw, 2.4rem) auto 0;
+  }
+
+  #videos .video-series-heading {
+    margin: 0 0 clamp(.9rem, 1.8vw, 1.25rem);
+  }
+
+  #videos .video-series-kicker {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 .7rem;
+    padding: .38rem .78rem;
+    border-radius: 999px;
+    border: 1px solid rgba(95, 212, 214, .18);
+    background: rgba(6, 21, 31, .68);
+    color: rgba(138, 229, 255, .92);
+    font-family: var(--f-mono, 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace);
+    font-size: .86rem;
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  #videos .video-series-heading h3 {
+    margin: 0;
+    color: #f8fafc;
+    font-family: var(--f-sans, 'Barlow', system-ui, sans-serif);
+    font-size: clamp(1.7rem, 2.4vw, 2.35rem);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -.018em;
+  }
+
+  #videos .video-series-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.35rem);
+  }
+
+  #videos .video-card {
+    padding: clamp(.9rem, 1.8vw, 1.15rem);
+    border: 1px solid rgba(69, 193, 224, .14);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, rgba(6, 15, 24, .94), rgba(6, 13, 22, .90));
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .18);
+  }
+
+  #videos .video-card-title {
+    margin: 0 0 .8rem;
+    color: #f8fafc;
+    font-family: var(--f-sans, 'Barlow', system-ui, sans-serif);
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -.014em;
+  }
+
+  #videos .video-card-shell {
+    position: relative;
+    width: 100%;
+    border-radius: .95rem;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255,255,255,.05);
+    box-shadow: 0 10px 22px rgba(0,0,0,.18);
+  }
+
+  #videos .video-card-player {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #000;
+  }
+
+  @media (min-width: 1024px) {
+    #videos .video-series-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #videos .video-card-wide {
+      grid-column: span 2;
+      max-width: calc(50% - .675rem);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    #videos .video-series-block {
+      width: calc(100vw - 28px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #videos .video-series-kicker {
+      font-size: .75rem;
+      letter-spacing: .072em;
+    }
+
+    #videos .video-series-heading h3 {
+      font-size: clamp(1.55rem, 5.8vw, 2.05rem);
+    }
+
+    #videos .video-card {
+      padding: .9rem;
+      border-radius: 1.18rem;
+    }
+
+    #videos .video-card-title {
+      font-size: clamp(1.35rem, 5.2vw, 1.85rem);
+    }
+  }
+</style>
+
+
+<!-- v20.76 — WebM-only video package: removed MP4 fallback source tags and MP4 video files to reduce ZIP size. -->
 
 </body>
 </html>
